@@ -1,3 +1,17 @@
+"""
+stb_player/mixins/youtube.py
+============================
+YouTube-specific helpers: yt-dlp wrappers for fetching channel video
+lists (with duration metadata) and resolving direct stream URLs.
+
+Key change vs original
+----------------------
+``fetch_youtube_videos`` now returns a **list of dicts**
+``[{url, title, duration}, ...]`` instead of a plain URL list.
+All callers have been updated accordingly; ``_yt_list`` is always built
+by extracting the ``url`` key from these dicts.
+"""
+
 import threading
 from tkinter import messagebox
 
@@ -14,6 +28,10 @@ class _SilentYdlLogger:
 
 
 class YoutubeMixin:
+    # ------------------------------------------------------------------
+    # yt-dlp option factory
+    # ------------------------------------------------------------------
+
     def _ydl_options(self, **overrides):
         options = {
             "quiet": True,
@@ -22,11 +40,15 @@ class YoutubeMixin:
             "skip_download": True,
             "retries": 1,
             "extractor_retries": 1,
-            "socket_timeout": 6,
+            "socket_timeout": 8,
             "logger": _SilentYdlLogger(),
         }
         options.update(overrides)
         return options
+
+    # ------------------------------------------------------------------
+    # Audio-track helpers (unchanged)
+    # ------------------------------------------------------------------
 
     def _get_audio_tracks(self, url):
         try:
@@ -117,14 +139,30 @@ class YoutubeMixin:
 
         threading.Thread(target=_work, daemon=True).start()
 
-    def fetch_youtube_videos(self, source):
+    # ------------------------------------------------------------------
+    # Video-list fetching  (UPDATED – returns dicts with duration)
+    # ------------------------------------------------------------------
+
+    def fetch_youtube_videos(self, source: str) -> tuple[list[dict], dict]:
+        """
+        Fetch the video list for a YouTube channel or playlist.
+
+        Returns
+        -------
+        videos : list[dict]
+            Each dict has keys ``url`` (str), ``title`` (str),
+            ``duration`` (int seconds, 0 if unknown).
+        title_map : dict[str, str]
+            Mapping ``url → title`` for quick lookups (backward-compat).
+        """
         try:
             import yt_dlp as ydl
         except ImportError:
             messagebox.showerror("Dependency", "yt-dlp required. pip install yt-dlp")
             return [], {}
 
-        options = self._ydl_options(extract_flat=True, playlistend=50)
+        # Increase playlist limit to get more videos for a richer schedule.
+        options = self._ydl_options(extract_flat=True, playlistend=100)
         source_url = source
         if source.startswith("yt:"):
             source_url = f"https://www.youtube.com/channel/{source[3:]}/videos"
@@ -145,8 +183,9 @@ class YoutubeMixin:
         if not info:
             return [], {}
 
-        out = []
-        title_map = {}
+        videos: list[dict] = []
+        title_map: dict[str, str] = {}
+
         if "entries" in info:
             for entry in info["entries"]:
                 if not entry:
@@ -154,21 +193,36 @@ class YoutubeMixin:
                 video_url = entry.get("webpage_url") or entry.get("url")
                 if video_url and not video_url.startswith("http"):
                     video_url = f"https://www.youtube.com/watch?v={video_url}"
-                if video_url:
-                    out.append(video_url)
-                    title = entry.get("title") or entry.get("fulltitle") or ""
-                    if title:
-                        title_map[video_url] = title
+                if not video_url:
+                    continue
+                title = entry.get("title") or entry.get("fulltitle") or ""
+                duration = int(entry.get("duration") or 0)
+                videos.append({"url": video_url, "title": title, "duration": duration})
+                if title:
+                    title_map[video_url] = title
         else:
             video_url = info.get("url") or info.get("webpage_url")
             if video_url and not video_url.startswith("http"):
                 video_url = f"https://www.youtube.com/watch?v={video_url}"
             if video_url:
-                out.append(video_url)
+                title = info.get("title") or ""
+                duration = int(info.get("duration") or 0)
+                videos.append({"url": video_url, "title": title, "duration": duration})
+                if title:
+                    title_map[video_url] = title
 
-        return out, title_map
+        return videos, title_map
 
-    def resolve_youtube_stream(self, url):
+    # ------------------------------------------------------------------
+    # Stream URL resolution (unchanged)
+    # ------------------------------------------------------------------
+
+    def resolve_youtube_stream(self, url: str):
+        """
+        Resolve a YouTube video page URL to a direct streamable URL.
+
+        Returns ``(stream_url, title, headers)`` or ``(None, None, None)``.
+        """
         try:
             import yt_dlp as ydl
         except ImportError:

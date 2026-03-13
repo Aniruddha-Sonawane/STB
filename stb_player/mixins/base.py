@@ -1,3 +1,19 @@
+"""
+stb_player/mixins/base.py
+=========================
+Application bootstrap, channel loading and startup warmup.
+
+What changed vs original
+------------------------
+* A ``ChannelScheduler`` instance is created at init time.
+* ``_warmup_channel`` reads the scheduler cache first; only hits YouTube
+  when the cache is stale (> 24 h old).  After fetching, video metadata
+  (url, title, duration) is saved to ``video_cache.json``.
+* The startup overlay lifts as soon as warmup finishes – no fixed timeout.
+* Channel 100 (or the first channel) is pre-resolved to the
+  *clock-scheduled* video so playback starts instantly.
+"""
+
 import glob
 import os
 import random
@@ -17,8 +33,9 @@ from stb_player.constants import (
     EPG_AUTO_HIDE_MS,
     IMAGES_DIR,
     IMG_EXTS,
-    STARTUP_LOADING_MS,
+    VIDEO_CACHE_FILE,
 )
+from stb_player.scheduler import ChannelScheduler
 
 
 class BaseMixin:
@@ -61,9 +78,10 @@ class BaseMixin:
         self._startup_finished = False
         self._suppress_end_event = False
 
+        # Persistent scheduler – video cache + clock-based schedule.
+        self.scheduler = ChannelScheduler(VIDEO_CACHE_FILE)
+
         try:
-            # Intel HD 530 + D3D11VA is unstable on some Windows setups.
-            # Use software decode for predictable startup behavior.
             self.instance = vlc.Instance(
                 "--quiet",
                 "--no-video-title-show",
@@ -97,7 +115,10 @@ class BaseMixin:
         self._current_img = None
         self._show_startup_loading()
         self._start_channel_warmup()
-        self.root.after(STARTUP_LOADING_MS, self._finish_startup_loading)
+
+    # ------------------------------------------------------------------
+    # Channel loading
+    # ------------------------------------------------------------------
 
     def _load_channels(self):
         import json
@@ -117,22 +138,26 @@ class BaseMixin:
             files.extend(glob.glob(os.path.join(IMAGES_DIR, ext)))
         return files
 
+    # ------------------------------------------------------------------
+    # Startup overlay
+    # ------------------------------------------------------------------
+
     def _show_startup_loading(self):
         overlay = tk.Frame(self.root, bg="black")
         overlay.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-        title = tk.Label(
+        title_lbl = tk.Label(
             overlay,
             text="Starting Set Top Box",
             fg=C_WHITE,
             bg="black",
             font=("Arial", 34, "bold"),
         )
-        title.place(relx=0.5, rely=0.42, anchor="center")
+        title_lbl.place(relx=0.5, rely=0.42, anchor="center")
 
         self._startup_status = tk.Label(
             overlay,
-            text="Loading channels 0/0",
+            text="Loading channels…",
             fg=C_DIM,
             bg="black",
             font=("Arial", 14),
@@ -167,12 +192,17 @@ class BaseMixin:
             )
         self._startup_spinner_job = self.root.after(350, self._tick_startup_spinner)
 
-    def _set_startup_progress(self, count):
+    def _set_startup_progress(self, count, label: str = ""):
         self._startup_done = min(count, self._startup_total)
         if self._can_update_startup_status():
+            extra = f"  ({label})" if label else ""
             self._startup_status.config(
-                text=f"Loading channels {self._startup_done}/{self._startup_total}"
+                text=f"Loading channels {self._startup_done}/{self._startup_total}{extra}"
             )
+
+    # ------------------------------------------------------------------
+    # Channel warmup  (runs entirely in a background daemon thread)
+    # ------------------------------------------------------------------
 
     def _start_channel_warmup(self):
         threading.Thread(target=self._warmup_channels, daemon=True).start()
@@ -182,37 +212,79 @@ class BaseMixin:
         total = len(channels)
         self.root.after(0, lambda: self._set_startup_progress(0))
         if total == 0:
-            self.root.after(0, lambda: self._set_startup_progress(0))
+            self.root.after(0, self._finish_startup_loading)
             return
+
         for index, channel in enumerate(channels, start=1):
+            name = channel.get("name", "")
             try:
                 self._warmup_channel(channel)
             except Exception:
                 pass
-            self.root.after(0, lambda finished=index: self._set_startup_progress(finished))
+            self.root.after(
+                0,
+                lambda done=index, n=name: self._set_startup_progress(done, n),
+            )
+
+        # All channels are ready – dismiss the overlay.
+        self.root.after(0, self._finish_startup_loading)
 
     def _warmup_channel(self, channel):
+        """
+        Load video metadata for one channel and pre-resolve the
+        clock-scheduled stream so it plays instantly when switched to.
+
+        Flow
+        ----
+        1. If the scheduler cache is valid:  load metadata from cache.
+        2. If stale or empty:               fetch from YouTube, save to cache.
+        3. Populate channel["_yt_list"] and channel["_yt_entry_titles"].
+        4. Ask the scheduler which video should be on air right now
+           and pre-resolve its stream URL into channel["_startup_stream"].
+        """
         source = channel.get("source", "")
-        if isinstance(source, str) and (source.startswith("yt:") or "youtube.com" in source):
-            if "_yt_list" not in channel or not channel.get("_yt_list"):
-                yt_list, title_map = self.fetch_youtube_videos(source)
-                channel["_yt_list"] = yt_list or []
-                channel["_yt_entry_titles"] = title_map or {}
-            failed_urls = channel.setdefault("_yt_failed_urls", set())
-            yt_list = channel.get("_yt_list", [])
-            candidates = [url for url in yt_list if url not in failed_urls and url.startswith("http")][:1]
-            if not candidates and yt_list:
-                candidates = [url for url in yt_list if url.startswith("http")][:1]
-            for url in candidates:
+        num = channel.get("number", "")
+
+        # --- YouTube channels ---
+        if isinstance(source, str) and (
+            source.startswith("yt:") or "youtube.com" in source
+        ):
+            # 1 / 2 – populate video list
+            if self.scheduler.is_stale(num):
+                yt_videos, title_map = self.fetch_youtube_videos(source)
+                if yt_videos:
+                    self.scheduler.update(num, channel.get("name", ""), yt_videos)
+                else:
+                    # Nothing fetched this time; fall back to whatever is cached
+                    title_map = {}
+            else:
+                # Build title_map from cached data
+                title_map = {
+                    v["url"]: v["title"]
+                    for v in self.scheduler.get_videos(num)
+                    if v.get("title")
+                }
+
+            videos = self.scheduler.get_videos(num)
+            # Keep _yt_list as a list of URL strings for existing code paths
+            channel["_yt_list"] = [v["url"] for v in videos]
+            channel["_yt_entry_titles"] = title_map
+
+            # 4 – find the clock-scheduled video and pre-resolve its stream
+            scheduled_video, seek_ms = self.scheduler.get_now_playing(num)
+            if scheduled_video:
+                url = scheduled_video["url"]
                 stream_url, title, headers = self.resolve_youtube_stream(url)
                 if stream_url:
                     channel["_startup_stream"] = (stream_url, title, headers, url)
+                    channel["_startup_seek_ms"] = seek_ms
                     if title:
                         channel.setdefault("_yt_titles", {})[url] = title
                 else:
-                    failed_urls.add(url)
+                    channel.setdefault("_yt_failed_urls", set()).add(url)
             return
 
+        # --- Local video folder ---
         if source and os.path.isdir(source):
             files = []
             for ext in ("*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv"):
@@ -220,6 +292,10 @@ class BaseMixin:
             if files:
                 files.sort()
                 channel["_startup_stream"] = (files[0], "", None, None)
+
+    # ------------------------------------------------------------------
+    # Startup finish
+    # ------------------------------------------------------------------
 
     def _finish_startup_loading(self):
         if self._startup_finished:
@@ -234,11 +310,19 @@ class BaseMixin:
         self._startup_status = None
         self.root.after(100, self._start_initial_channel)
 
+    # ------------------------------------------------------------------
+    # Media-end callback (thread-safe trampoline)
+    # ------------------------------------------------------------------
+
     def _on_media_end(self, _event):
         try:
             self.root.after(0, self._handle_media_end)
         except Exception:
             pass
+
+    # ------------------------------------------------------------------
+    # Start initial channel after startup
+    # ------------------------------------------------------------------
 
     def _start_initial_channel(self):
         if self.current_channel:
@@ -263,6 +347,10 @@ class BaseMixin:
                 self.root.attributes("-fullscreen", True)
         except tk.TclError:
             pass
+
+    # ------------------------------------------------------------------
+    # Image helpers
+    # ------------------------------------------------------------------
 
     def _pick_image(self, width, height):
         if not self._img_pool:
@@ -295,6 +383,10 @@ class BaseMixin:
 
     def _sorted_keys(self):
         return sorted(self.channels.keys(), key=lambda value: int(value))
+
+    # ------------------------------------------------------------------
+    # Keyboard handler
+    # ------------------------------------------------------------------
 
     def on_keypress(self, event=None):
         key = event.keysym
@@ -360,6 +452,10 @@ class BaseMixin:
             else:
                 self.root.quit()
 
+    # ------------------------------------------------------------------
+    # Channel-number badge
+    # ------------------------------------------------------------------
+
     def _prepare_ch_badge(self):
         self._badge_win = tk.Toplevel(self.root)
         self._badge_win.withdraw()
@@ -374,201 +470,95 @@ class BaseMixin:
         inner = tk.Frame(border, bg=C_BADGE_BG)
         inner.pack(padx=6, pady=6)
 
-        self._digit_canvases = []
-        slot_frame = tk.Frame(inner, bg=C_BADGE_BG)
-        slot_frame.pack()
-        slot_w, slot_h = 22, 30
-        for _ in range(3):
-            canvas = tk.Canvas(
-                slot_frame,
-                width=slot_w,
-                height=slot_h,
-                bg=C_BADGE_BG,
-                highlightthickness=0,
-                bd=0,
-            )
-            canvas.pack(side=tk.LEFT, padx=2)
-            canvas.create_line(0, slot_h - 3, slot_w, slot_h - 3, fill=C_WHITE, width=2)
-            text_id = canvas.create_text(
-                slot_w // 2,
-                slot_h // 2 - 2,
-                text="",
-                fill=C_WHITE,
-                font=("Arial", 16, "bold"),
-                anchor="center",
-            )
-            self._digit_canvases.append((canvas, text_id))
+        self._badge_ch_num = tk.Label(
+            inner,
+            text="",
+            fg=C_WHITE,
+            bg=C_BADGE_BG,
+            font=("Arial", 52, "bold"),
+            width=4,
+            anchor="center",
+        )
+        self._badge_ch_num.pack()
 
-        self._badge_name = tk.Label(
+        self._badge_ch_name = tk.Label(
             inner,
             text="",
             fg=C_DIM,
             bg=C_BADGE_BG,
-            font=("Arial", 9),
+            font=("Arial", 13),
         )
-        self._badge_name.pack(pady=(3, 0))
+        self._badge_ch_name.pack()
 
-    def _show_ch_badge(self, num_str, name=""):
-        for index, (canvas, text_id) in enumerate(self._digit_canvases):
-            channel_digit = num_str[index] if index < len(num_str) else ""
-            canvas.itemconfig(text_id, text=channel_digit)
-        self._badge_name.config(text=name)
+        self._badge_hide_job = None
 
-        self._badge_win.update_idletasks()
+    def _show_ch_badge(self, number_str: str):
+        ch = self.channels.get(number_str)
+        name = ch.get("name", "") if ch else ""
+
+        self._badge_ch_num.config(text=number_str)
+        self._badge_ch_name.config(text=name)
+
         self.root.update_idletasks()
-        root_w = self.root.winfo_width()
-        root_h = self.root.winfo_height()
-        root_x = self.root.winfo_rootx()
-        root_y = self.root.winfo_rooty()
-        badge_w = self._badge_win.winfo_reqwidth()
-        x = root_x + root_w - badge_w - int(root_w * 0.05)
-        y = root_y + int(root_h * 0.12)
+        rw = self.root.winfo_width()
+        rh = self.root.winfo_height()
+        rx = self.root.winfo_rootx()
+        ry = self.root.winfo_rooty()
+        self._badge_win.update_idletasks()
+        bw = self._badge_win.winfo_reqwidth()
+        bh = self._badge_win.winfo_reqheight()
+        x = rx + rw - bw - 40
+        y = ry + rh - bh - 60
         self._badge_win.geometry(f"+{x}+{y}")
         self._badge_win.deiconify()
         self._badge_win.lift()
 
-    def _hide_ch_badge(self):
-        self._badge_win.withdraw()
+        if self._badge_hide_job:
+            self.root.after_cancel(self._badge_hide_job)
+        self._badge_hide_job = self.root.after(3000, self._badge_win.withdraw)
 
     def _auto_confirm_channel(self):
+        self.buffer_job = None
         if self.channel_buffer:
             self._confirm_typed_channel()
 
     def _confirm_typed_channel(self):
         number = self.channel_buffer
         self.channel_buffer = ""
-        self._hide_ch_badge()
+        if self._badge_hide_job:
+            self.root.after_cancel(self._badge_hide_job)
+        self._badge_win.withdraw()
+        self.hide_epg()
         channel = self.channels.get(number)
         if channel:
             self.switch_channel(channel)
-        else:
-            messagebox.showinfo("Channel", f"Channel {number} not found")
+
+    # ------------------------------------------------------------------
+    # Browse (left/right arrow channel switch)
+    # ------------------------------------------------------------------
 
     def _browse_channel_delta(self, delta: int):
         keys = self._sorted_keys()
         if not keys:
             return
-
-        reference = self._browse_num or self.current_channel.get("number") or keys[0]
-        try:
-            index = keys.index(reference)
-        except ValueError:
-            index = 0
-        index = (index + delta) % len(keys)
-        self._browse_num = keys[index]
-
-        target_channel = self.channels[self._browse_num]
-        browse_items = self._build_browse_items(target_channel)
-
-        number = target_channel.get("number", "")
-        name = target_channel.get("name", "")
-        self.epg_ch_num.config(text=f" {number} ")
-        self.epg_ch_name.config(text=name)
-
-        row_a = browse_items[0] if browse_items else ("", "", None)
-        row_b = browse_items[1] if len(browse_items) > 1 else ("", "", None)
-        self.epg_active_title.config(text=row_a[0])
-        self.epg_active_time.config(text=row_a[1])
-        self.epg_next_title.config(text=row_b[0])
-        self.epg_next_time.config(text=row_b[1])
-
-        import datetime
-
-        self.date_label.config(text=datetime.datetime.now().strftime("%a %d %b  %I:%M %p"))
-        photo = self._pick_image(190, 190)
-        if photo:
-            self._current_img = photo
-            self._epg_img_canvas.itemconfig(self._epg_img_id, image=photo)
-
-        self.root.update_idletasks()
-        root_w = self.root.winfo_width()
-        root_h = self.root.winfo_height()
-        root_x = self.root.winfo_rootx()
-        root_y = self.root.winfo_rooty()
-        width = min(1100, int(root_w * 0.94))
-        height = 240
-        x = root_x + (root_w - width) // 2
-        y = root_y + root_h - height - 36
-        self.epg_window.geometry(f"{width}x{height}+{x}+{y}")
-        self.epg_window.deiconify()
-        self.epg_window.lift()
-
-        if self.hide_job:
-            self.root.after_cancel(self.hide_job)
+        current_num = (
+            self.current_channel.get("number") if self.current_channel else None
+        )
+        if current_num and current_num in keys:
+            idx = keys.index(current_num)
+        else:
+            idx = 0
+        new_idx = (idx + delta) % len(keys)
+        self._browse_num = keys[new_idx]
+        channel = self.channels.get(self._browse_num)
+        if channel:
+            self._update_epg(channel)
+        self.show_epg(auto_hide=4000)
         if self._browse_hide_job:
             self.root.after_cancel(self._browse_hide_job)
-        self._browse_hide_job = self.root.after(EPG_AUTO_HIDE_MS, self._cancel_browse)
-
-    def _build_browse_items(self, channel):
-        source = channel.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        if is_youtube:
-            if not channel.get("_yt_list"):
-                self._ensure_youtube_list_async(channel)
-            items = []
-            current_title = channel.get("_current_title", "")
-            if current_title and current_title != "Loading...":
-                items.append((current_title, "Now Playing", None))
-
-            yt_titles = channel.get("_yt_titles", {})
-            entry_titles = channel.get("_yt_entry_titles", {})
-            for url in channel.get("_yt_list", [])[:20]:
-                if url == channel.get("_current_yt_url"):
-                    continue
-                title = yt_titles.get(url) or entry_titles.get(url)
-                if not title:
-                    continue
-                items.append((title, "", url))
-                if len(items) >= 2:
-                    break
-
-            if items:
-                if len(items) == 1:
-                    items.append(("", "", None))
-                return items
-
-        browse_items = []
-        for schedule in channel.get("schedule", []):
-            time_str = (
-                f"{schedule.get('start', '')} - {schedule.get('end', '')}"
-                if schedule.get("start")
-                else ""
-            )
-            browse_items.append((schedule.get("title", ""), time_str, None))
-        if not browse_items:
-            name = channel.get("name", "")
-            browse_items = [(name, "", None), ("", "", None)]
-        return browse_items
-
-    def _ensure_youtube_list_async(self, channel):
-        if channel.get("_yt_fetching"):
-            return
-        source = channel.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        if not is_youtube:
-            return
-        channel["_yt_fetching"] = True
-
-        def _worker():
-            try:
-                yt_list, title_map = self.fetch_youtube_videos(source)
-                if yt_list:
-                    channel["_yt_list"] = yt_list
-                if title_map:
-                    existing = channel.setdefault("_yt_entry_titles", {})
-                    existing.update(title_map)
-            finally:
-                channel["_yt_fetching"] = False
-
-        threading.Thread(target=_worker, daemon=True).start()
+        self._browse_hide_job = self.root.after(3500, self._cancel_browse)
 
     def _confirm_browse(self):
-        if self._browse_hide_job:
-            self.root.after_cancel(self._browse_hide_job)
         number = self._browse_num
         self._browse_num = None
         self.hide_epg()
@@ -584,12 +574,17 @@ class BaseMixin:
                 self.root.after_cancel(self.hide_job)
             self.hide_job = self.root.after(EPG_AUTO_HIDE_MS, self.hide_epg)
 
+    # ------------------------------------------------------------------
+    # EPG item building
+    # ------------------------------------------------------------------
+
     def _build_epg_items(self, channel):
         items = []
         source = channel.get("source", "")
         is_youtube = isinstance(source, str) and (
             source.startswith("yt:") or "youtube.com" in source
         )
+        num = channel.get("number", "")
 
         if is_youtube:
             current_title = channel.get("_current_title", "Now Playing")
@@ -599,20 +594,23 @@ class BaseMixin:
                 preload_title = self._preload_result[1] or "Next Video"
                 items.append((preload_title, "Up Next", "__preload__"))
 
-            yt_titles = channel.get("_yt_titles", {})
-            for url in channel.get("_yt_list", [])[:20]:
-                if url == channel.get("_current_yt_url"):
+            # Show scheduled programme list from cache
+            videos = self.scheduler.get_videos(num)
+            current_url = channel.get("_current_yt_url", "")
+            shown = 0
+            for vid in videos:
+                url = vid.get("url", "")
+                if url == current_url:
                     continue
-                title = yt_titles.get(url, "")
+                title = vid.get("title") or channel.get("_yt_entry_titles", {}).get(url, "")
                 if not title:
-                    entry_title = channel.get("_yt_entry_titles", {}).get(url, "")
-                    if entry_title:
-                        title = entry_title
-                    elif "v=" in url:
-                        title = url.split("v=")[-1][:11]
-                    else:
-                        title = "Video"
-                items.append((title, "", url))
+                    title = url.split("v=")[-1][:11] if "v=" in url else "Video"
+                dur = vid.get("duration", 0)
+                time_str = _fmt_duration(dur) if dur else ""
+                items.append((title, time_str, url))
+                shown += 1
+                if shown >= 20:
+                    break
         else:
             for schedule in channel.get("schedule", []):
                 time_str = (
@@ -625,6 +623,10 @@ class BaseMixin:
         if not items:
             items = [("No programme info", "", None)]
         return items
+
+    # ------------------------------------------------------------------
+    # EPG row navigation
+    # ------------------------------------------------------------------
 
     def _epg_row_move(self, delta: int):
         channel = self.current_channel
@@ -690,3 +692,18 @@ class BaseMixin:
         self.epg_active_time.config(text=selected[1])
         self.epg_next_title.config(text=selected_next[0])
         self.epg_next_time.config(text=selected_next[1])
+
+
+# ------------------------------------------------------------------
+# Utility
+# ------------------------------------------------------------------
+
+def _fmt_duration(seconds: int) -> str:
+    """Format a duration in seconds as H:MM or MM:SS."""
+    if seconds <= 0:
+        return ""
+    h, rem = divmod(seconds, 3600)
+    m, s = divmod(rem, 60)
+    if h:
+        return f"{h}:{m:02d}:{s:02d}"
+    return f"{m}:{s:02d}"
