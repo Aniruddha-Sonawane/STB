@@ -7,6 +7,8 @@ IMAGES_DIR = str(BASE_DIR / "images")
 IMG_EXTS = ("*.jpg", "*.jpeg", "*.png", "*.gif", "*.bmp", "*.webp")
 MAIL_INTERVAL_MS = 60 * 60 * 1000
 MAX_EPG_ROWS = 6
+EPG_AUTO_HIDE_MS = 10_000
+STARTUP_LOADING_MS = 10_000
 
 C_BG = "#0A0C14"
 C_PROG_ACTIVE = "#1A4FA3"

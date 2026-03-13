@@ -2,19 +2,39 @@ import threading
 from tkinter import messagebox
 
 
+class _SilentYdlLogger:
+    def debug(self, _msg):
+        pass
+
+    def warning(self, _msg):
+        pass
+
+    def error(self, _msg):
+        pass
+
+
 class YoutubeMixin:
+    def _ydl_options(self, **overrides):
+        options = {
+            "quiet": True,
+            "no_warnings": True,
+            "ignoreerrors": True,
+            "skip_download": True,
+            "retries": 1,
+            "extractor_retries": 1,
+            "socket_timeout": 6,
+            "logger": _SilentYdlLogger(),
+        }
+        options.update(overrides)
+        return options
+
     def _get_audio_tracks(self, url):
         try:
             import yt_dlp as ydl
         except ImportError:
             return []
 
-        options = {
-            "quiet": True,
-            "skip_download": True,
-            "noplaylist": True,
-            "no_warnings": True,
-        }
+        options = self._ydl_options(noplaylist=True)
         try:
             with ydl.YoutubeDL(options) as ydl_client:
                 info = ydl_client.extract_info(url, download=False)
@@ -59,12 +79,7 @@ class YoutubeMixin:
             except ImportError:
                 return
 
-            options = {
-                "quiet": True,
-                "skip_download": True,
-                "noplaylist": True,
-                "no_warnings": True,
-            }
+            options = self._ydl_options(noplaylist=True)
             if fmt_id:
                 options["format"] = f"bestvideo+{fmt_id}/best"
             try:
@@ -102,21 +117,14 @@ class YoutubeMixin:
 
         threading.Thread(target=_work, daemon=True).start()
 
-    def fetch_youtube_videos(self, source) -> list:
+    def fetch_youtube_videos(self, source):
         try:
             import yt_dlp as ydl
         except ImportError:
             messagebox.showerror("Dependency", "yt-dlp required. pip install yt-dlp")
-            return []
+            return [], {}
 
-        options = {
-            "quiet": True,
-            "ignoreerrors": True,
-            "extract_flat": True,
-            "skip_download": True,
-            "no_warnings": True,
-            "playlistend": 50,
-        }
+        options = self._ydl_options(extract_flat=True, playlistend=50)
         source_url = source
         if source.startswith("yt:"):
             source_url = f"https://www.youtube.com/channel/{source[3:]}/videos"
@@ -133,9 +141,9 @@ class YoutubeMixin:
             with ydl.YoutubeDL(options) as ydl_client:
                 info = ydl_client.extract_info(source_url, download=False)
         except Exception:
-            return []
+            return [], {}
         if not info:
-            return []
+            return [], {}
 
         out = []
         title_map = {}
@@ -166,13 +174,7 @@ class YoutubeMixin:
         except ImportError:
             return None, None, None
 
-        options = {
-            "quiet": True,
-            "ignoreerrors": True,
-            "skip_download": True,
-            "noplaylist": True,
-            "no_warnings": True,
-        }
+        options = self._ydl_options(noplaylist=True)
         try:
             with ydl.YoutubeDL(options) as ydl_client:
                 info = ydl_client.extract_info(url, download=False)

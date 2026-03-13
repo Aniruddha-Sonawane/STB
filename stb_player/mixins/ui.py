@@ -18,6 +18,7 @@ from stb_player.constants import (
     C_PROGRESS_FG,
     C_WHITE,
     C_YELLOW,
+    EPG_AUTO_HIDE_MS,
     MAIL_INTERVAL_MS,
 )
 
@@ -463,7 +464,7 @@ class UiMixin:
             else:
                 self.epg_progress.coords(self.progress_fill, 0, 2, 0, 8)
 
-    def show_epg(self, auto_hide=5000):
+    def show_epg(self, auto_hide=EPG_AUTO_HIDE_MS):
         if self.current_channel:
             self._update_epg(self.current_channel)
 
