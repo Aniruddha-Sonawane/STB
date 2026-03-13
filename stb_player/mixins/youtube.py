@@ -106,11 +106,8 @@ class YoutubeMixin:
         try:
             import yt_dlp as ydl
         except ImportError:
-            try:
-                import youtube_dl as ydl
-            except ImportError:
-                messagebox.showerror("Dependency", "yt-dlp required. pip install yt-dlp")
-                return []
+            messagebox.showerror("Dependency", "yt-dlp required. pip install yt-dlp")
+            return []
 
         options = {
             "quiet": True,
@@ -167,10 +164,7 @@ class YoutubeMixin:
         try:
             import yt_dlp as ydl
         except ImportError:
-            try:
-                import youtube_dl as ydl
-            except ImportError:
-                return None, None, None
+            return None, None, None
 
         options = {
             "quiet": True,
