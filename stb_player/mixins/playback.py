@@ -33,28 +33,47 @@ class PlaybackMixin:
         return candidates[:limit]
 
     def _recover_youtube_channel(self, channel):
+        if channel.get("_recover_inflight"):
+            return
         tries = channel.get("_recover_tries", 0)
-        if tries >= 5:
+        if tries >= 2:
             channel["_current_title"] = "Unable to load stream"
+            channel["_recover_inflight"] = False
             self.show_epg()
             return
         candidates = self._youtube_candidates(channel)
         if not candidates:
             channel["_current_title"] = "No playable videos"
+            channel["_recover_inflight"] = False
             self.show_epg()
             return
 
-        next_url = candidates[0]
+        next_url = random.choice(candidates[: min(10, len(candidates))])
         channel["_recover_tries"] = tries + 1
+        channel["_recover_inflight"] = True
         self.channel_request_id += 1
         request_id = self.channel_request_id
         channel["_current_title"] = "Loading..."
         self.show_epg()
+        self.root.after(
+            8000,
+            lambda ch=channel, rid=request_id: self._recover_timeout(ch, rid),
+        )
         threading.Thread(
             target=self._resolve_and_play,
             args=(channel, next_url, request_id),
             daemon=True,
         ).start()
+
+    def _recover_timeout(self, channel, request_id):
+        if channel is not self.current_channel:
+            return
+        if request_id != self.channel_request_id:
+            return
+        if not channel.get("_recover_inflight"):
+            return
+        channel["_recover_inflight"] = False
+        self._show_channel_error(request_id, "Stream request timed out")
 
     def _snapshot(self):
         previous = self.current_channel
@@ -79,6 +98,7 @@ class PlaybackMixin:
         return state.get("position_ms", 0) + int((_t.time() - state.get("left_at", 0)) * 1000)
 
     def switch_channel(self, channel: dict):
+        previous_channel = self.current_channel
         self._snapshot()
         self.current_channel = channel
         self.channel_request_id += 1
@@ -87,7 +107,8 @@ class PlaybackMixin:
         request_id = self.channel_request_id
         source = channel.get("source", "")
         prepared_source = prepared_title = prepared_headers = prepared_origin = None
-        prepared = channel.pop("_startup_stream", None)
+        use_startup_stream = not previous_channel
+        prepared = channel.pop("_startup_stream", None) if use_startup_stream else None
         if isinstance(prepared, tuple):
             prepared_source = prepared[0] if len(prepared) > 0 else None
             prepared_title = prepared[1] if len(prepared) > 1 else None
@@ -97,6 +118,7 @@ class PlaybackMixin:
         if isinstance(source, str) and (source.startswith("yt:") or "youtube.com" in source):
             saved = self.channel_state.get(channel.get("number", ""), {})
             saved_source = saved.get("source")
+            channel["_recover_inflight"] = False
 
             if self._preload_channel is channel and self._preload_result:
                 stream_url, title, headers, origin_url = self._preload_result
@@ -174,7 +196,9 @@ class PlaybackMixin:
                 return
             stream_url = title = headers = None
             chosen_url = None
-            for url in self._youtube_candidates(channel, include_current=True, limit=15):
+            candidates = self._youtube_candidates(channel, include_current=True, limit=50)
+            random.shuffle(candidates)
+            for url in candidates:
                 stream_url, title, headers = self.resolve_youtube_stream(url)
                 if stream_url:
                     chosen_url = url
@@ -280,13 +304,13 @@ class PlaybackMixin:
             channel["_current_yt_url"] = origin_url
             channel.setdefault("_yt_failed_urls", set()).discard(origin_url)
         channel["_recover_tries"] = 0
+        channel["_recover_inflight"] = False
 
         self._epg_items = self._build_epg_items(channel)
         self._epg_row_index = 0
 
         self.show_epg()
         self._suppress_end_event = True
-        self.stop()
         self.root.after(300, lambda: setattr(self, "_suppress_end_event", False))
 
         if source:
@@ -326,6 +350,7 @@ class PlaybackMixin:
                 ),
             )
         else:
+            channel["_recover_inflight"] = False
             if url.startswith("http"):
                 channel.setdefault("_yt_failed_urls", set()).add(url)
             self.root.after(
@@ -363,6 +388,11 @@ class PlaybackMixin:
             source.startswith("yt:") or "youtube.com" in source
         )
         if is_youtube:
+            if channel.get("_recover_tries", 0) >= 2:
+                channel["_current_title"] = "Channel unavailable"
+                channel["_recover_inflight"] = False
+                self.show_epg()
+                return
             self._recover_youtube_channel(channel)
             return
         channel["_current_title"] = "Playback unavailable"
@@ -406,7 +436,7 @@ class PlaybackMixin:
         if not candidates:
             self._show_channel_error(request_id, "No playable videos in this channel")
             return
-        next_url = candidates[0]
+        next_url = random.choice(candidates[: min(10, len(candidates))])
         self.channel_request_id += 1
         next_request_id = self.channel_request_id
         channel["_current_title"] = "Loading..."
@@ -421,6 +451,10 @@ class PlaybackMixin:
         if request_id != self.channel_request_id:
             return
         try:
+            state = self.player.get_state()
+            if state != vlc.State.Playing:
+                self._epg_tick = self.root.after(800, lambda: self._do_tick(request_id))
+                return
             duration = self.player.get_length()
             position = self.player.get_time()
             if duration > 0 and position >= 0:

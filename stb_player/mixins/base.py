@@ -184,23 +184,12 @@ class BaseMixin:
         if total == 0:
             self.root.after(0, lambda: self._set_startup_progress(0))
             return
-
-        lock = threading.Lock()
-        completed = {"count": 0}
-
-        def _worker(channel):
+        for index, channel in enumerate(channels, start=1):
             try:
                 self._warmup_channel(channel)
             except Exception:
                 pass
-            with lock:
-                completed["count"] += 1
-                done = completed["count"]
-            self.root.after(0, lambda finished=done: self._set_startup_progress(finished))
-
-        for channel in channels:
-            worker = threading.Thread(target=_worker, args=(channel,), daemon=True)
-            worker.start()
+            self.root.after(0, lambda finished=index: self._set_startup_progress(finished))
 
     def _warmup_channel(self, channel):
         source = channel.get("source", "")
@@ -211,19 +200,16 @@ class BaseMixin:
                 channel["_yt_entry_titles"] = title_map or {}
             failed_urls = channel.setdefault("_yt_failed_urls", set())
             yt_list = channel.get("_yt_list", [])
-            candidates = [url for url in yt_list if url not in failed_urls][:3]
+            candidates = [url for url in yt_list if url not in failed_urls and url.startswith("http")][:1]
             if not candidates and yt_list:
-                candidates = yt_list[:3]
-            if not candidates:
-                candidates = [source]
+                candidates = [url for url in yt_list if url.startswith("http")][:1]
             for url in candidates:
                 stream_url, title, headers = self.resolve_youtube_stream(url)
                 if stream_url:
                     channel["_startup_stream"] = (stream_url, title, headers, url)
                     if title:
                         channel.setdefault("_yt_titles", {})[url] = title
-                    break
-                if url.startswith("http"):
+                else:
                     failed_urls.add(url)
             return
 
