@@ -1,0 +1,22 @@
+{
+ "101": {
+  "name": "Music",
+  "source": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+ },
+ "102": {
+  "name": "News",
+  "source": "https://www.youtube.com/watch?v=jNQXAC9IVRw"
+ },
+  "103": {
+    "name": "Movie Channel",
+    "source": "videos/movies/"
+  },
+  "104": {
+    "name": "YouTube Random",
+    "source": "yt:UCBR8-60-B28hp2BmDPdntcQ"
+  },
+  "108": {
+    "name": "Disney India",
+    "source": "https://www.youtube.com/@disneyindia/videos"
+  }
+}

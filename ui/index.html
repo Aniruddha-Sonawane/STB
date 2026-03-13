@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>STB Player</title>
+
+<style>
+body{
+ margin:0;
+ background:black;
+ overflow:hidden;
+ font-family:Arial;
+}
+
+#player{
+ width:100vw;
+ height:100vh;
+}
+
+#channelDisplay{
+ position:absolute;
+ top:20px;
+ left:50%;
+ transform:translateX(-50%);
+ color:white;
+ font-size:40px;
+ background:rgba(0,0,0,0.6);
+ padding:10px 30px;
+ border-radius:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="channelDisplay"></div>
+<div id="player"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+
+let player;
+let channels = {};
+let buffer="";
+let timer=null;
+
+async function loadChannels(){
+    channels = await window.pywebview.api.get_channels();
+}
+
+function onYouTubeIframeAPIReady(){
+
+    player = new YT.Player('player',{
+        height:'100%',
+        width:'100%',
+        videoId:'',
+        playerVars:{
+            autoplay:1,
+            controls:0,
+            modestbranding:1
+        }
+    });
+
+}
+
+async function switchChannel(num){
+
+    const ch = channels[num];
+
+    if(!ch){
+        showText("Not Found");
+        return;
+    }
+
+    showText(num);
+
+    if(ch.type==="youtube_home"){
+        window.location="https://youtube.com";
+    }
+
+    if(ch.type==="video"){
+        player.loadVideoById(ch.videoId);
+    }
+
+    if(ch.type==="channel"){
+        loadRandomVideo(ch.channelId);
+    }
+
+}
+
+async function loadRandomVideo(channelId){
+
+    const API_KEY="YOUR_API_KEY";
+
+    const url=`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
+
+    const r=await fetch(url);
+    const d=await r.json();
+
+    const vids=d.items.filter(v=>v.id.videoId);
+
+    const v=vids[Math.floor(Math.random()*vids.length)];
+
+    player.loadVideoById(v.id.videoId);
+
+}
+
+function showText(t){
+
+    const d=document.getElementById("channelDisplay");
+    d.innerText=t;
+
+    setTimeout(()=>{ d.innerText=""; },2000);
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key>='0' && e.key<='9'){
+
+        buffer+=e.key;
+
+        showText(buffer);
+
+        clearTimeout(timer);
+
+        timer=setTimeout(()=>{
+            switchChannel(parseInt(buffer));
+            buffer="";
+        },1000);
+
+    }
+
+});
+
+loadChannels();
+
+</script>
+
+</body>
+</html>
