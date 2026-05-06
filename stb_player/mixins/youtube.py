@@ -13,7 +13,9 @@ by extracting the ``url`` key from these dicts.
 """
 
 import threading
+import time
 from tkinter import messagebox
+from urllib.parse import parse_qs, urlparse
 
 
 class _SilentYdlLogger:
@@ -87,7 +89,7 @@ class YoutubeMixin:
 
     def _switch_audio_track(self, fmt_id, lang):
         channel = self.current_channel
-        url = channel.get("_resolved_src") or channel.get("source", "")
+        url = channel.get("_current_yt_url") or channel.get("_resolved_src") or channel.get("source", "")
         if not url or not url.startswith("http"):
             return
 
@@ -223,6 +225,10 @@ class YoutubeMixin:
 
         Returns ``(stream_url, title, headers)`` or ``(None, None, None)``.
         """
+        cached_stream, cached_title, cached_headers = self.scheduler.get_stream(url)
+        if cached_stream:
+            return cached_stream, cached_title or "YouTube Video", cached_headers or {}
+
         try:
             import yt_dlp as ydl
         except ImportError:
@@ -241,6 +247,8 @@ class YoutubeMixin:
         headers = info.get("http_headers") or {}
         direct = info.get("url")
         if direct and direct.startswith("http"):
+            expires_at = self._extract_expiry(direct)
+            self.scheduler.put_stream(url, direct, title, headers, expires_at=expires_at)
             return direct, title, headers
 
         best = None
@@ -261,9 +269,43 @@ class YoutubeMixin:
                 best = fmt
 
         if best:
-            return best.get("url"), title, headers
+            best_url = best.get("url")
+            if best_url:
+                expires_at = self._extract_expiry(best_url)
+                self.scheduler.put_stream(
+                    url,
+                    best_url,
+                    title,
+                    headers,
+                    expires_at=expires_at,
+                )
+                return best_url, title, headers
 
         for fmt in reversed(info.get("formats", [])):
             if fmt.get("url"):
-                return fmt.get("url"), title, headers
+                stream_url = fmt.get("url")
+                expires_at = self._extract_expiry(stream_url)
+                self.scheduler.put_stream(
+                    url,
+                    stream_url,
+                    title,
+                    headers,
+                    expires_at=expires_at,
+                )
+                return stream_url, title, headers
         return None, title, headers
+
+    def _extract_expiry(self, stream_url: str) -> float | None:
+        """
+        Extract absolute expiry timestamp from CDN URLs when available.
+        """
+        try:
+            query = parse_qs(urlparse(stream_url).query)
+            value = query.get("expire", [None])[0]
+            if value is None:
+                return None
+            expiry_ts = float(value)
+            # Keep a small safety margin so we refresh before hard expiry.
+            return max(time.time() + 60, expiry_ts - 45)
+        except Exception:
+            return None

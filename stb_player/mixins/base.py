@@ -1,4 +1,4 @@
-"""
+﻿"""
 stb_player/mixins/base.py
 =========================
 Application bootstrap, channel loading and startup warmup.
@@ -9,13 +9,14 @@ What changed vs original
 * ``_warmup_channel`` reads the scheduler cache first; only hits YouTube
   when the cache is stale (> 24 h old).  After fetching, video metadata
   (url, title, duration) is saved to ``video_cache.json``.
-* The startup overlay lifts as soon as warmup finishes – no fixed timeout.
+* The startup overlay lifts as soon as warmup finishes â€“ no fixed timeout.
 * Channel 100 (or the first channel) is pre-resolved to the
   *clock-scheduled* video so playback starts instantly.
 """
 
 import glob
 import os
+from pathlib import Path
 import random
 import sys
 import threading
@@ -25,6 +26,7 @@ from tkinter import messagebox
 import vlc
 
 from stb_player.constants import (
+    BASE_DIR,
     CHANNELS_FILE,
     C_BADGE_BG,
     C_DIM,
@@ -33,6 +35,7 @@ from stb_player.constants import (
     EPG_AUTO_HIDE_MS,
     IMAGES_DIR,
     IMG_EXTS,
+    STREAM_CACHE_FILE,
     VIDEO_CACHE_FILE,
 )
 from stb_player.scheduler import ChannelScheduler
@@ -51,6 +54,7 @@ class BaseMixin:
 
         self.channel_buffer = ""
         self.buffer_job = None
+        self.ui_mode = "NORMAL"
 
         self._browse_num = None
         self._browse_hide_job = None
@@ -78,8 +82,12 @@ class BaseMixin:
         self._startup_finished = False
         self._suppress_end_event = False
 
-        # Persistent scheduler – video cache + clock-based schedule.
-        self.scheduler = ChannelScheduler(VIDEO_CACHE_FILE)
+        # Persistent scheduler â€“ video cache + clock-based schedule.
+        self.scheduler = ChannelScheduler(
+            VIDEO_CACHE_FILE,
+            STREAM_CACHE_FILE,
+            str(Path(BASE_DIR)),
+        )
 
         try:
             self.instance = vlc.Instance(
@@ -157,7 +165,7 @@ class BaseMixin:
 
         self._startup_status = tk.Label(
             overlay,
-            text="Loading channels…",
+            text="Loading channelsâ€¦",
             fg=C_DIM,
             bg="black",
             font=("Arial", 14),
@@ -226,63 +234,13 @@ class BaseMixin:
                 lambda done=index, n=name: self._set_startup_progress(done, n),
             )
 
-        # All channels are ready – dismiss the overlay.
+        # Warmup only parses local data; network loading happens on tune.
         self.root.after(0, self._finish_startup_loading)
 
     def _warmup_channel(self, channel):
-        """
-        Load video metadata for one channel and pre-resolve the
-        clock-scheduled stream so it plays instantly when switched to.
-
-        Flow
-        ----
-        1. If the scheduler cache is valid:  load metadata from cache.
-        2. If stale or empty:               fetch from YouTube, save to cache.
-        3. Populate channel["_yt_list"] and channel["_yt_entry_titles"].
-        4. Ask the scheduler which video should be on air right now
-           and pre-resolve its stream URL into channel["_startup_stream"].
-        """
+        """Parse schedule and prime only local-folder startup streams."""
+        self.scheduler.prepare_channel(channel)
         source = channel.get("source", "")
-        num = channel.get("number", "")
-
-        # --- YouTube channels ---
-        if isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        ):
-            # 1 / 2 – populate video list
-            if self.scheduler.is_stale(num):
-                yt_videos, title_map = self.fetch_youtube_videos(source)
-                if yt_videos:
-                    self.scheduler.update(num, channel.get("name", ""), yt_videos)
-                else:
-                    # Nothing fetched this time; fall back to whatever is cached
-                    title_map = {}
-            else:
-                # Build title_map from cached data
-                title_map = {
-                    v["url"]: v["title"]
-                    for v in self.scheduler.get_videos(num)
-                    if v.get("title")
-                }
-
-            videos = self.scheduler.get_videos(num)
-            # Keep _yt_list as a list of URL strings for existing code paths
-            channel["_yt_list"] = [v["url"] for v in videos]
-            channel["_yt_entry_titles"] = title_map
-
-            # 4 – find the clock-scheduled video and pre-resolve its stream
-            scheduled_video, seek_ms = self.scheduler.get_now_playing(num)
-            if scheduled_video:
-                url = scheduled_video["url"]
-                stream_url, title, headers = self.resolve_youtube_stream(url)
-                if stream_url:
-                    channel["_startup_stream"] = (stream_url, title, headers, url)
-                    channel["_startup_seek_ms"] = seek_ms
-                    if title:
-                        channel.setdefault("_yt_titles", {})[url] = title
-                else:
-                    channel.setdefault("_yt_failed_urls", set()).add(url)
-            return
 
         # --- Local video folder ---
         if source and os.path.isdir(source):
@@ -292,6 +250,7 @@ class BaseMixin:
             if files:
                 files.sort()
                 channel["_startup_stream"] = (files[0], "", None, None)
+
 
     # ------------------------------------------------------------------
     # Startup finish
@@ -384,6 +343,18 @@ class BaseMixin:
     def _sorted_keys(self):
         return sorted(self.channels.keys(), key=lambda value: int(value))
 
+    def _is_youtube_channel(self, channel: dict | None) -> bool:
+        if not channel:
+            return False
+        schedule_ref = channel.get("schedule")
+        if isinstance(schedule_ref, str) and schedule_ref.strip():
+            return True
+        source = channel.get("source", "")
+        if not isinstance(source, str):
+            return False
+        src = source.strip().lower()
+        return src.startswith("yt:") or "youtube.com" in src or "youtu.be" in src
+
     # ------------------------------------------------------------------
     # Keyboard handler
     # ------------------------------------------------------------------
@@ -394,6 +365,7 @@ class BaseMixin:
         if key.isdigit():
             if len(self.channel_buffer) < 3:
                 self.channel_buffer += key
+            self.ui_mode = "CHANNEL_INPUT"
             self._show_ch_badge(self.channel_buffer)
             if self.buffer_job:
                 self.root.after_cancel(self.buffer_job)
@@ -401,18 +373,24 @@ class BaseMixin:
             return
 
         if key == "Return":
-            if self._browse_num is not None:
-                self._confirm_browse()
-            elif self.channel_buffer:
+            if self.channel_buffer:
                 self._confirm_typed_channel()
+            elif self.ui_mode == "BROWSE" and self._browse_num is not None:
+                self._confirm_browse()
             elif self._epg_row_index > 0:
                 self._epg_activate_row()
+            elif self.current_channel:
+                self.show_epg(user_initiated=True)
             return
 
         if key == "Left":
+            if self.ui_mode == "CHANNEL_INPUT":
+                return
             self._browse_channel_delta(-1)
             return
         if key == "Right":
+            if self.ui_mode == "CHANNEL_INPUT":
+                return
             self._browse_channel_delta(+1)
             return
 
@@ -425,9 +403,11 @@ class BaseMixin:
 
         if key in ("i", "I"):
             if self.epg_window.winfo_viewable():
+                self.ui_mode = "NORMAL"
                 self.hide_epg()
             else:
-                self.show_epg()
+                self.ui_mode = "EPG"
+                self.show_epg(user_initiated=True)
             return
 
         if key in ("m", "M"):
@@ -446,9 +426,22 @@ class BaseMixin:
             return
 
         if key == "Escape":
-            if self._epg_row_index != 0:
+            if self.ui_mode == "CHANNEL_INPUT":
+                self.channel_buffer = ""
+                self.ui_mode = "NORMAL"
+                if self.buffer_job:
+                    self.root.after_cancel(self.buffer_job)
+                    self.buffer_job = None
+                self._badge_win.withdraw()
+            elif self.ui_mode == "BROWSE" and self._browse_num is not None:
+                self._cancel_browse()
+                self.ui_mode = "NORMAL"
+            elif self._epg_row_index != 0:
                 self._epg_row_index = 0
                 self._render_epg_rows()
+            elif self.epg_window.winfo_viewable():
+                self.ui_mode = "NORMAL"
+                self.hide_epg()
             else:
                 self.root.quit()
 
@@ -525,13 +518,17 @@ class BaseMixin:
     def _confirm_typed_channel(self):
         number = self.channel_buffer
         self.channel_buffer = ""
+        self.ui_mode = "NORMAL"
         if self._badge_hide_job:
             self.root.after_cancel(self._badge_hide_job)
         self._badge_win.withdraw()
-        self.hide_epg()
         channel = self.channels.get(number)
         if channel:
-            self.switch_channel(channel)
+            if self.current_channel and channel.get("number") == self.current_channel.get("number"):
+                self.show_epg(user_initiated=True)
+                return
+            self.hide_epg()
+            self.switch_channel(channel, user_initiated=True)
 
     # ------------------------------------------------------------------
     # Browse (left/right arrow channel switch)
@@ -541,9 +538,10 @@ class BaseMixin:
         keys = self._sorted_keys()
         if not keys:
             return
-        current_num = (
-            self.current_channel.get("number") if self.current_channel else None
-        )
+        self.ui_mode = "BROWSE"
+        current_num = self._browse_num
+        if not current_num:
+            current_num = self.current_channel.get("number") if self.current_channel else None
         if current_num and current_num in keys:
             idx = keys.index(current_num)
         else:
@@ -552,8 +550,8 @@ class BaseMixin:
         self._browse_num = keys[new_idx]
         channel = self.channels.get(self._browse_num)
         if channel:
-            self._update_epg(channel)
-        self.show_epg(auto_hide=4000)
+            self._update_epg(channel, browsing=True)
+        self.show_epg(auto_hide=4000, user_initiated=True)
         if self._browse_hide_job:
             self.root.after_cancel(self._browse_hide_job)
         self._browse_hide_job = self.root.after(3500, self._cancel_browse)
@@ -561,13 +559,18 @@ class BaseMixin:
     def _confirm_browse(self):
         number = self._browse_num
         self._browse_num = None
+        self.ui_mode = "NORMAL"
         self.hide_epg()
         channel = self.channels.get(number)
         if channel:
-            self.switch_channel(channel)
+            if self.current_channel and channel.get("number") == self.current_channel.get("number"):
+                self.show_epg(user_initiated=True)
+                return
+            self.switch_channel(channel, user_initiated=True)
 
     def _cancel_browse(self):
         self._browse_num = None
+        self.ui_mode = "NORMAL"
         if self.current_channel:
             self._update_epg(self.current_channel)
             if self.hide_job:
@@ -580,11 +583,7 @@ class BaseMixin:
 
     def _build_epg_items(self, channel):
         items = []
-        source = channel.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        num = channel.get("number", "")
+        is_youtube = self._is_youtube_channel(channel)
 
         if is_youtube:
             current_title = channel.get("_current_title", "Now Playing")
@@ -594,8 +593,10 @@ class BaseMixin:
                 preload_title = self._preload_result[1] or "Next Video"
                 items.append((preload_title, "Up Next", "__preload__"))
 
-            # Show scheduled programme list from cache
-            videos = self.scheduler.get_videos(num)
+            source_key = channel.get("_current_source_key", "")
+            if not source_key:
+                source_key = self.scheduler.resolve_program(channel).get("source_key", "")
+            videos = self.scheduler.get_videos(source_key) if source_key else []
             current_url = channel.get("_current_yt_url", "")
             shown = 0
             for vid in videos:
@@ -611,6 +612,12 @@ class BaseMixin:
                 shown += 1
                 if shown >= 20:
                     break
+
+            if not videos:
+                for block in self.scheduler.get_upcoming_blocks(channel, count=3):
+                    block_title = block.title or "Scheduled Block"
+                    block_time = block.start_dt.strftime("%I:%M %p")
+                    items.append((block_title, block_time, None))
         else:
             for schedule in channel.get("schedule", []):
                 time_str = (
@@ -632,13 +639,14 @@ class BaseMixin:
         channel = self.current_channel
         if not channel:
             return
+        self.ui_mode = "EPG"
         if not self._epg_items:
             self._epg_items = self._build_epg_items(channel)
 
         if not self.epg_window.winfo_viewable():
             self._epg_row_index = 0
             self._render_epg_rows()
-            self.show_epg(auto_hide=EPG_AUTO_HIDE_MS)
+            self.show_epg(auto_hide=EPG_AUTO_HIDE_MS, user_initiated=True)
             return
 
         new_index = self._epg_row_index + delta
@@ -669,6 +677,7 @@ class BaseMixin:
                 title=title,
                 headers=headers,
                 origin_url=origin_url,
+                show_overlay=True,
             )
 
         elif url and url.startswith("http"):
@@ -677,7 +686,7 @@ class BaseMixin:
             request_id = self.channel_request_id
             threading.Thread(
                 target=self._resolve_and_play,
-                args=(channel, url, request_id),
+                args=(channel, url, request_id, True),
                 daemon=True,
             ).start()
 

@@ -3,10 +3,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 CHANNELS_FILE = str(BASE_DIR / "channels.json")
 IMAGES_DIR = str(BASE_DIR / "images")
+SCHEDULES_DIR = str(BASE_DIR / "schedules")
 
 # Persistent video cache – titles, URLs and durations for every channel.
 # This file is written once at startup and refreshed after 24 hours.
 VIDEO_CACHE_FILE = str(BASE_DIR / "video_cache.json")
+STREAM_CACHE_FILE = str(BASE_DIR / "stream_cache.json")
 
 IMG_EXTS = ("*.jpg", "*.jpeg", "*.png", "*.gif", "*.bmp", "*.webp")
 MAIL_INTERVAL_MS = 60 * 60 * 1000

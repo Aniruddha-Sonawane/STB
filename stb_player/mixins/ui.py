@@ -26,14 +26,11 @@ from stb_player.constants import (
 class UiMixin:
     def _show_language_picker(self):
         channel = self.current_channel
-        source = channel.get("source", "") if channel else ""
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
+        is_youtube = self._is_youtube_channel(channel)
         if not is_youtube:
             return
 
-        url = channel.get("_resolved_src") or channel.get("source", "")
+        url = channel.get("_current_yt_url") or channel.get("_resolved_src") or channel.get("source", "")
         if not url:
             return
 
@@ -438,13 +435,20 @@ class UiMixin:
             self._epg_items = self._build_epg_items(channel)
         else:
             items = []
-            for schedule in channel.get("schedule", []):
-                time_str = (
-                    f"{schedule.get('start', '')} - {schedule.get('end', '')}"
-                    if schedule.get("start")
-                    else ""
-                )
-                items.append((schedule.get("title", ""), time_str, None))
+            schedule_ref = channel.get("schedule")
+            if isinstance(schedule_ref, list):
+                for schedule in schedule_ref:
+                    time_str = (
+                        f"{schedule.get('start', '')} - {schedule.get('end', '')}"
+                        if schedule.get("start")
+                        else ""
+                    )
+                    items.append((schedule.get("title", ""), time_str, None))
+            elif self._is_youtube_channel(channel):
+                for block in self.scheduler.get_upcoming_blocks(channel, count=3):
+                    block_title = block.title or channel.get("name", "")
+                    block_time = block.start_dt.strftime("%I:%M %p")
+                    items.append((block_title, block_time, None))
             if not items:
                 items = [(channel.get("name", ""), "", None), ("", "", None)]
             self._epg_items = items
@@ -464,7 +468,9 @@ class UiMixin:
             else:
                 self.epg_progress.coords(self.progress_fill, 0, 2, 0, 8)
 
-    def show_epg(self, auto_hide=EPG_AUTO_HIDE_MS):
+    def show_epg(self, auto_hide=EPG_AUTO_HIDE_MS, user_initiated=False):
+        if not user_initiated and not self.epg_window.winfo_viewable():
+            return
         if self.current_channel:
             self._update_epg(self.current_channel)
 
@@ -488,6 +494,7 @@ class UiMixin:
 
     def hide_epg(self):
         self.epg_window.withdraw()
+        self.ui_mode = "NORMAL"
         if self._browse_num is not None:
             self._browse_num = None
             if self.current_channel:

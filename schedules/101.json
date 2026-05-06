@@ -1,0 +1,28 @@
+{
+  "timezone": "Asia/Kolkata",
+  "days": {
+    "default": [
+      {
+        "start": "00:00",
+        "duration_minutes": 1200,
+        "playlist": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "mode": "sequential",
+        "title": "Music Day"
+      },
+      {
+        "start": "20:00",
+        "duration_minutes": 30,
+        "playlist": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "mode": "daily_rotate",
+        "title": "Music Prime"
+      },
+      {
+        "start": "20:30",
+        "duration_minutes": 210,
+        "playlist": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "mode": "sequential",
+        "title": "Music Night"
+      }
+    ]
+  }
+}

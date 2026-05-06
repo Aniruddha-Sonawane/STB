@@ -1,29 +1,9 @@
 """
-stb_player/mixins/playback.py
-=============================
-Media playback and channel-switching logic.
-
-What changed vs original
-------------------------
-* ``switch_channel`` for YouTube sources now uses the scheduler to
-  determine the clock-scheduled video and seek offset instead of picking
-  a random video every time.  This means:
-    – Same video is always on air at a given wall-clock time.
-    – Tuning to a channel mid-video will seek to the correct position
-      (e.g. a 54-min video started at 1:00 AM; tuning at 1:37 AM will
-      seek to the 37-minute mark).
-* ``_handle_media_end`` advances to the *next clock-scheduled* video
-  instead of picking randomly; this keeps the schedule intact as time
-  progresses.
-* The pre-resolved startup stream is used with its stored seek offset
-  so the very first channel also starts in the right place.
-* ``_yt_list`` is now a list of URL strings extracted from the scheduler
-  video-dict objects; all related helpers remain compatible.
+Playback logic for scheduled and local channels.
 """
 
 import glob
 import os
-import random
 import sys
 import threading
 import time as _t
@@ -60,46 +40,32 @@ class PlaybackMixin:
         return candidates[:limit]
 
     # ------------------------------------------------------------------
-    # Recovery helpers (unchanged)
+    # Recovery helpers
     # ------------------------------------------------------------------
 
     def _recover_youtube_channel(self, channel):
         if channel.get("_recover_inflight"):
             return
-        tries = channel.get("_recover_tries", 0)
-        if tries >= 2:
-            channel["_current_title"] = "Unable to load stream"
-            channel["_recover_inflight"] = False
-            self.show_epg()
-            return
 
-        # Use scheduler to get the next clock-appropriate video
-        num = channel.get("number", "")
-        next_video = self.scheduler.get_next_video(num)
-        if next_video:
-            next_url = next_video["url"]
-        else:
-            candidates = self._youtube_candidates(channel)
-            if not candidates:
-                channel["_current_title"] = "No playable videos"
-                channel["_recover_inflight"] = False
-                self.show_epg()
-                return
-            next_url = random.choice(candidates[: min(10, len(candidates))])
+        tries = int(channel.get("_recover_tries", 0))
+        if tries >= 2:
+            channel["_current_title"] = "Channel unavailable"
+            channel["_recover_inflight"] = False
+            self.show_epg(user_initiated=False)
+            return
 
         channel["_recover_tries"] = tries + 1
         channel["_recover_inflight"] = True
         self.channel_request_id += 1
         request_id = self.channel_request_id
-        channel["_current_title"] = "Loading..."
-        self.show_epg()
+        channel["_current_title"] = "Recovering stream..."
         self.root.after(
             8000,
             lambda ch=channel, rid=request_id: self._recover_timeout(ch, rid),
         )
         threading.Thread(
-            target=self._resolve_and_play,
-            args=(channel, next_url, request_id),
+            target=self._resolve_channel_program,
+            args=(channel, request_id, False),
             daemon=True,
         ).start()
 
@@ -114,7 +80,7 @@ class PlaybackMixin:
         self._show_channel_error(request_id, "Stream request timed out")
 
     # ------------------------------------------------------------------
-    # Position snapshot (for live/file channels; not used for schedule)
+    # Position snapshot (for local/file channels)
     # ------------------------------------------------------------------
 
     def _snapshot(self):
@@ -124,14 +90,10 @@ class PlaybackMixin:
         number = previous.get("number")
         if not number:
             return
-        source = previous.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        # Don't snapshot YouTube channels – they use the clock schedule,
-        # not a manual resume position.
-        if is_youtube:
+
+        if self._is_youtube_channel(previous):
             return
+
         position = self.player.get_time()
         if position < 0:
             position = 0
@@ -142,7 +104,6 @@ class PlaybackMixin:
             state["source"] = previous["_resolved_src"]
 
     def _resume_ms(self, channel) -> int:
-        """Only used for non-YouTube (file/live) channels."""
         state = self.channel_state.get(channel.get("number"))
         if not state:
             return 0
@@ -151,10 +112,24 @@ class PlaybackMixin:
         )
 
     # ------------------------------------------------------------------
-    # Main channel switch
+    # Channel switch
     # ------------------------------------------------------------------
 
-    def switch_channel(self, channel: dict):
+    def switch_channel(
+        self,
+        channel: dict,
+        user_initiated: bool = False,
+        force_restart: bool = False,
+    ):
+        if (
+            not force_restart
+            and self.current_channel
+            and channel.get("number") == self.current_channel.get("number")
+        ):
+            if user_initiated:
+                self.show_epg(user_initiated=True)
+            return
+
         previous_channel = self.current_channel
         self._snapshot()
         self.current_channel = channel
@@ -163,87 +138,27 @@ class PlaybackMixin:
         self._epg_items = []
         request_id = self.channel_request_id
         source = channel.get("source", "")
-
         is_first_channel = not previous_channel
 
-        # ---- YouTube / yt: channels ----
-        if isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        ):
+        if self._is_youtube_channel(channel):
             channel["_recover_inflight"] = False
-
-            # Case 1: preloaded next video is ready (from the preload worker)
-            if self._preload_channel is channel and self._preload_result:
-                stream_url, title, headers, origin_url = self._preload_result
-                self._preload_result = None
-                self._preload_channel = None
-                channel["_current_title"] = title or ""
-                self._play_media_source(
-                    channel,
-                    stream_url,
-                    request_id=request_id,
-                    title=title,
-                    headers=headers,
-                    origin_url=origin_url,
-                )
-                return
-
-            # Case 2: startup pre-resolved stream is available (first launch)
-            if is_first_channel:
-                prepared = channel.pop("_startup_stream", None)
-                seek_ms = channel.pop("_startup_seek_ms", 0)
-                if isinstance(prepared, tuple) and prepared[0]:
-                    src, title, headers, origin_url = (
-                        prepared + (None,) * (4 - len(prepared))
-                    )[:4]
-                    self._play_media_source(
-                        channel,
-                        src,
-                        request_id=request_id,
-                        title=title,
-                        headers=headers,
-                        origin_url=origin_url,
-                        seek_ms=seek_ms,
-                    )
-                    return
-
-            # Case 3: resolve the clock-scheduled video now (background)
-            num = channel.get("number", "")
-            scheduled_video, seek_ms = self.scheduler.get_now_playing(num)
-
-            if scheduled_video:
-                url = scheduled_video["url"]
-                # Use a cached title if we have one
-                title = (
-                    channel.get("_yt_titles", {}).get(url)
-                    or channel.get("_yt_entry_titles", {}).get(url)
-                    or scheduled_video.get("title", "")
-                    or "Loading…"
-                )
-                channel["_current_title"] = title
-                self.show_epg()
-                threading.Thread(
-                    target=self._resolve_and_play_scheduled,
-                    args=(channel, url, request_id, seek_ms),
-                    daemon=True,
-                ).start()
-            else:
-                # No cache yet – fall back to fetching the channel
-                channel["_current_title"] = "Loading…"
-                self.show_epg()
-                threading.Thread(
-                    target=self._load_yt_channel,
-                    args=(channel, source, request_id),
-                    daemon=True,
-                ).start()
+            channel["_current_title"] = "Loading..."
+            if user_initiated:
+                self.show_epg(user_initiated=True)
+            threading.Thread(
+                target=self._resolve_channel_program,
+                args=(channel, request_id, user_initiated),
+                daemon=True,
+            ).start()
             return
 
-        # ---- Local file / folder ----
+        # Local file / folder
         if source and os.path.isdir(source):
             files = []
             for ext in ("*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv"):
                 files.extend(glob.glob(os.path.join(source, ext)))
             if files:
+                files.sort()
                 source = files[0]
 
         if is_first_channel:
@@ -255,206 +170,175 @@ class PlaybackMixin:
             channel,
             source,
             request_id=request_id,
+            show_overlay=user_initiated,
         )
 
     # ------------------------------------------------------------------
-    # Resolve & play (scheduled – includes seek)
+    # Scheduled program resolution
     # ------------------------------------------------------------------
 
-    def _resolve_and_play_scheduled(self, channel, url, request_id, seek_ms: int = 0):
-        """
-        Background worker: resolve *url* to a direct stream and play it,
-        seeking to *seek_ms* so the viewer joins mid-video at the correct
-        clock position.
-        """
-        stream_url, title, headers = self.resolve_youtube_stream(url)
-        if stream_url:
-            if title:
-                channel.setdefault("_yt_titles", {})[url] = title
-            self.root.after(
-                0,
-                lambda: self._play_media_source(
-                    channel,
-                    stream_url,
-                    request_id=request_id,
-                    title=title,
-                    headers=headers,
-                    origin_url=url,
-                    seek_ms=seek_ms,
-                ),
-            )
-        else:
-            channel.setdefault("_yt_failed_urls", set()).add(url)
-            # Fall back: try any available video
-            self.root.after(
-                0,
-                lambda: self._show_channel_error(
-                    request_id, "Could not resolve scheduled stream"
-                ),
-            )
+    def _refresh_source_metadata(self, channel, source_key: str) -> bool:
+        fetch_source = source_key
+        if source_key.startswith("legacy:"):
+            fetch_source = str(channel.get("source", "") or "").strip()
+        if not fetch_source:
+            return False
 
-    def _resolve_and_play(self, channel, url, request_id):
-        """Original resolver (no forced seek) – used for user-selected EPG items."""
-        stream_url, title, headers = self.resolve_youtube_stream(url)
-        if stream_url:
-            if title:
-                channel.setdefault("_yt_titles", {})[url] = title
-            self.root.after(
-                0,
-                lambda: self._play_media_source(
-                    channel,
-                    stream_url,
-                    request_id=request_id,
-                    title=title,
-                    headers=headers,
-                    origin_url=url,
-                ),
-            )
-        else:
-            channel["_recover_inflight"] = False
-            if url.startswith("http"):
-                channel.setdefault("_yt_failed_urls", set()).add(url)
-            self.root.after(
-                0,
-                lambda: self._show_channel_error(
-                    request_id,
-                    "Could not resolve stream for selected video",
-                ),
-            )
+        yt_videos, title_map = self.fetch_youtube_videos(fetch_source)
+        if not yt_videos:
+            return False
 
-    # ------------------------------------------------------------------
-    # Lazy YouTube channel load (fallback when cache is empty)
-    # ------------------------------------------------------------------
+        self.scheduler.update_metadata(source_key, channel.get("name", ""), yt_videos)
+        if title_map:
+            channel.setdefault("_yt_entry_titles", {}).update(title_map)
+        return True
 
-    def _load_yt_channel(self, channel, source, request_id):
+    def _resolve_channel_program(self, channel, request_id, show_overlay: bool):
         try:
-            num = channel.get("number", "")
-            if not channel.get("_yt_list"):
-                yt_videos, title_map = self.fetch_youtube_videos(source)
-                if yt_videos:
-                    self.scheduler.update(num, channel.get("name", ""), yt_videos)
-                    channel["_yt_list"] = [v["url"] for v in yt_videos]
-                    channel["_yt_entry_titles"] = title_map
-            yt_list = channel.get("_yt_list", [])
-            if not yt_list:
-                self.root.after(
-                    0,
-                    lambda: self._show_channel_error(
-                        request_id,
-                        f"No videos found for channel {channel.get('number', '')}",
-                    ),
-                )
+            if request_id != self.channel_request_id or channel is not self.current_channel:
                 return
+            program = self.scheduler.resolve_program(channel)
+            source_key = str(program.get("source_key") or "")
+            videos = list(program.get("videos") or [])
 
-            # Now that we have videos, use the scheduler
-            scheduled_video, seek_ms = self.scheduler.get_now_playing(num)
-            if scheduled_video:
-                url = scheduled_video["url"]
-            else:
-                candidates = self._youtube_candidates(channel, include_current=True)
-                if not candidates:
-                    self.root.after(
-                        0,
-                        lambda: self._show_channel_error(
-                            request_id, "No playable videos"
-                        ),
-                    )
-                    return
-                url = random.choice(candidates[:10])
+            # Load missing metadata lazily for this tuned source only.
+            if source_key and not videos:
+                self._refresh_source_metadata(channel, source_key)
+                program = self.scheduler.resolve_program(channel)
+                source_key = str(program.get("source_key") or "")
+                videos = list(program.get("videos") or [])
+            elif source_key and self.scheduler.metadata_is_stale(source_key):
+                # Background refresh - playback still continues with cached data.
+                threading.Thread(
+                    target=self._refresh_source_metadata,
+                    args=(channel, source_key),
+                    daemon=True,
+                ).start()
+
+            video = program.get("video")
+            seek_ms = int(program.get("seek_ms") or 0)
+            if video is None and videos:
+                video = videos[0]
                 seek_ms = 0
 
-            stream_url, title, headers = self.resolve_youtube_stream(url)
-            if not stream_url:
-                channel.setdefault("_yt_failed_urls", set()).add(url)
+            if source_key:
+                channel["_current_source_key"] = source_key
+            if videos:
+                channel["_yt_list"] = [item.get("url", "") for item in videos if item.get("url")]
+                title_map = {item.get("url", ""): item.get("title", "") for item in videos if item.get("url")}
+                channel.setdefault("_yt_entry_titles", {}).update(
+                    {url: title for url, title in title_map.items() if title}
+                )
+
+            if not video:
                 self.root.after(
                     0,
                     lambda: self._show_channel_error(
                         request_id,
-                        f"Cannot resolve stream for {channel.get('name', '')}",
+                        f"No playable scheduled video for channel {channel.get('number', '')}",
                     ),
                 )
                 return
 
-            if title:
-                channel.setdefault("_yt_titles", {})[url] = title
+            url = video.get("url", "")
+            if not url:
+                self.root.after(
+                    0,
+                    lambda: self._show_channel_error(
+                        request_id, "Scheduled entry has no video URL"
+                    ),
+                )
+                return
 
-            self.root.after(
-                0,
-                lambda: self._play_media_source(
-                    channel,
-                    stream_url,
-                    request_id=request_id,
-                    title=title,
-                    headers=headers,
-                    origin_url=url,
-                    seek_ms=seek_ms,
-                ),
+            title = (
+                channel.get("_yt_titles", {}).get(url)
+                or channel.get("_yt_entry_titles", {}).get(url)
+                or video.get("title", "")
+                or "Loading..."
+            )
+            channel["_current_title"] = title
+
+            if request_id != self.channel_request_id or channel is not self.current_channel:
+                return
+            self._resolve_and_play_scheduled(
+                channel,
+                url,
+                request_id=request_id,
+                seek_ms=seek_ms,
+                show_overlay=show_overlay,
             )
         except Exception as exc:
             message = str(exc)
             self.root.after(0, lambda: self._show_channel_error(request_id, message))
 
     # ------------------------------------------------------------------
-    # Preload worker (pre-resolves the next scheduled video)
+    # Resolve & play helpers
     # ------------------------------------------------------------------
 
-    def _preload_next(self, channel):
-        source = channel.get("source", "")
-        if not (isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )):
+    def _resolve_and_play_scheduled(
+        self,
+        channel,
+        url,
+        request_id,
+        seek_ms: int = 0,
+        show_overlay: bool = False,
+    ):
+        stream_url, title, headers = self.resolve_youtube_stream(url)
+        if stream_url:
+            if title:
+                channel.setdefault("_yt_titles", {})[url] = title
+            self.root.after(
+                0,
+                lambda: self._play_media_source(
+                    channel,
+                    stream_url,
+                    request_id=request_id,
+                    title=title,
+                    headers=headers,
+                    origin_url=url,
+                    seek_ms=seek_ms,
+                    show_overlay=show_overlay,
+                ),
+            )
             return
-        if getattr(self, "_preload_worker_channel", None) is channel:
+
+        channel.setdefault("_yt_failed_urls", set()).add(url)
+        self.scheduler.invalidate_stream(url)
+        self.root.after(
+            0,
+            lambda: self._show_channel_error(request_id, "Could not resolve scheduled stream"),
+        )
+
+    def _resolve_and_play(self, channel, url, request_id, show_overlay: bool = True):
+        stream_url, title, headers = self.resolve_youtube_stream(url)
+        if stream_url:
+            if title:
+                channel.setdefault("_yt_titles", {})[url] = title
+            self.root.after(
+                0,
+                lambda: self._play_media_source(
+                    channel,
+                    stream_url,
+                    request_id=request_id,
+                    title=title,
+                    headers=headers,
+                    origin_url=url,
+                    show_overlay=show_overlay,
+                ),
+            )
             return
-        self._preload_worker_channel = channel
 
-        def _work():
-            try:
-                num = channel.get("number", "")
-                next_video = self.scheduler.get_next_video(num)
-                if not next_video:
-                    # Fall back to candidates if scheduler has no data
-                    candidates = self._youtube_candidates(channel)
-                    if not candidates:
-                        return
-                    random.shuffle(candidates)
-                    for url in candidates[:10]:
-                        stream_url, title, headers = self.resolve_youtube_stream(url)
-                        if stream_url:
-                            if title:
-                                channel.setdefault("_yt_titles", {})[url] = title
-                            self._preload_result = (stream_url, title, headers, url)
-                            self._preload_channel = channel
-                            self.root.after(0, self._on_preload_ready)
-                            return
-                        channel.setdefault("_yt_failed_urls", set()).add(url)
-                    return
-
-                url = next_video["url"]
-                stream_url, title, headers = self.resolve_youtube_stream(url)
-                if stream_url:
-                    if title:
-                        channel.setdefault("_yt_titles", {})[url] = title
-                    self._preload_result = (stream_url, title, headers, url)
-                    self._preload_channel = channel
-                    self.root.after(0, self._on_preload_ready)
-                else:
-                    channel.setdefault("_yt_failed_urls", set()).add(url)
-            finally:
-                if getattr(self, "_preload_worker_channel", None) is channel:
-                    self._preload_worker_channel = None
-
-        threading.Thread(target=_work, daemon=True).start()
-
-    def _on_preload_ready(self):
-        if self._preload_result and self._preload_channel is self.current_channel:
-            title = self._preload_result[1] or ""
-            if self._epg_items and len(self._epg_items) > 1:
-                if self._epg_items[1][2] != "__preload__":
-                    self._epg_items.insert(1, (title, "Up Next", "__preload__"))
-                else:
-                    self._epg_items[1] = (title, "Up Next", "__preload__")
-            self._render_epg_rows()
+        channel["_recover_inflight"] = False
+        if url.startswith("http"):
+            channel.setdefault("_yt_failed_urls", set()).add(url)
+        self.scheduler.invalidate_stream(url)
+        self.root.after(
+            0,
+            lambda: self._show_channel_error(
+                request_id,
+                "Could not resolve stream for selected video",
+            ),
+        )
 
     # ------------------------------------------------------------------
     # Core playback
@@ -480,6 +364,7 @@ class PlaybackMixin:
         headers=None,
         origin_url=None,
         seek_ms: int = 0,
+        show_overlay: bool = False,
     ):
         if request_id is not None and request_id != self.channel_request_id:
             return
@@ -494,42 +379,36 @@ class PlaybackMixin:
 
         self._epg_items = self._build_epg_items(channel)
         self._epg_row_index = 0
+        if show_overlay:
+            self.show_epg(user_initiated=True)
+        else:
+            self.show_epg(user_initiated=False)
 
-        self.show_epg()
         self._suppress_end_event = True
         self.root.after(300, lambda: setattr(self, "_suppress_end_event", False))
 
-        if source:
-            media = self.instance.media_new(source)
-            self._apply_headers(media, headers)
-            self.player.set_media(media)
-            self._set_video_window()
-            self.player.audio_set_volume(self._volume)
-            self.player.play()
-
-            # For file/live channels use the snapshot resume position;
-            # for YouTube channels use the clock-schedule seek offset.
-            effective_seek = seek_ms
-            if effective_seek == 0:
-                src_is_youtube = isinstance(
-                    channel.get("source", ""), str
-                ) and (
-                    channel["source"].startswith("yt:")
-                    or "youtube.com" in channel["source"]
-                )
-                if not src_is_youtube:
-                    effective_seek = self._resume_ms(channel)
-
-            if effective_seek > 0:
-                self._seek_when_ready(effective_seek, request_id)
-
-            self._preload_next(channel)
-            self._start_tick(request_id)
-        else:
+        if not source:
             self._show_channel_error(
                 request_id,
                 f"Channel {channel.get('number', '')} has no playable source",
             )
+            return
+
+        media = self.instance.media_new(source)
+        self._apply_headers(media, headers)
+        self.player.set_media(media)
+        self._set_video_window()
+        self.player.audio_set_volume(self._volume)
+        self.player.play()
+
+        effective_seek = seek_ms
+        if effective_seek == 0 and not self._is_youtube_channel(channel):
+            effective_seek = self._resume_ms(channel)
+
+        if effective_seek > 0:
+            self._seek_when_ready(effective_seek, request_id)
+
+        self._start_tick(request_id)
 
     # ------------------------------------------------------------------
     # Seek helper
@@ -561,23 +440,20 @@ class PlaybackMixin:
         channel = self.current_channel
         if not channel:
             return
-        source = channel.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        if is_youtube:
+        if self._is_youtube_channel(channel):
             if channel.get("_recover_tries", 0) >= 2:
                 channel["_current_title"] = "Channel unavailable"
                 channel["_recover_inflight"] = False
-                self.show_epg()
+                self.show_epg(user_initiated=False)
                 return
             self._recover_youtube_channel(channel)
             return
+
         channel["_current_title"] = "Playback unavailable"
-        self.show_epg()
+        self.show_epg(user_initiated=False)
 
     # ------------------------------------------------------------------
-    # Progress tick (EPG bar update + preload trigger)
+    # Progress tick
     # ------------------------------------------------------------------
 
     def _start_tick(self, request_id):
@@ -591,55 +467,15 @@ class PlaybackMixin:
         channel = self.current_channel
         if not channel:
             return
-        source = channel.get("source", "")
-        is_youtube = isinstance(source, str) and (
-            source.startswith("yt:") or "youtube.com" in source
-        )
-        if not is_youtube:
+        if not self._is_youtube_channel(channel):
             return
-
-        request_id = self.channel_request_id
-
-        # Use preloaded stream if ready
-        if self._preload_result and self._preload_channel is channel:
-            stream_url, title, headers, origin_url = self._preload_result
-            self._preload_result = None
-            self._preload_channel = None
-            channel["_current_title"] = title or channel.get("_current_title", "")
-            self._play_media_source(
-                channel,
-                stream_url,
-                request_id=request_id,
-                title=title,
-                headers=headers,
-                origin_url=origin_url,
-                # No seek on a fresh video-end transition
-                seek_ms=0,
-            )
-            return
-
-        # Use the scheduler to determine what should be on air now.
-        # Since the current video just ended, the clock has advanced, so
-        # get_now_playing will naturally return the next video in the loop.
-        num = channel.get("number", "")
-        next_video, seek_ms = self.scheduler.get_now_playing(num)
-        if next_video:
-            url = next_video["url"]
-        else:
-            candidates = self._youtube_candidates(channel)
-            if not candidates:
-                self._show_channel_error(request_id, "No playable videos in this channel")
-                return
-            url = random.choice(candidates[: min(10, len(candidates))])
-            seek_ms = 0
 
         self.channel_request_id += 1
-        next_request_id = self.channel_request_id
-        channel["_current_title"] = "Loading…"
-        self.show_epg()
+        request_id = self.channel_request_id
+        channel["_current_title"] = "Loading..."
         threading.Thread(
-            target=self._resolve_and_play_scheduled,
-            args=(channel, url, next_request_id, seek_ms),
+            target=self._resolve_channel_program,
+            args=(channel, request_id, False),
             daemon=True,
         ).start()
 
@@ -656,13 +492,6 @@ class PlaybackMixin:
             if duration > 0 and position >= 0:
                 fill_w = max(2, min(219, int(220 * position / duration)))
                 self.epg_progress.coords(self.progress_fill, 0, 2, fill_w, 8)
-                remaining = duration - position
-                if (
-                    remaining < 15_000
-                    and self.current_channel
-                    and self._preload_channel is not self.current_channel
-                ):
-                    self._preload_next(self.current_channel)
         except Exception:
             pass
         self._epg_tick = self.root.after(500, lambda: self._do_tick(request_id))

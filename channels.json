@@ -1,26 +1,26 @@
 {
   "100": {
-  "name": "Tata Play",
-  "source": "https://www.youtube.com/@TataPlayOfficial/videos"
-},
- "101": {
-  "name": "Music",
-  "source": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
- },
- "102": {
-  "name": "News",
-  "source": "https://www.youtube.com/watch?v=jNQXAC9IVRw"
- },
+    "name": "Tata Play",
+    "schedule": "schedules/100.json"
+  },
+  "101": {
+    "name": "Music",
+    "schedule": "schedules/101.json"
+  },
+  "102": {
+    "name": "News",
+    "schedule": "schedules/102.json"
+  },
   "103": {
     "name": "Movie Channel",
     "source": "videos/movies/"
   },
   "104": {
     "name": "YouTube Random",
-    "source": "yt:UCBR8-60-B28hp2BmDPdntcQ"
+    "schedule": "schedules/104.json"
   },
   "108": {
     "name": "Disney India",
-    "source": "https://www.youtube.com/@disneyindia/videos"
+    "schedule": "schedules/108.json"
   }
 }
