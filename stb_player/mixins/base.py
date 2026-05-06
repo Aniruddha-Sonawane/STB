@@ -349,6 +349,11 @@ class BaseMixin:
         schedule_ref = channel.get("schedule")
         if isinstance(schedule_ref, str) and schedule_ref.strip():
             return True
+        if isinstance(schedule_ref, dict):
+            if schedule_ref.get("days") or schedule_ref.get("weekdays") or schedule_ref.get("weekends"):
+                return True
+        if isinstance(schedule_ref, list) and schedule_ref:
+            return True
         source = channel.get("source", "")
         if not isinstance(source, str):
             return False
@@ -487,14 +492,7 @@ class BaseMixin:
 
     def _show_ch_badge(self, number_str: str):
         ch = self.channels.get(number_str)
-        if ch:
-            genre = ch.get("genre", "")
-            if genre:
-                name = f"{ch.get('name', '')} ({genre})"
-            else:
-                name = ch.get("name", "")
-        else:
-            name = ""
+        name = ch.get("name", "") if ch else ""
 
         self._badge_ch_num.config(text=number_str)
         self._badge_ch_name.config(text=name)
@@ -593,38 +591,31 @@ class BaseMixin:
         is_youtube = self._is_youtube_channel(channel)
 
         if is_youtube:
-            current_title = channel.get("_current_title", "Now Playing")
-            items.append((current_title, "Now Playing", None))
+            program = self.scheduler.resolve_program(channel)
+            current_block = program.get("block")
+            current_title = channel.get("_current_title", "") or (
+                current_block.title if current_block else "Scheduled Program"
+            )
+            current_time = (
+                _fmt_time_range(current_block.start_dt, current_block.end_dt)
+                if current_block
+                else ""
+            )
+            items.append((current_title, current_time, None))
 
-            if self._preload_channel is channel and self._preload_result:
-                preload_title = self._preload_result[1] or "Next Video"
-                items.append((preload_title, "Up Next", "__preload__"))
-
-            source_key = channel.get("_current_source_key", "")
-            if not source_key:
-                source_key = self.scheduler.resolve_program(channel).get("source_key", "")
-            videos = self.scheduler.get_videos(source_key) if source_key else []
-            current_url = channel.get("_current_yt_url", "")
-            shown = 0
-            for vid in videos:
-                url = vid.get("url", "")
-                if url == current_url:
+            upcoming = self.scheduler.get_upcoming_blocks(channel, count=6)
+            for block in upcoming:
+                if (
+                    current_block
+                    and block.start_dt == current_block.start_dt
+                    and block.playlist == current_block.playlist
+                ):
                     continue
-                title = vid.get("title") or channel.get("_yt_entry_titles", {}).get(url, "")
-                if not title:
-                    title = url.split("v=")[-1][:11] if "v=" in url else "Video"
-                dur = vid.get("duration", 0)
-                time_str = _fmt_duration(dur) if dur else ""
-                items.append((title, time_str, url))
-                shown += 1
-                if shown >= 20:
+                block_title = block.title or "Scheduled Block"
+                block_time = _fmt_time_range(block.start_dt, block.end_dt)
+                items.append((block_title, block_time, None))
+                if len(items) >= 20:
                     break
-
-            if not videos:
-                for block in self.scheduler.get_upcoming_blocks(channel, count=3):
-                    block_title = block.title or "Scheduled Block"
-                    block_time = block.start_dt.strftime("%I:%M %p")
-                    items.append((block_title, block_time, None))
         else:
             for schedule in channel.get("schedule", []):
                 time_str = (
@@ -714,12 +705,7 @@ class BaseMixin:
 # Utility
 # ------------------------------------------------------------------
 
-def _fmt_duration(seconds: int) -> str:
-    """Format a duration in seconds as H:MM or MM:SS."""
-    if seconds <= 0:
-        return ""
-    h, rem = divmod(seconds, 3600)
-    m, s = divmod(rem, 60)
-    if h:
-        return f"{h}:{m:02d}:{s:02d}"
-    return f"{m}:{s:02d}"
+def _fmt_time_range(start_dt, end_dt) -> str:
+    start = start_dt.strftime("%I:%M %p").lstrip("0")
+    end = end_dt.strftime("%I:%M %p").lstrip("0")
+    return f"{start} - {end}"

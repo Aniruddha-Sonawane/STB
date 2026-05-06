@@ -238,8 +238,16 @@ class ChannelScheduler:
 
     def get_schedule(self, channel: dict) -> dict | None:
         schedule_ref = channel.get("schedule")
+        if isinstance(schedule_ref, dict):
+            return self._normalise_schedule_obj(
+                schedule_ref,
+                default_timezone=str(channel.get("timezone") or "Asia/Kolkata"),
+            )
         if isinstance(schedule_ref, list):
-            return {"timezone": channel.get("timezone", "Asia/Kolkata"), "days": {"default": schedule_ref}}
+            return {
+                "timezone": channel.get("timezone", "Asia/Kolkata"),
+                "days": {"default": schedule_ref},
+            }
 
         if not isinstance(schedule_ref, str) or not schedule_ref.strip():
             return None
@@ -249,7 +257,14 @@ class ChannelScheduler:
         if cached is not None:
             return cached
 
-        schedule_path = Path(cache_key)
+        selector = ""
+        schedule_file = cache_key
+        if "#" in cache_key:
+            schedule_file, selector = cache_key.split("#", 1)
+            schedule_file = schedule_file.strip()
+            selector = selector.strip()
+
+        schedule_path = Path(schedule_file)
         if not schedule_path.is_absolute():
             schedule_path = self.project_root / schedule_path
 
@@ -258,15 +273,97 @@ class ChannelScheduler:
             self._schedule_cache[cache_key] = None
             return None
 
-        if "days" not in loaded or not isinstance(loaded["days"], dict):
-            self._schedule_cache[cache_key] = None
+        selected_obj = loaded
+        default_tz = str(channel.get("timezone") or loaded.get("timezone") or "Asia/Kolkata")
+        channel_num = str(channel.get("number", "")).strip()
+
+        if selector:
+            selected_obj = self._select_schedule_obj(loaded, selector)
+        else:
+            # If file is a map of channel schedules, auto-pick by channel number.
+            selected_obj = self._select_schedule_obj(loaded, channel_num) or loaded
+
+        normalised = self._normalise_schedule_obj(
+            selected_obj,
+            default_timezone=default_tz,
+        )
+        self._schedule_cache[cache_key] = normalised
+        return normalised
+
+    def _select_schedule_obj(self, loaded: dict, key: str) -> dict | None:
+        if not isinstance(loaded, dict) or not key:
             return None
 
-        if "timezone" not in loaded:
-            loaded["timezone"] = channel.get("timezone", "Asia/Kolkata")
+        channels_map = loaded.get("channels")
+        if isinstance(channels_map, dict):
+            picked = channels_map.get(key)
+            if isinstance(picked, dict):
+                return picked
 
-        self._schedule_cache[cache_key] = loaded
-        return loaded
+        picked = loaded.get(key)
+        if isinstance(picked, dict):
+            return picked
+        return None
+
+    def _normalise_schedule_obj(
+        self,
+        schedule_obj: dict,
+        default_timezone: str = "Asia/Kolkata",
+    ) -> dict | None:
+        if not isinstance(schedule_obj, dict):
+            return None
+
+        timezone = str(schedule_obj.get("timezone") or default_timezone)
+
+        days = schedule_obj.get("days")
+        if isinstance(days, dict):
+            out = {"timezone": timezone, "days": days}
+            unscheduled = schedule_obj.get("unscheduled")
+            if unscheduled is not None:
+                out["unscheduled"] = unscheduled
+            return out
+
+        # Compact inline form:
+        # {
+        #   "timezone": "Asia/Kolkata",
+        #   "weekdays": [...],
+        #   "weekends": [...]
+        # }
+        weekdays = schedule_obj.get("weekdays")
+        weekends = schedule_obj.get("weekends")
+        default_rows = schedule_obj.get("default")
+
+        if isinstance(default_rows, list):
+            out = {"timezone": timezone, "days": {"default": default_rows}}
+            unscheduled = schedule_obj.get("unscheduled")
+            if unscheduled is not None:
+                out["unscheduled"] = unscheduled
+            return out
+
+        if not isinstance(weekdays, list) and not isinstance(weekends, list):
+            return None
+
+        weekday_rows = weekdays if isinstance(weekdays, list) else []
+        weekend_rows = weekends if isinstance(weekends, list) else []
+        if not weekend_rows and weekday_rows:
+            weekend_rows = weekday_rows
+        if not weekday_rows and weekend_rows:
+            weekday_rows = weekend_rows
+
+        days_map = {
+            "monday": weekday_rows,
+            "tuesday": weekday_rows,
+            "wednesday": weekday_rows,
+            "thursday": weekday_rows,
+            "friday": weekday_rows,
+            "saturday": weekend_rows,
+            "sunday": weekend_rows,
+        }
+        out = {"timezone": timezone, "days": days_map}
+        unscheduled = schedule_obj.get("unscheduled")
+        if unscheduled is not None:
+            out["unscheduled"] = unscheduled
+        return out
 
     # ------------------------------------------------------------------
     # Program resolution
@@ -519,6 +616,83 @@ class ChannelScheduler:
 
         return blocks
 
+    def _unscheduled_config_for_day(self, schedule: dict, day_key: str) -> dict | None:
+        unscheduled = schedule.get("unscheduled")
+        if unscheduled is None:
+            return None
+
+        if isinstance(unscheduled, str):
+            playlist = unscheduled.strip()
+            if not playlist:
+                return None
+            return {"playlist": playlist, "mode": "sequential", "title": "Unscheduled Feed"}
+
+        if not isinstance(unscheduled, dict):
+            return None
+
+        # Flat form:
+        # "unscheduled": {"playlist": "...", "mode": "...", "title": "..."}
+        if "playlist" in unscheduled:
+            playlist = str(unscheduled.get("playlist") or "").strip()
+            if not playlist:
+                return None
+            return {
+                "playlist": playlist,
+                "mode": str(unscheduled.get("mode") or "sequential").strip().lower(),
+                "title": str(unscheduled.get("title") or "Unscheduled Feed").strip(),
+            }
+
+        # Day-group form:
+        # "unscheduled": {"weekdays": {...}, "weekends": {...}, "default": {...}}
+        is_weekend = day_key in ("saturday", "sunday")
+        raw = unscheduled.get("weekends" if is_weekend else "weekdays")
+        if raw is None:
+            raw = unscheduled.get("default")
+        if raw is None:
+            return None
+
+        if isinstance(raw, str):
+            playlist = raw.strip()
+            if not playlist:
+                return None
+            return {"playlist": playlist, "mode": "sequential", "title": "Unscheduled Feed"}
+
+        if isinstance(raw, dict):
+            playlist = str(raw.get("playlist") or "").strip()
+            if not playlist:
+                return None
+            return {
+                "playlist": playlist,
+                "mode": str(raw.get("mode") or "sequential").strip().lower(),
+                "title": str(raw.get("title") or "Unscheduled Feed").strip(),
+            }
+        return None
+
+    def _build_unscheduled_block(self, schedule: dict, now: datetime) -> ScheduleBlock | None:
+        day_key = _DAY_NAMES[now.weekday()]
+        cfg = self._unscheduled_config_for_day(schedule, day_key)
+        if not cfg:
+            return None
+
+        tz_name = str(schedule.get("timezone") or "Asia/Kolkata")
+        tz = self._tzinfo(tz_name)
+        start_dt = datetime.combine(now.date(), time(0, 0))
+        if tz is not None:
+            start_dt = start_dt.replace(tzinfo=tz)
+        end_dt = start_dt + timedelta(days=1)
+
+        return ScheduleBlock(
+            title=str(cfg.get("title") or "Unscheduled Feed"),
+            playlist=str(cfg.get("playlist") or ""),
+            mode=str(cfg.get("mode") or "sequential"),
+            start="00:00",
+            duration_minutes=24 * 60,
+            start_dt=start_dt,
+            end_dt=end_dt,
+            day_key=day_key,
+            block_index=9999,
+        )
+
     def _resolve_block(self, schedule: dict, when_dt: datetime | None = None) -> ScheduleBlock | None:
         now = self._to_schedule_tz(schedule, when_dt)
         if not now:
@@ -534,11 +708,17 @@ class ChannelScheduler:
             if block.start_dt <= now < block.end_dt:
                 return block
 
+        # If nothing is explicitly scheduled for this time, use the
+        # unscheduled fallback feed when configured.
+        unscheduled_block = self._build_unscheduled_block(schedule, now)
+        if unscheduled_block:
+            return unscheduled_block
+
         today_blocks = self._materialize_day(schedule, today)
         if not today_blocks:
             return None
 
-        # If current time is outside explicit ranges, snap to nearest previous block.
+        # Legacy fallback behavior if unscheduled is not configured.
         past_blocks = [block for block in today_blocks if block.start_dt <= now]
         if past_blocks:
             return past_blocks[-1]

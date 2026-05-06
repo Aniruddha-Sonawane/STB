@@ -1,11 +1,19 @@
 {
+  "100": {
+    "name": "TataSky",
+    "epg_no": "100",
+    "genre": "DTH Services",
+    "quality": "HD",
+    "fta_pay": "FTA",
+    "schedule": "channel_schedules.json#100"
+  },
   "114": {
     "name": "DD National",
     "epg_no": "114",
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#114"
   },
   "115": {
     "name": "Star Plus HD",
@@ -13,7 +21,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#115"
   },
   "117": {
     "name": "Star Plus",
@@ -21,7 +29,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#117"
   },
   "121": {
     "name": "Star Bharat HD",
@@ -29,7 +37,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#121"
   },
   "122": {
     "name": "Star Bharat",
@@ -37,7 +45,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#122"
   },
   "128": {
     "name": "SET HD",
@@ -45,7 +53,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#128"
   },
   "130": {
     "name": "SET",
@@ -53,7 +61,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#130"
   },
   "132": {
     "name": "Sony SAB HD",
@@ -61,7 +69,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#132"
   },
   "134": {
     "name": "Sony SAB",
@@ -69,7 +77,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#134"
   },
   "137": {
     "name": "&TV HD",
@@ -77,7 +85,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#137"
   },
   "139": {
     "name": "&TV",
@@ -85,7 +93,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#139"
   },
   "141": {
     "name": "Zee TV HD",
@@ -93,7 +101,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#141"
   },
   "143": {
     "name": "Zee TV",
@@ -101,7 +109,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#143"
   },
   "147": {
     "name": "Colors HD",
@@ -109,7 +117,7 @@
     "genre": "Hindi Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#147"
   },
   "149": {
     "name": "Colors",
@@ -117,7 +125,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#149"
   },
   "153": {
     "name": "UTV Bindass",
@@ -125,7 +133,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#153"
   },
   "155": {
     "name": "Investigation Discovery",
@@ -133,7 +141,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#155"
   },
   "156": {
     "name": "Naaptol",
@@ -141,7 +149,7 @@
     "genre": "Shopping",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#156"
   },
   "158": {
     "name": "Ezmall",
@@ -149,7 +157,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#158"
   },
   "171": {
     "name": "Star Utsav",
@@ -157,7 +165,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#171"
   },
   "172": {
     "name": "Zee Anmol",
@@ -165,7 +173,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#172"
   },
   "173": {
     "name": "Colors Rishtey",
@@ -173,7 +181,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#173"
   },
   "174": {
     "name": "Sony Pal",
@@ -181,7 +189,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#174"
   },
   "175": {
     "name": "The Q",
@@ -189,7 +197,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#175"
   },
   "176": {
     "name": "Big Magic",
@@ -197,7 +205,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#176"
   },
   "177": {
     "name": "Dangal",
@@ -205,7 +213,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#177"
   },
   "178": {
     "name": "Anjan TV",
@@ -213,7 +221,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#178"
   },
   "180": {
     "name": "DD Retro",
@@ -221,7 +229,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#180"
   },
   "181": {
     "name": "Shemaroo TV",
@@ -229,7 +237,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#181"
   },
   "182": {
     "name": "Ishara",
@@ -237,7 +245,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#182"
   },
   "198": {
     "name": "DD Kisan",
@@ -245,7 +253,7 @@
     "genre": "Hindi Entertainment",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#198"
   },
   "202": {
     "name": "Star World HD",
@@ -253,7 +261,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#202"
   },
   "203": {
     "name": "Star World",
@@ -261,7 +269,7 @@
     "genre": "English Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#203"
   },
   "206": {
     "name": "Star World Premiere HD",
@@ -269,7 +277,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#206"
   },
   "210": {
     "name": "Zee Café HD",
@@ -277,7 +285,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#210"
   },
   "211": {
     "name": "Zee Café",
@@ -285,7 +293,7 @@
     "genre": "English Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#211"
   },
   "214": {
     "name": "Colors Infinity HD",
@@ -293,7 +301,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#214"
   },
   "215": {
     "name": "Colors Infinity",
@@ -301,7 +309,7 @@
     "genre": "English Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#215"
   },
   "218": {
     "name": "Comedy Central HD",
@@ -309,7 +317,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#218"
   },
   "219": {
     "name": "Comedy Central",
@@ -317,7 +325,7 @@
     "genre": "English Entertainment",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#219"
   },
   "221": {
     "name": "Disney International HD",
@@ -325,7 +333,7 @@
     "genre": "English Entertainment",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#221"
   },
   "308": {
     "name": "Star Gold HD",
@@ -333,7 +341,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#308"
   },
   "310": {
     "name": "Star Gold",
@@ -341,7 +349,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#310"
   },
   "312": {
     "name": "Sony Max HD",
@@ -349,7 +357,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#312"
   },
   "314": {
     "name": "Sony Max",
@@ -357,7 +365,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#314"
   },
   "317": {
     "name": "Star Gold 2",
@@ -365,7 +373,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#317"
   },
   "319": {
     "name": "Zee Cinema HD",
@@ -373,7 +381,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#319"
   },
   "321": {
     "name": "Zee Cinema",
@@ -381,7 +389,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#321"
   },
   "322": {
     "name": "UTV HD",
@@ -389,7 +397,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#322"
   },
   "323": {
     "name": "UTV Movies",
@@ -397,7 +405,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#323"
   },
   "325": {
     "name": "UTV Action",
@@ -405,7 +413,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#325"
   },
   "327": {
     "name": "Zee Bollywood",
@@ -413,7 +421,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#327"
   },
   "328": {
     "name": "Zee Classic",
@@ -421,7 +429,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#328"
   },
   "331": {
     "name": "&pictures HD",
@@ -429,7 +437,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#331"
   },
   "332": {
     "name": "&pictures",
@@ -437,7 +445,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#332"
   },
   "344": {
     "name": "Colors Cineplex HD",
@@ -445,7 +453,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#344"
   },
   "345": {
     "name": "Colors Cineplex",
@@ -453,7 +461,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#345"
   },
   "346": {
     "name": "B4U Kadak",
@@ -461,7 +469,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#346"
   },
   "349": {
     "name": "Zee Action",
@@ -469,7 +477,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#349"
   },
   "351": {
     "name": "Sony Wah",
@@ -477,7 +485,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#351"
   },
   "352": {
     "name": "B4U Movies",
@@ -485,7 +493,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#352"
   },
   "355": {
     "name": "Sony Max 2",
@@ -493,7 +501,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#355"
   },
   "356": {
     "name": "Star Gold Select HD",
@@ -501,7 +509,7 @@
     "genre": "Hindi Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#356"
   },
   "357": {
     "name": "Star Gold Select",
@@ -509,7 +517,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#357"
   },
   "358": {
     "name": "Cinema TV India",
@@ -517,7 +525,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#358"
   },
   "365": {
     "name": "Wow Cinema One",
@@ -525,7 +533,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#365"
   },
   "366": {
     "name": "Enterr10 Movies",
@@ -533,7 +541,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#366"
   },
   "367": {
     "name": "Bflix Movies",
@@ -541,7 +549,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#367"
   },
   "369": {
     "name": "Star Utsav Movies",
@@ -549,7 +557,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#369"
   },
   "371": {
     "name": "Zee Anmol Cinema",
@@ -557,7 +565,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#371"
   },
   "375": {
     "name": "Dhinchaak",
@@ -565,7 +573,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#375"
   },
   "376": {
     "name": "Manoranjan TV",
@@ -573,7 +581,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#376"
   },
   "377": {
     "name": "Manoranjan Grand",
@@ -581,7 +589,7 @@
     "genre": "Hindi Movies",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#377"
   },
   "402": {
     "name": "Star Movies HD",
@@ -589,7 +597,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#402"
   },
   "403": {
     "name": "Star Movies",
@@ -597,7 +605,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#403"
   },
   "406": {
     "name": "Sony Pix HD",
@@ -605,7 +613,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#406"
   },
   "407": {
     "name": "Sony Pix",
@@ -613,7 +621,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#407"
   },
   "412": {
     "name": "&flix HD",
@@ -621,7 +629,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#412"
   },
   "413": {
     "name": "&flix",
@@ -629,7 +637,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#413"
   },
   "418": {
     "name": "Star Movies Select HD",
@@ -637,7 +645,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#418"
   },
   "420": {
     "name": "Movies Now HD",
@@ -645,7 +653,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#420"
   },
   "421": {
     "name": "Movies Now",
@@ -653,7 +661,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#421"
   },
   "423": {
     "name": "MN+ HD",
@@ -661,7 +669,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#423"
   },
   "425": {
     "name": "MNX HD",
@@ -669,7 +677,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#425"
   },
   "426": {
     "name": "MNX",
@@ -677,7 +685,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#426"
   },
   "429": {
     "name": "Romedy Now",
@@ -685,7 +693,7 @@
     "genre": "English Movies",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#429"
   },
   "431": {
     "name": "&prive HD",
@@ -693,7 +701,7 @@
     "genre": "English Movies",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#431"
   },
   "453": {
     "name": "DD Sports",
@@ -701,7 +709,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#453"
   },
   "454": {
     "name": "Star Sports 1 HD",
@@ -709,7 +717,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#454"
   },
   "455": {
     "name": "Star Sports 1",
@@ -717,7 +725,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#455"
   },
   "456": {
     "name": "Star Sports 2 HD",
@@ -725,7 +733,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#456"
   },
   "457": {
     "name": "Star Sports 2",
@@ -733,7 +741,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#457"
   },
   "458": {
     "name": "Star Sports 3",
@@ -741,7 +749,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#458"
   },
   "459": {
     "name": "Star Sports 1 Hindi HD",
@@ -749,7 +757,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#459"
   },
   "460": {
     "name": "Star Sports 1 Hindi",
@@ -757,7 +765,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#460"
   },
   "463": {
     "name": "Star Sports Select 1 HD",
@@ -765,7 +773,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#463"
   },
   "464": {
     "name": "Star Sports Select 1",
@@ -773,7 +781,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#464"
   },
   "465": {
     "name": "Star Sports Select 2 HD",
@@ -781,7 +789,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#465"
   },
   "466": {
     "name": "Star Sports Select 2",
@@ -789,7 +797,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#466"
   },
   "470": {
     "name": "Sony Ten 1 HD",
@@ -797,7 +805,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#470"
   },
   "471": {
     "name": "Sony Ten 1",
@@ -805,7 +813,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#471"
   },
   "473": {
     "name": "Sony Ten 2 HD",
@@ -813,7 +821,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#473"
   },
   "474": {
     "name": "Sony Ten 2",
@@ -821,7 +829,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#474"
   },
   "475": {
     "name": "Sony Ten 3 HD",
@@ -829,7 +837,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#475"
   },
   "476": {
     "name": "Sony Ten 3",
@@ -837,7 +845,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#476"
   },
   "483": {
     "name": "Sony Six HD",
@@ -845,7 +853,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#483"
   },
   "484": {
     "name": "Sony Six",
@@ -853,7 +861,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#484"
   },
   "495": {
     "name": "Eurosport HD",
@@ -861,7 +869,7 @@
     "genre": "Sports",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#495"
   },
   "496": {
     "name": "Eurosport",
@@ -869,7 +877,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#496"
   },
   "497": {
     "name": "Star Sports First",
@@ -877,7 +885,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#497"
   },
   "498": {
     "name": "1Sports",
@@ -885,7 +893,7 @@
     "genre": "Sports",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#498"
   },
   "501": {
     "name": "DD News HD",
@@ -893,7 +901,7 @@
     "genre": "Hindi News",
     "quality": "HD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#501"
   },
   "502": {
     "name": "DD News",
@@ -901,7 +909,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#502"
   },
   "504": {
     "name": "ABP News",
@@ -909,7 +917,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#504"
   },
   "506": {
     "name": "NDTV India",
@@ -917,7 +925,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#506"
   },
   "508": {
     "name": "Aaj Tak HD",
@@ -925,7 +933,7 @@
     "genre": "Hindi News",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#508"
   },
   "509": {
     "name": "Aaj Tak",
@@ -933,7 +941,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#509"
   },
   "511": {
     "name": "Zee News",
@@ -941,7 +949,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#511"
   },
   "514": {
     "name": "India TV",
@@ -949,7 +957,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#514"
   },
   "516": {
     "name": "News 24",
@@ -957,7 +965,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#516"
   },
   "519": {
     "name": "News18 India",
@@ -965,7 +973,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#519"
   },
   "520": {
     "name": "Zee Hindustan",
@@ -973,7 +981,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#520"
   },
   "521": {
     "name": "R Bharat",
@@ -981,7 +989,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#521"
   },
   "522": {
     "name": "India News",
@@ -989,7 +997,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#522"
   },
   "523": {
     "name": "News Nation",
@@ -997,7 +1005,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#523"
   },
   "524": {
     "name": "TV9 Bharatvarsh",
@@ -1005,7 +1013,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#524"
   },
   "525": {
     "name": "Good News Today",
@@ -1013,7 +1021,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#525"
   },
   "527": {
     "name": "Total TV",
@@ -1021,7 +1029,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#527"
   },
   "528": {
     "name": "Times Now Navbharat HD",
@@ -1029,7 +1037,7 @@
     "genre": "Hindi News",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#528"
   },
   "529": {
     "name": "Times Now Navbharat",
@@ -1037,7 +1045,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#529"
   },
   "530": {
     "name": "News India 24x7",
@@ -1045,7 +1053,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#530"
   },
   "534": {
     "name": "Sudarshan News",
@@ -1053,7 +1061,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#534"
   },
   "542": {
     "name": "APN News",
@@ -1061,7 +1069,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#542"
   },
   "551": {
     "name": "India Voice",
@@ -1069,7 +1077,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#551"
   },
   "552": {
     "name": "News 11 Bharat",
@@ -1077,7 +1085,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#552"
   },
   "553": {
     "name": "News 1 India",
@@ -1085,7 +1093,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#553"
   },
   "557": {
     "name": "Hindi Khabar",
@@ -1093,7 +1101,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#557"
   },
   "559": {
     "name": "Bharat Samachar",
@@ -1101,7 +1109,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#559"
   },
   "563": {
     "name": "Khabrain Abhi Tak",
@@ -1109,7 +1117,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#563"
   },
   "566": {
     "name": "Samay",
@@ -1117,7 +1125,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#566"
   },
   "567": {
     "name": "Network 10",
@@ -1125,7 +1133,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#567"
   },
   "568": {
     "name": "Jantantra TV",
@@ -1133,7 +1141,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#568"
   },
   "569": {
     "name": "Prime News",
@@ -1141,7 +1149,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#569"
   },
   "590": {
     "name": "Zee Business",
@@ -1149,7 +1157,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#590"
   },
   "592": {
     "name": "CNBC Awaaz",
@@ -1157,7 +1165,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#592"
   },
   "594": {
     "name": "ET Now Swadesh",
@@ -1165,7 +1173,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#594"
   },
   "598": {
     "name": "Sansad TV",
@@ -1173,7 +1181,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#598"
   },
   "599": {
     "name": "Sansad TV - Rajya Sabha",
@@ -1181,7 +1189,7 @@
     "genre": "Hindi News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#599"
   },
   "601": {
     "name": "NDTV 24x7",
@@ -1189,7 +1197,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#601"
   },
   "603": {
     "name": "Times Now World (HD)",
@@ -1197,7 +1205,7 @@
     "genre": "English News",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#603"
   },
   "604": {
     "name": "Times Now",
@@ -1205,7 +1213,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#604"
   },
   "606": {
     "name": "India Today",
@@ -1213,7 +1221,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#606"
   },
   "608": {
     "name": "CNN News18",
@@ -1221,7 +1229,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#608"
   },
   "610": {
     "name": "NewsX",
@@ -1229,7 +1237,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#610"
   },
   "612": {
     "name": "Mirror Now",
@@ -1237,7 +1245,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#612"
   },
   "613": {
     "name": "WION",
@@ -1245,7 +1253,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#613"
   },
   "616": {
     "name": "Republic TV",
@@ -1253,7 +1261,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#616"
   },
   "617": {
     "name": "India Ahead",
@@ -1261,7 +1269,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#617"
   },
   "622": {
     "name": "DD India",
@@ -1269,7 +1277,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#622"
   },
   "623": {
     "name": "NDTV Profit Prime",
@@ -1277,7 +1285,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#623"
   },
   "625": {
     "name": "CNBC TV18 Prime HD",
@@ -1285,7 +1293,7 @@
     "genre": "English News",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#625"
   },
   "626": {
     "name": "CNBC TV18",
@@ -1293,7 +1301,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#626"
   },
   "627": {
     "name": "ET Now",
@@ -1301,7 +1309,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#627"
   },
   "631": {
     "name": "CNN",
@@ -1309,7 +1317,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#631"
   },
   "633": {
     "name": "BBC World",
@@ -1317,7 +1325,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#633"
   },
   "637": {
     "name": "Al Jazeera",
@@ -1325,7 +1333,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#637"
   },
   "638": {
     "name": "Channel News Asia",
@@ -1333,7 +1341,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#638"
   },
   "639": {
     "name": "France 24",
@@ -1341,7 +1349,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#639"
   },
   "640": {
     "name": "TV5 Monde Asie",
@@ -1349,7 +1357,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#640"
   },
   "641": {
     "name": "DW",
@@ -1357,7 +1365,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#641"
   },
   "642": {
     "name": "Australia TV",
@@ -1365,7 +1373,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#642"
   },
   "643": {
     "name": "Russia Today",
@@ -1373,7 +1381,7 @@
     "genre": "English News",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#643"
   },
   "652": {
     "name": "Hungama TV",
@@ -1381,7 +1389,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#652"
   },
   "655": {
     "name": "Marvel HQ",
@@ -1389,7 +1397,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#655"
   },
   "658": {
     "name": "Disney",
@@ -1397,7 +1405,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#658"
   },
   "662": {
     "name": "Nick HD+",
@@ -1405,7 +1413,7 @@
     "genre": "Kids",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#662"
   },
   "663": {
     "name": "Nick",
@@ -1413,7 +1421,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#663"
   },
   "666": {
     "name": "Cartoon Network HD+",
@@ -1421,7 +1429,7 @@
     "genre": "Kids",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#666"
   },
   "667": {
     "name": "Cartoon Network",
@@ -1429,7 +1437,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#667"
   },
   "670": {
     "name": "Pogo",
@@ -1437,7 +1445,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#670"
   },
   "672": {
     "name": "Discovery Kids",
@@ -1445,7 +1453,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#672"
   },
   "674": {
     "name": "Sonic Nickelodeon",
@@ -1453,7 +1461,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#674"
   },
   "676": {
     "name": "Sony Yay",
@@ -1461,7 +1469,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#676"
   },
   "678": {
     "name": "Gubbare",
@@ -1469,7 +1477,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#678"
   },
   "680": {
     "name": "ETV Bal Bharat",
@@ -1477,7 +1485,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#680"
   },
   "684": {
     "name": "Baby TV HD",
@@ -1485,7 +1493,7 @@
     "genre": "Kids",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#684"
   },
   "685": {
     "name": "Nick Jr",
@@ -1493,7 +1501,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#685"
   },
   "686": {
     "name": "Disney Junior",
@@ -1501,7 +1509,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#686"
   },
   "687": {
     "name": "CBeeBies",
@@ -1509,7 +1517,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#687"
   },
   "692": {
     "name": "Kushi TV",
@@ -1517,7 +1525,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#692"
   },
   "693": {
     "name": "Chutti TV",
@@ -1525,7 +1533,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#693"
   },
   "694": {
     "name": "Chintu TV",
@@ -1533,7 +1541,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#694"
   },
   "695": {
     "name": "Kochu TV",
@@ -1541,7 +1549,7 @@
     "genre": "Kids",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#695"
   },
   "708": {
     "name": "National Geographic HD",
@@ -1549,7 +1557,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#708"
   },
   "709": {
     "name": "National Geographic",
@@ -1557,7 +1565,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#709"
   },
   "711": {
     "name": "Nat Geo Wild HD",
@@ -1565,7 +1573,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#711"
   },
   "712": {
     "name": "Nat Geo Wild",
@@ -1573,7 +1581,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#712"
   },
   "713": {
     "name": "Discovery HD World",
@@ -1581,7 +1589,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#713"
   },
   "714": {
     "name": "Discovery Channel",
@@ -1589,7 +1597,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#714"
   },
   "716": {
     "name": "Animal Planet HD World",
@@ -1597,7 +1605,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#716"
   },
   "717": {
     "name": "Animal Planet",
@@ -1605,7 +1613,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#717"
   },
   "719": {
     "name": "Discovery Science",
@@ -1613,7 +1621,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#719"
   },
   "720": {
     "name": "History TV18 HD",
@@ -1621,7 +1629,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#720"
   },
   "721": {
     "name": "History TV18",
@@ -1629,7 +1637,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#721"
   },
   "724": {
     "name": "Sony BBC Earth HD",
@@ -1637,7 +1645,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#724"
   },
   "725": {
     "name": "Sony BBC Earth",
@@ -1645,7 +1653,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#725"
   },
   "735": {
     "name": "Epic",
@@ -1653,7 +1661,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#735"
   },
   "753": {
     "name": "Fox Life HD",
@@ -1661,7 +1669,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#753"
   },
   "754": {
     "name": "Fox Life",
@@ -1669,7 +1677,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#754"
   },
   "755": {
     "name": "DD Gyan Darshan",
@@ -1677,7 +1685,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#755"
   },
   "756": {
     "name": "Swayam Prabha",
@@ -1685,7 +1693,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#756"
   },
   "759": {
     "name": "TLC HD",
@@ -1693,7 +1701,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#759"
   },
   "760": {
     "name": "TLC",
@@ -1701,7 +1709,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#760"
   },
   "762": {
     "name": "Good Times",
@@ -1709,7 +1717,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#762"
   },
   "764": {
     "name": "Discovery Turbo",
@@ -1717,7 +1725,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#764"
   },
   "765": {
     "name": "TravelXP HD",
@@ -1725,7 +1733,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#765"
   },
   "766": {
     "name": "TravelXP",
@@ -1733,7 +1741,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#766"
   },
   "768": {
     "name": "Food Food",
@@ -1741,7 +1749,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#768"
   },
   "769": {
     "name": "Zee Zest HD",
@@ -1749,7 +1757,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#769"
   },
   "770": {
     "name": "Zee Zest",
@@ -1757,7 +1765,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#770"
   },
   "772": {
     "name": "Fashion TV",
@@ -1765,7 +1773,7 @@
     "genre": "Knowledge & Lifestyle",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#772"
   },
   "806": {
     "name": "MTV HD+",
@@ -1773,7 +1781,7 @@
     "genre": "Music",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#806"
   },
   "807": {
     "name": "MTV",
@@ -1781,7 +1789,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#807"
   },
   "809": {
     "name": "9XM",
@@ -1789,7 +1797,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#809"
   },
   "811": {
     "name": "Zoom",
@@ -1797,7 +1805,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#811"
   },
   "813": {
     "name": "E24",
@@ -1805,7 +1813,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#813"
   },
   "820": {
     "name": "MTV Beats HD",
@@ -1813,7 +1821,7 @@
     "genre": "Music",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#820"
   },
   "821": {
     "name": "MTV Beats",
@@ -1821,7 +1829,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#821"
   },
   "822": {
     "name": "B4U Music",
@@ -1829,7 +1837,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#822"
   },
   "825": {
     "name": "Mastiii",
@@ -1837,7 +1845,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#825"
   },
   "826": {
     "name": "Zing",
@@ -1845,7 +1853,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#826"
   },
   "830": {
     "name": "9X Jalwa",
@@ -1853,7 +1861,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#830"
   },
   "833": {
     "name": "insync",
@@ -1861,7 +1869,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#833"
   },
   "835": {
     "name": "Showbox",
@@ -1869,7 +1877,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#835"
   },
   "855": {
     "name": "Vh1 HD",
@@ -1877,7 +1885,7 @@
     "genre": "Music",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#855"
   },
   "856": {
     "name": "Vh1",
@@ -1885,7 +1893,7 @@
     "genre": "Music",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#856"
   },
   "1055": {
     "name": "Aastha",
@@ -1893,7 +1901,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1055"
   },
   "1057": {
     "name": "Sanskar",
@@ -1901,7 +1909,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1057"
   },
   "1058": {
     "name": "Disha TV",
@@ -1909,7 +1917,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1058"
   },
   "1059": {
     "name": "Paras TV",
@@ -1917,7 +1925,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1059"
   },
   "1061": {
     "name": "MH One Shraddha",
@@ -1925,7 +1933,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1061"
   },
   "1063": {
     "name": "Sadhna TV",
@@ -1933,7 +1941,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1063"
   },
   "1064": {
     "name": "Sharnam TV",
@@ -1941,7 +1949,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1064"
   },
   "1065": {
     "name": "Peace of Mind",
@@ -1949,7 +1957,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1065"
   },
   "1066": {
     "name": "Jinvani Channel",
@@ -1957,7 +1965,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1066"
   },
   "1067": {
     "name": "Arihant",
@@ -1965,7 +1973,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1067"
   },
   "1068": {
     "name": "Ishwar TV",
@@ -1973,7 +1981,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1068"
   },
   "1073": {
     "name": "Satsang TV",
@@ -1981,7 +1989,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1073"
   },
   "1074": {
     "name": "Shubh TV",
@@ -1989,7 +1997,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1074"
   },
   "1077": {
     "name": "Aastha Bhajan",
@@ -1997,7 +2005,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1077"
   },
   "1078": {
     "name": "Vedic",
@@ -2005,7 +2013,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1078"
   },
   "1082": {
     "name": "Subharti TV",
@@ -2013,7 +2021,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1082"
   },
   "1083": {
     "name": "Divya",
@@ -2021,7 +2029,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1083"
   },
   "1084": {
     "name": "Awakening",
@@ -2029,7 +2037,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1084"
   },
   "1085": {
     "name": "Santwani",
@@ -2037,7 +2045,7 @@
     "genre": "Spiritual",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1085"
   },
   "1102": {
     "name": "Zee Ganga",
@@ -2045,7 +2053,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1102"
   },
   "1103": {
     "name": "Dishum",
@@ -2053,7 +2061,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1103"
   },
   "1113": {
     "name": "Zee Biskope",
@@ -2061,7 +2069,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1113"
   },
   "1114": {
     "name": "Filamchi Bhojpuri",
@@ -2069,7 +2077,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1114"
   },
   "1118": {
     "name": "Oscar Movies Bhojpuri",
@@ -2077,7 +2085,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1118"
   },
   "1119": {
     "name": "Bhojpuri Cinema",
@@ -2085,7 +2093,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1119"
   },
   "1120": {
     "name": "B4U Bhojpuri",
@@ -2093,7 +2101,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1120"
   },
   "1122": {
     "name": "PASAND",
@@ -2101,7 +2109,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1122"
   },
   "1125": {
     "name": "News18 Uttar Pradesh",
@@ -2109,7 +2117,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1125"
   },
   "1126": {
     "name": "Zee Uttar Pradesh",
@@ -2117,7 +2125,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1126"
   },
   "1127": {
     "name": "ABP Ganga",
@@ -2125,7 +2133,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1127"
   },
   "1129": {
     "name": "News18 Bihar Jharkhand",
@@ -2133,7 +2141,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1129"
   },
   "1130": {
     "name": "Zee Bihar Jharkhand",
@@ -2141,7 +2149,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1130"
   },
   "1136": {
     "name": "India News UP UK",
@@ -2149,7 +2157,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1136"
   },
   "1137": {
     "name": "News State UP",
@@ -2157,7 +2165,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1137"
   },
   "1138": {
     "name": "Sadhna Plus News",
@@ -2165,7 +2173,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1138"
   },
   "1139": {
     "name": "Kashish News",
@@ -2173,7 +2181,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1139"
   },
   "1152": {
     "name": "DD Bharati",
@@ -2181,7 +2189,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1152"
   },
   "1153": {
     "name": "DD Uttar Pradesh",
@@ -2189,7 +2197,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1153"
   },
   "1154": {
     "name": "DD Bihar",
@@ -2197,7 +2205,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1154"
   },
   "1155": {
     "name": "News18 Madhya Pradesh",
@@ -2205,7 +2213,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1155"
   },
   "1156": {
     "name": "Zee Madhya Pradesh",
@@ -2213,7 +2221,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1156"
   },
   "1161": {
     "name": "IBC 24",
@@ -2221,7 +2229,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1161"
   },
   "1162": {
     "name": "Bansal News",
@@ -2229,7 +2237,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1162"
   },
   "1163": {
     "name": "INH 24X7",
@@ -2237,7 +2245,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1163"
   },
   "1164": {
     "name": "India News MP CG",
@@ -2245,7 +2253,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1164"
   },
   "1165": {
     "name": "News State MP CG",
@@ -2253,7 +2261,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1165"
   },
   "1166": {
     "name": "Swaraj Express SMBC",
@@ -2261,7 +2269,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1166"
   },
   "1168": {
     "name": "Sadhna News MP CG",
@@ -2269,7 +2277,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1168"
   },
   "1169": {
     "name": "News 24 MP CG",
@@ -2277,7 +2285,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1169"
   },
   "1170": {
     "name": "Anaadi TV",
@@ -2285,7 +2293,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1170"
   },
   "1175": {
     "name": "DD Madhya Pradesh",
@@ -2293,7 +2301,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1175"
   },
   "1176": {
     "name": "News18 Rajasthan",
@@ -2301,7 +2309,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1176"
   },
   "1177": {
     "name": "Zee Rajasthan News",
@@ -2309,7 +2317,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1177"
   },
   "1182": {
     "name": "First India Rajasthan",
@@ -2317,7 +2325,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1182"
   },
   "1183": {
     "name": "India News Rajasthan",
@@ -2325,7 +2333,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1183"
   },
   "1184": {
     "name": "Patrika TV Rajasthan",
@@ -2333,7 +2341,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1184"
   },
   "1185": {
     "name": "Jan TV",
@@ -2341,7 +2349,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1185"
   },
   "1186": {
     "name": "A1 TV",
@@ -2349,7 +2357,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1186"
   },
   "1190": {
     "name": "DD Rajasthan",
@@ -2357,7 +2365,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1190"
   },
   "1191": {
     "name": "News18 Urdu",
@@ -2365,7 +2373,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1191"
   },
   "1192": {
     "name": "Zee Salaam",
@@ -2373,7 +2381,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1192"
   },
   "1193": {
     "name": "Channel Win",
@@ -2381,7 +2389,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1193"
   },
   "1194": {
     "name": "Gulistan News",
@@ -2389,7 +2397,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1194"
   },
   "1199": {
     "name": "DD Urdu",
@@ -2397,7 +2405,7 @@
     "genre": "Hindi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1199"
   },
   "1201": {
     "name": "Colors Marathi HD",
@@ -2405,7 +2413,7 @@
     "genre": "Marathi Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1201"
   },
   "1202": {
     "name": "Colors Marathi",
@@ -2413,7 +2421,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1202"
   },
   "1203": {
     "name": "Zee Marathi HD",
@@ -2421,7 +2429,7 @@
     "genre": "Marathi Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1203"
   },
   "1204": {
     "name": "Zee Marathi",
@@ -2429,7 +2437,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1204"
   },
   "1207": {
     "name": "Star Pravah HD",
@@ -2437,7 +2445,7 @@
     "genre": "Marathi Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1207"
   },
   "1208": {
     "name": "Star Pravah",
@@ -2445,7 +2453,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1208"
   },
   "1211": {
     "name": "Zee Yuva",
@@ -2453,7 +2461,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1211"
   },
   "1213": {
     "name": "Sony Marathi",
@@ -2461,7 +2469,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1213"
   },
   "1217": {
     "name": "Sun Marathi",
@@ -2469,7 +2477,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1217"
   },
   "1225": {
     "name": "Zee Talkies HD",
@@ -2477,7 +2485,7 @@
     "genre": "Marathi Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1225"
   },
   "1226": {
     "name": "Zee Talkies",
@@ -2485,7 +2493,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1226"
   },
   "1229": {
     "name": "Fakt Marathi",
@@ -2493,7 +2501,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1229"
   },
   "1230": {
     "name": "Shemaroo Marathi Bana",
@@ -2501,7 +2509,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1230"
   },
   "1255": {
     "name": "ABP Majha",
@@ -2509,7 +2517,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1255"
   },
   "1257": {
     "name": "News18 Lokmat",
@@ -2517,7 +2525,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1257"
   },
   "1259": {
     "name": "Zee 24 Taas",
@@ -2525,7 +2533,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1259"
   },
   "1261": {
     "name": "Saam TV",
@@ -2533,7 +2541,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1261"
   },
   "1262": {
     "name": "Jai Maharashtra",
@@ -2541,7 +2549,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1262"
   },
   "1263": {
     "name": "TV9 Marathi",
@@ -2549,7 +2557,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1263"
   },
   "1265": {
     "name": "Lokshahi",
@@ -2557,7 +2565,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1265"
   },
   "1274": {
     "name": "DD Sahyadri",
@@ -2565,7 +2573,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1274"
   },
   "1276": {
     "name": "9X Jhakaas",
@@ -2573,7 +2581,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1276"
   },
   "1277": {
     "name": "Sangeet Marathi",
@@ -2581,7 +2589,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1277"
   },
   "1278": {
     "name": "Zee Vajwa",
@@ -2589,7 +2597,7 @@
     "genre": "Marathi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1278"
   },
   "1302": {
     "name": "Colors Bangla HD",
@@ -2597,7 +2605,7 @@
     "genre": "Bengali Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1302"
   },
   "1303": {
     "name": "Colors Bangla",
@@ -2605,7 +2613,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1303"
   },
   "1306": {
     "name": "Zee Bangla HD",
@@ -2613,7 +2621,7 @@
     "genre": "Bengali Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1306"
   },
   "1307": {
     "name": "Zee Bangla",
@@ -2621,7 +2629,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1307"
   },
   "1309": {
     "name": "Star Jalsha HD",
@@ -2629,7 +2637,7 @@
     "genre": "Bengali Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1309"
   },
   "1310": {
     "name": "Star Jalsha",
@@ -2637,7 +2645,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1310"
   },
   "1312": {
     "name": "Sony Aath",
@@ -2645,7 +2653,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1312"
   },
   "1317": {
     "name": "Sun Bangla",
@@ -2653,7 +2661,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1317"
   },
   "1320": {
     "name": "Aakaash Aath",
@@ -2661,7 +2669,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1320"
   },
   "1321": {
     "name": "Ruposhi Bangla",
@@ -2669,7 +2677,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1321"
   },
   "1322": {
     "name": "Enterr10 Bangla",
@@ -2677,7 +2685,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1322"
   },
   "1326": {
     "name": "Jalsha Movies HD",
@@ -2685,7 +2693,7 @@
     "genre": "Bengali Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1326"
   },
   "1327": {
     "name": "Jalsha Movies",
@@ -2693,7 +2701,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1327"
   },
   "1329": {
     "name": "Zee Bangla Cinema",
@@ -2701,7 +2709,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1329"
   },
   "1331": {
     "name": "Colors Bangla Cinema",
@@ -2709,7 +2717,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1331"
   },
   "1341": {
     "name": "Khushboo Bangla",
@@ -2717,7 +2725,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1341"
   },
   "1350": {
     "name": "Star Sports 1 Bangla",
@@ -2725,7 +2733,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1350"
   },
   "1360": {
     "name": "ABP Ananda",
@@ -2733,7 +2741,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1360"
   },
   "1362": {
     "name": "Zee 24 Ghanta",
@@ -2741,7 +2749,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1362"
   },
   "1363": {
     "name": "Kolkata TV",
@@ -2749,7 +2757,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1363"
   },
   "1365": {
     "name": "News18 Bangla",
@@ -2757,7 +2765,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1365"
   },
   "1366": {
     "name": "TV9 Bangla",
@@ -2765,7 +2773,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1366"
   },
   "1367": {
     "name": "Republic Bangla",
@@ -2773,7 +2781,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1367"
   },
   "1368": {
     "name": "News Time Bangla",
@@ -2781,7 +2789,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1368"
   },
   "1369": {
     "name": "CTVN AKD Plus",
@@ -2789,7 +2797,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1369"
   },
   "1370": {
     "name": "Calcutta News",
@@ -2797,7 +2805,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1370"
   },
   "1379": {
     "name": "DD Bangla",
@@ -2805,7 +2813,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1379"
   },
   "1380": {
     "name": "Sangeet Bangla",
@@ -2813,7 +2821,7 @@
     "genre": "Bengali Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1380"
   },
   "1403": {
     "name": "Zee Telugu HD",
@@ -2821,7 +2829,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1403"
   },
   "1404": {
     "name": "Zee Telugu",
@@ -2829,7 +2837,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1404"
   },
   "1405": {
     "name": "Gemini TV HD",
@@ -2837,7 +2845,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1405"
   },
   "1406": {
     "name": "Gemini TV",
@@ -2845,7 +2853,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1406"
   },
   "1408": {
     "name": "Star Maa HD",
@@ -2853,7 +2861,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1408"
   },
   "1409": {
     "name": "Star Maa",
@@ -2861,7 +2869,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1409"
   },
   "1411": {
     "name": "ETV HD",
@@ -2869,7 +2877,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1411"
   },
   "1412": {
     "name": "ETV Telugu",
@@ -2877,7 +2885,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1412"
   },
   "1415": {
     "name": "Gemini Life",
@@ -2885,7 +2893,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1415"
   },
   "1417": {
     "name": "ETV Plus",
@@ -2893,7 +2901,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1417"
   },
   "1419": {
     "name": "Telugu Naaptol",
@@ -2901,7 +2909,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1419"
   },
   "1422": {
     "name": "Vissa TV",
@@ -2909,7 +2917,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1422"
   },
   "1423": {
     "name": "Studio Yuva",
@@ -2917,7 +2925,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1423"
   },
   "1430": {
     "name": "Gemini Movies HD",
@@ -2925,7 +2933,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1430"
   },
   "1431": {
     "name": "Gemini Movies",
@@ -2933,7 +2941,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1431"
   },
   "1432": {
     "name": "Star Maa Movies HD",
@@ -2941,7 +2949,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1432"
   },
   "1433": {
     "name": "Star Maa Movies",
@@ -2949,7 +2957,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1433"
   },
   "1435": {
     "name": "Star Maa Gold",
@@ -2957,7 +2965,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1435"
   },
   "1437": {
     "name": "Zee Cinemalu HD",
@@ -2965,7 +2973,7 @@
     "genre": "Telugu Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1437"
   },
   "1438": {
     "name": "Zee Cinemalu",
@@ -2973,7 +2981,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1438"
   },
   "1440": {
     "name": "ETV Cinema",
@@ -2981,7 +2989,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1440"
   },
   "1442": {
     "name": "Gemini Comedy",
@@ -2989,7 +2997,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1442"
   },
   "1446": {
     "name": "Star Sports 1 Telugu",
@@ -2997,7 +3005,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1446"
   },
   "1451": {
     "name": "ETV Life",
@@ -3005,7 +3013,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1451"
   },
   "1453": {
     "name": "ETV Abhiruchi",
@@ -3013,7 +3021,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1453"
   },
   "1456": {
     "name": "Sakshi TV",
@@ -3021,7 +3029,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1456"
   },
   "1457": {
     "name": "ETV Andhra Pradesh",
@@ -3029,7 +3037,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1457"
   },
   "1458": {
     "name": "TV5 News",
@@ -3037,7 +3045,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1458"
   },
   "1459": {
     "name": "TV9 Telugu",
@@ -3045,7 +3053,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1459"
   },
   "1460": {
     "name": "NTV Telugu",
@@ -3053,7 +3061,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1460"
   },
   "1461": {
     "name": "ABN Andhra Jyothy",
@@ -3061,7 +3069,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1461"
   },
   "1462": {
     "name": "T News",
@@ -3069,7 +3077,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1462"
   },
   "1463": {
     "name": "V6 News",
@@ -3077,7 +3085,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1463"
   },
   "1464": {
     "name": "ETV Telangana",
@@ -3085,7 +3093,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1464"
   },
   "1465": {
     "name": "HM TV",
@@ -3093,7 +3101,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1465"
   },
   "1466": {
     "name": "Raj News Telugu",
@@ -3101,7 +3109,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1466"
   },
   "1467": {
     "name": "10 TV",
@@ -3109,7 +3117,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1467"
   },
   "1470": {
     "name": "4TV News",
@@ -3117,7 +3125,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1470"
   },
   "1479": {
     "name": "Vidya",
@@ -3125,7 +3133,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1479"
   },
   "1480": {
     "name": "Nipuna",
@@ -3133,7 +3141,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1480"
   },
   "1481": {
     "name": "DD Saptagiri",
@@ -3141,7 +3149,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1481"
   },
   "1482": {
     "name": "DD Yadagiri",
@@ -3149,7 +3157,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1482"
   },
   "1484": {
     "name": "Gemini Music",
@@ -3157,7 +3165,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1484"
   },
   "1486": {
     "name": "Star Maa Music",
@@ -3165,7 +3173,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1486"
   },
   "1487": {
     "name": "Raj Musix Telugu",
@@ -3173,7 +3181,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1487"
   },
   "1490": {
     "name": "Bhakti TV",
@@ -3181,7 +3189,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1490"
   },
   "1491": {
     "name": "Subhavaartha TV",
@@ -3189,7 +3197,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1491"
   },
   "1492": {
     "name": "Aradana TV",
@@ -3197,7 +3205,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1492"
   },
   "1493": {
     "name": "Swara Sagar",
@@ -3205,7 +3213,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1493"
   },
   "1494": {
     "name": "Hindu Dharmam",
@@ -3213,7 +3221,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1494"
   },
   "1499": {
     "name": "SVBC",
@@ -3221,7 +3229,7 @@
     "genre": "Telugu Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1499"
   },
   "1503": {
     "name": "Sun TV HD",
@@ -3229,7 +3237,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1503"
   },
   "1504": {
     "name": "Sun TV",
@@ -3237,7 +3245,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1504"
   },
   "1506": {
     "name": "Sun Life",
@@ -3245,7 +3253,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1506"
   },
   "1507": {
     "name": "Star Vijay HD",
@@ -3253,7 +3261,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1507"
   },
   "1508": {
     "name": "Star Vijay",
@@ -3261,7 +3269,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1508"
   },
   "1510": {
     "name": "Zee Tamil HD",
@@ -3269,7 +3277,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1510"
   },
   "1511": {
     "name": "Zee Tamil",
@@ -3277,7 +3285,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1511"
   },
   "1513": {
     "name": "Vijay Super",
@@ -3285,7 +3293,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1513"
   },
   "1514": {
     "name": "Colors Tamil HD",
@@ -3293,7 +3301,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1514"
   },
   "1515": {
     "name": "Colors Tamil",
@@ -3301,7 +3309,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1515"
   },
   "1517": {
     "name": "Jaya TV HD",
@@ -3309,7 +3317,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1517"
   },
   "1518": {
     "name": "Kalaignar TV",
@@ -3317,7 +3325,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1518"
   },
   "1520": {
     "name": "Raj TV",
@@ -3325,7 +3333,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1520"
   },
   "1521": {
     "name": "D Tamil",
@@ -3333,7 +3341,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1521"
   },
   "1522": {
     "name": "Raj Digital Plus",
@@ -3341,7 +3349,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1522"
   },
   "1523": {
     "name": "Mega TV",
@@ -3349,7 +3357,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1523"
   },
   "1524": {
     "name": "Mega 24",
@@ -3357,7 +3365,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1524"
   },
   "1525": {
     "name": "Tamil Naaptol",
@@ -3365,7 +3373,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1525"
   },
   "1530": {
     "name": "Vasanth TV",
@@ -3373,7 +3381,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1530"
   },
   "1531": {
     "name": "Sirippoli",
@@ -3381,7 +3389,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1531"
   },
   "1532": {
     "name": "Polimer TV",
@@ -3389,7 +3397,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1532"
   },
   "1533": {
     "name": "Makkal TV",
@@ -3397,7 +3405,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1533"
   },
   "1534": {
     "name": "Peppers TV",
@@ -3405,7 +3413,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1534"
   },
   "1535": {
     "name": "Moon TV",
@@ -3413,7 +3421,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1535"
   },
   "1536": {
     "name": "Vendhar TV",
@@ -3421,7 +3429,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1536"
   },
   "1540": {
     "name": "KTV HD",
@@ -3429,7 +3437,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1540"
   },
   "1541": {
     "name": "KTV",
@@ -3437,7 +3445,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1541"
   },
   "1543": {
     "name": "Adithya TV",
@@ -3445,7 +3453,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1543"
   },
   "1544": {
     "name": "J Movies",
@@ -3453,7 +3461,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1544"
   },
   "1546": {
     "name": "Zee Thirai",
@@ -3461,7 +3469,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1546"
   },
   "1551": {
     "name": "Star Sports 1 Tamil",
@@ -3469,7 +3477,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1551"
   },
   "1552": {
     "name": "Sony Ten 4",
@@ -3477,7 +3485,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1552"
   },
   "1553": {
     "name": "TravelXP Tamil",
@@ -3485,7 +3493,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1553"
   },
   "1554": {
     "name": "Kalvi TV",
@@ -3493,7 +3501,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1554"
   },
   "1556": {
     "name": "Puthiya Thalaimurai",
@@ -3501,7 +3509,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1556"
   },
   "1557": {
     "name": "Thanthi TV",
@@ -3509,7 +3517,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1557"
   },
   "1558": {
     "name": "Jaya Plus",
@@ -3517,7 +3525,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1558"
   },
   "1559": {
     "name": "Sun News",
@@ -3525,7 +3533,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1559"
   },
   "1560": {
     "name": "News 7 Tamil",
@@ -3533,7 +3541,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1560"
   },
   "1561": {
     "name": "Polimer News",
@@ -3541,7 +3549,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1561"
   },
   "1562": {
     "name": "News18 Tamil Nadu",
@@ -3549,7 +3557,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1562"
   },
   "1563": {
     "name": "Seithigal TV",
@@ -3557,7 +3565,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1563"
   },
   "1564": {
     "name": "Raj News Tamil",
@@ -3565,7 +3573,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1564"
   },
   "1565": {
     "name": "Sathiyam TV",
@@ -3573,7 +3581,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1565"
   },
   "1566": {
     "name": "Malaimurasu Seithigal",
@@ -3581,7 +3589,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1566"
   },
   "1567": {
     "name": "Captain News",
@@ -3589,7 +3597,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1567"
   },
   "1568": {
     "name": "News J",
@@ -3597,7 +3605,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1568"
   },
   "1578": {
     "name": "DD Podhigai",
@@ -3605,7 +3613,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1578"
   },
   "1579": {
     "name": "Sun Music HD",
@@ -3613,7 +3621,7 @@
     "genre": "Tamil Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1579"
   },
   "1580": {
     "name": "Sun Music",
@@ -3621,7 +3629,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1580"
   },
   "1581": {
     "name": "Jaya Max",
@@ -3629,7 +3637,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1581"
   },
   "1582": {
     "name": "Raj Musix",
@@ -3637,7 +3645,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1582"
   },
   "1583": {
     "name": "Vijay Music",
@@ -3645,7 +3653,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1583"
   },
   "1584": {
     "name": "Isaiaruvi",
@@ -3653,7 +3661,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1584"
   },
   "1585": {
     "name": "Murasu TV",
@@ -3661,7 +3669,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1585"
   },
   "1586": {
     "name": "Mega Musiq",
@@ -3669,7 +3677,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1586"
   },
   "1587": {
     "name": "Jothi TV",
@@ -3677,7 +3685,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1587"
   },
   "1590": {
     "name": "Madha TV",
@@ -3685,7 +3693,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1590"
   },
   "1591": {
     "name": "Angel TV",
@@ -3693,7 +3701,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1591"
   },
   "1592": {
     "name": "Nambikkai TV",
@@ -3701,7 +3709,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1592"
   },
   "1599": {
     "name": "SVBC 2",
@@ -3709,7 +3717,7 @@
     "genre": "Tamil Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1599"
   },
   "1603": {
     "name": "Udaya TV HD",
@@ -3717,7 +3725,7 @@
     "genre": "Kannada Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1603"
   },
   "1604": {
     "name": "Udaya TV",
@@ -3725,7 +3733,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1604"
   },
   "1605": {
     "name": "Colors Kannada HD",
@@ -3733,7 +3741,7 @@
     "genre": "Kannada Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1605"
   },
   "1606": {
     "name": "Colors Kannada",
@@ -3741,7 +3749,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1606"
   },
   "1609": {
     "name": "Star Suvarna HD",
@@ -3749,7 +3757,7 @@
     "genre": "Kannada Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1609"
   },
   "1610": {
     "name": "Star Suvarna",
@@ -3757,7 +3765,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1610"
   },
   "1611": {
     "name": "Zee Kannada HD",
@@ -3765,7 +3773,7 @@
     "genre": "Kannada Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1611"
   },
   "1612": {
     "name": "Zee Kannada",
@@ -3773,7 +3781,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1612"
   },
   "1615": {
     "name": "Colors Super",
@@ -3781,7 +3789,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1615"
   },
   "1617": {
     "name": "Kannada Naaptol",
@@ -3789,7 +3797,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1617"
   },
   "1618": {
     "name": "Sirikannada All Time",
@@ -3797,7 +3805,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1618"
   },
   "1626": {
     "name": "Udaya Movies",
@@ -3805,7 +3813,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1626"
   },
   "1628": {
     "name": "Udaya Comedy",
@@ -3813,7 +3821,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1628"
   },
   "1630": {
     "name": "Star Suvarna Plus",
@@ -3821,7 +3829,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1630"
   },
   "1632": {
     "name": "Colors Kannada Cinema",
@@ -3829,7 +3837,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1632"
   },
   "1634": {
     "name": "Zee Picchar",
@@ -3837,7 +3845,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1634"
   },
   "1639": {
     "name": "Public Movies",
@@ -3845,7 +3853,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1639"
   },
   "1645": {
     "name": "Star Sports 1 Kannada",
@@ -3853,7 +3861,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1645"
   },
   "1650": {
     "name": "Kasthuri",
@@ -3861,7 +3869,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1650"
   },
   "1653": {
     "name": "TV9 Kannada",
@@ -3869,7 +3877,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1653"
   },
   "1654": {
     "name": "Asianet Suvarna News",
@@ -3877,7 +3885,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1654"
   },
   "1655": {
     "name": "Public TV",
@@ -3885,7 +3893,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1655"
   },
   "1656": {
     "name": "News18 Kannada",
@@ -3893,7 +3901,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1656"
   },
   "1657": {
     "name": "TV5 Kannada",
@@ -3901,7 +3909,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1657"
   },
   "1658": {
     "name": "Raj News Kannada",
@@ -3909,7 +3917,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1658"
   },
   "1659": {
     "name": "Dighvijay 24x7 News",
@@ -3917,7 +3925,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1659"
   },
   "1660": {
     "name": "Power TV",
@@ -3925,7 +3933,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1660"
   },
   "1661": {
     "name": "News 1st",
@@ -3933,7 +3941,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1661"
   },
   "1672": {
     "name": "DD Chandana",
@@ -3941,7 +3949,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1672"
   },
   "1673": {
     "name": "Udaya Music",
@@ -3949,7 +3957,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1673"
   },
   "1674": {
     "name": "Raj Musix Kannada",
@@ -3957,7 +3965,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1674"
   },
   "1677": {
     "name": "Public Music",
@@ -3965,7 +3973,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1677"
   },
   "1685": {
     "name": "Sri Sankara TV",
@@ -3973,7 +3981,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1685"
   },
   "1686": {
     "name": "Ayush TV",
@@ -3981,7 +3989,7 @@
     "genre": "Kannada Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1686"
   },
   "1702": {
     "name": "Colors Gujarati",
@@ -3989,7 +3997,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1702"
   },
   "1711": {
     "name": "Colors Gujarati Cinema",
@@ -3997,7 +4005,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1711"
   },
   "1720": {
     "name": "TV9 Gujarati",
@@ -4005,7 +4013,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1720"
   },
   "1721": {
     "name": "Gujarat Samachar TV",
@@ -4013,7 +4021,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1721"
   },
   "1722": {
     "name": "Sandesh News",
@@ -4021,7 +4029,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1722"
   },
   "1724": {
     "name": "CNBC Bajaar",
@@ -4029,7 +4037,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1724"
   },
   "1726": {
     "name": "News18 Gujarati",
@@ -4037,7 +4045,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1726"
   },
   "1728": {
     "name": "ABP Asmita",
@@ -4045,7 +4053,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1728"
   },
   "1729": {
     "name": "VTV Gujarati",
@@ -4053,7 +4061,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1729"
   },
   "1731": {
     "name": "Zee 24 Kalak",
@@ -4061,7 +4069,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1731"
   },
   "1732": {
     "name": "India News Gujarat",
@@ -4069,7 +4077,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1732"
   },
   "1734": {
     "name": "Mantavya News",
@@ -4077,7 +4085,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1734"
   },
   "1739": {
     "name": "DD Girnar",
@@ -4085,7 +4093,7 @@
     "genre": "Gujarati Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1739"
   },
   "1752": {
     "name": "Colors Oriya",
@@ -4093,7 +4101,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1752"
   },
   "1754": {
     "name": "Tarang TV",
@@ -4101,7 +4109,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1754"
   },
   "1756": {
     "name": "Zee Sarthak",
@@ -4109,7 +4117,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1756"
   },
   "1760": {
     "name": "Manjari",
@@ -4117,7 +4125,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1760"
   },
   "1763": {
     "name": "Alankar",
@@ -4125,7 +4133,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1763"
   },
   "1771": {
     "name": "OTV",
@@ -4133,7 +4141,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1771"
   },
   "1773": {
     "name": "Zee Odisha",
@@ -4141,7 +4149,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1773"
   },
   "1774": {
     "name": "Kanak News",
@@ -4149,7 +4157,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1774"
   },
   "1776": {
     "name": "News18 Odia",
@@ -4157,7 +4165,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1776"
   },
   "1777": {
     "name": "Kalinga TV",
@@ -4165,7 +4173,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1777"
   },
   "1778": {
     "name": "Prameya News 7",
@@ -4173,7 +4181,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1778"
   },
   "1779": {
     "name": "Nandighosha TV",
@@ -4181,7 +4189,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1779"
   },
   "1780": {
     "name": "Argus News",
@@ -4189,7 +4197,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1780"
   },
   "1785": {
     "name": "DD Odia",
@@ -4197,7 +4205,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1785"
   },
   "1786": {
     "name": "Tarang Music",
@@ -4205,7 +4213,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1786"
   },
   "1795": {
     "name": "Prarthana TV",
@@ -4213,7 +4221,7 @@
     "genre": "Odia Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1795"
   },
   "1802": {
     "name": "Surya TV HD",
@@ -4221,7 +4229,7 @@
     "genre": "Malayalam Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1802"
   },
   "1803": {
     "name": "Surya TV",
@@ -4229,7 +4237,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1803"
   },
   "1806": {
     "name": "Asianet HD",
@@ -4237,7 +4245,7 @@
     "genre": "Malayalam Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1806"
   },
   "1807": {
     "name": "Asianet",
@@ -4245,7 +4253,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1807"
   },
   "1809": {
     "name": "Asianet Plus",
@@ -4253,7 +4261,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1809"
   },
   "1811": {
     "name": "Zee Keralam HD",
@@ -4261,7 +4269,7 @@
     "genre": "Malayalam Regional",
     "quality": "HD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1811"
   },
   "1812": {
     "name": "Zee Keralam",
@@ -4269,7 +4277,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1812"
   },
   "1814": {
     "name": "Flowers",
@@ -4277,7 +4285,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1814"
   },
   "1817": {
     "name": "Amrita TV",
@@ -4285,7 +4293,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1817"
   },
   "1818": {
     "name": "Mazhavil Manorama HD",
@@ -4293,7 +4301,7 @@
     "genre": "Malayalam Regional",
     "quality": "HD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1818"
   },
   "1819": {
     "name": "Mazhavil Manorama",
@@ -4301,7 +4309,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1819"
   },
   "1820": {
     "name": "Kairali TV",
@@ -4309,7 +4317,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1820"
   },
   "1822": {
     "name": "We TV",
@@ -4317,7 +4325,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1822"
   },
   "1823": {
     "name": "Naaptol Malayalam",
@@ -4325,7 +4333,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1823"
   },
   "1826": {
     "name": "Surya Movies",
@@ -4333,7 +4341,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1826"
   },
   "1828": {
     "name": "Asianet Movies",
@@ -4341,7 +4349,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1828"
   },
   "1830": {
     "name": "Surya Comedy",
@@ -4349,7 +4357,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1830"
   },
   "1838": {
     "name": "Safari TV",
@@ -4357,7 +4365,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1838"
   },
   "1841": {
     "name": "Asianet News",
@@ -4365,7 +4373,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1841"
   },
   "1842": {
     "name": "Kairali News",
@@ -4373,7 +4381,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1842"
   },
   "1843": {
     "name": "Manorama News",
@@ -4381,7 +4389,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1843"
   },
   "1844": {
     "name": "Mathrubhumi News",
@@ -4389,7 +4397,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1844"
   },
   "1846": {
     "name": "News18 Kerala",
@@ -4397,7 +4405,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1846"
   },
   "1847": {
     "name": "Jai Hind TV",
@@ -4405,7 +4413,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1847"
   },
   "1848": {
     "name": "Jeevan TV",
@@ -4413,7 +4421,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1848"
   },
   "1849": {
     "name": "Media One TV",
@@ -4421,7 +4429,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1849"
   },
   "1850": {
     "name": "Janam TV",
@@ -4429,7 +4437,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1850"
   },
   "1851": {
     "name": "Kaumudy",
@@ -4437,7 +4445,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1851"
   },
   "1853": {
     "name": "Raj News Malayalam",
@@ -4445,7 +4453,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1853"
   },
   "1854": {
     "name": "Twenty four",
@@ -4453,7 +4461,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1854"
   },
   "1873": {
     "name": "KITE Victers",
@@ -4461,7 +4469,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1873"
   },
   "1874": {
     "name": "DD Malayalam",
@@ -4469,7 +4477,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1874"
   },
   "1875": {
     "name": "Surya Music",
@@ -4477,7 +4485,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1875"
   },
   "1877": {
     "name": "Raj Musix Malayalam",
@@ -4485,7 +4493,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1877"
   },
   "1878": {
     "name": "Kappa TV",
@@ -4493,7 +4501,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1878"
   },
   "1885": {
     "name": "Goodness",
@@ -4501,7 +4509,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1885"
   },
   "1886": {
     "name": "God TV",
@@ -4509,7 +4517,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1886"
   },
   "1887": {
     "name": "SHALOM TV",
@@ -4517,7 +4525,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1887"
   },
   "1888": {
     "name": "Harvest TV 24x7",
@@ -4525,7 +4533,7 @@
     "genre": "Malayalam Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1888"
   },
   "1903": {
     "name": "Zee Punjabi",
@@ -4533,7 +4541,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1903"
   },
   "1906": {
     "name": "PTC Punjabi",
@@ -4541,7 +4549,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1906"
   },
   "1907": {
     "name": "MH One",
@@ -4549,7 +4557,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1907"
   },
   "1911": {
     "name": "Pitaara TV",
@@ -4557,7 +4565,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1911"
   },
   "1912": {
     "name": "PTC Punjabi Gold",
@@ -4565,7 +4573,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1912"
   },
   "1920": {
     "name": "Zee Punjab Haryana",
@@ -4573,7 +4581,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1920"
   },
   "1921": {
     "name": "PTC News",
@@ -4581,7 +4589,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1921"
   },
   "1922": {
     "name": "News18 Punjab Haryana",
@@ -4589,7 +4597,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1922"
   },
   "1923": {
     "name": "India News Punjab",
@@ -4597,7 +4605,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1923"
   },
   "1924": {
     "name": "India News Haryana",
@@ -4605,7 +4613,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1924"
   },
   "1925": {
     "name": "Janta TV",
@@ -4613,7 +4621,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1925"
   },
   "1926": {
     "name": "MH One News",
@@ -4621,7 +4629,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1926"
   },
   "1927": {
     "name": "ANB News",
@@ -4629,7 +4637,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1927"
   },
   "1928": {
     "name": "Living India News",
@@ -4637,7 +4645,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1928"
   },
   "1929": {
     "name": "ABP Sanjha",
@@ -4645,7 +4653,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1929"
   },
   "1935": {
     "name": "DD Punjabi",
@@ -4653,7 +4661,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1935"
   },
   "1938": {
     "name": "PTC Chak De",
@@ -4661,7 +4669,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1938"
   },
   "1939": {
     "name": "9X Tashan",
@@ -4669,7 +4677,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1939"
   },
   "1941": {
     "name": "PTC Music",
@@ -4677,7 +4685,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1941"
   },
   "1942": {
     "name": "Punjabi hits",
@@ -4685,7 +4693,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1942"
   },
   "1945": {
     "name": "Chardikla Time TV",
@@ -4693,7 +4701,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1945"
   },
   "1946": {
     "name": "PTC Simran",
@@ -4701,7 +4709,7 @@
     "genre": "Punjabi Regional",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1946"
   },
   "1951": {
     "name": "Nepal 1",
@@ -4709,7 +4717,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1951"
   },
   "1952": {
     "name": "Rang",
@@ -4717,7 +4725,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1952"
   },
   "1953": {
     "name": "Rengoni TV",
@@ -4725,7 +4733,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1953"
   },
   "1961": {
     "name": "Indradhanu",
@@ -4733,7 +4741,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1961"
   },
   "1970": {
     "name": "DY 365",
@@ -4741,7 +4749,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1970"
   },
   "1971": {
     "name": "News18 Assam North East",
@@ -4749,7 +4757,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "Pay",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1971"
   },
   "1973": {
     "name": "News Live",
@@ -4757,7 +4765,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1973"
   },
   "1974": {
     "name": "Protidin Time",
@@ -4765,7 +4773,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1974"
   },
   "1975": {
     "name": "Prag News",
@@ -4773,7 +4781,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1975"
   },
   "1976": {
     "name": "North East Live",
@@ -4781,7 +4789,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1976"
   },
   "1977": {
     "name": "NKTV 24x7",
@@ -4789,7 +4797,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1977"
   },
   "1978": {
     "name": "Hornbill TV",
@@ -4797,7 +4805,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1978"
   },
   "1985": {
     "name": "DD Port Blair",
@@ -4805,7 +4813,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1985"
   },
   "1986": {
     "name": "DD Arunprabha",
@@ -4813,7 +4821,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1986"
   },
   "1987": {
     "name": "DD Manipur",
@@ -4821,7 +4829,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1987"
   },
   "1988": {
     "name": "DD North East",
@@ -4829,7 +4837,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1988"
   },
   "1989": {
     "name": "DD Kashir",
@@ -4837,7 +4845,7 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1989"
   },
   "1990": {
     "name": "Ramdhenu",
@@ -4845,6 +4853,6 @@
     "genre": "Others",
     "quality": "SD",
     "fta_pay": "FTA",
-    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+    "schedule": "channel_schedules.json#1990"
   }
 }

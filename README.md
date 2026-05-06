@@ -1,70 +1,51 @@
-﻿# STB Scheduler Architecture
+# STB Master Channel Schedule
 
-This project now uses deterministic, TV-style scheduling:
+This project now uses separate master files:
 
-- `channels.json`: channel metadata only.
-- `schedules/<channel>.json`: time blocks (`start`, `duration_minutes`, `playlist`, `mode`).
-- `video_cache.json`: long-lived metadata cache (video list, title, duration).
-- `stream_cache.json`: short-lived direct stream URL cache.
+- `channels.json`: channel number + metadata + schedule reference.
+- `channel_schedules.json`: all schedule blocks and fallback feed nodes.
+- `channels_by_genre.json`: optional grouped view.
 
-## Channel config (`channels.json`)
+## Schedule format
 
-```json
-{
-  "100": {
-    "name": "Tata Play",
-    "schedule": "schedules/100.json"
-  },
-  "103": {
-    "name": "Movie Channel",
-    "source": "videos/movies/"
-  }
-}
-```
+Each channel schedule in `channel_schedules.json` has:
 
-## Schedule config (`schedules/100.json`)
+- `weekdays`: used for Monday-Friday
+- `weekends`: used for Saturday-Sunday
+- `unscheduled`: fallback feed used outside scheduled slots
 
-```json
-{
-  "timezone": "Asia/Kolkata",
-  "days": {
-    "default": [
-      {
-        "start": "20:00",
-        "duration_minutes": 30,
-        "playlist": "https://www.youtube.com/playlist?list=...",
-        "mode": "daily_rotate",
-        "title": "Prime Slot"
-      },
-      {
-        "start": "20:30",
-        "duration_minutes": 30,
-        "playlist": "https://www.youtube.com/playlist?list=...",
-        "mode": "sequential",
-        "title": "Next Slot"
-      }
-    ]
-  }
-}
-```
+Each slot supports:
 
-## Playback modes
+- `start` (for example `20:00`)
+- `duration_minutes` (for example `30`)
+- `playlist` (YouTube playlist/channel/videos URL)
+- `mode` (`daily_rotate` or `sequential`)
+- `title`
 
-- `sequential`: moves through playlist using video durations.
-- `daily_rotate`: same time slot picks next playlist index each day.
+`unscheduled` supports separate weekday/weekend playlists:
 
-## Runtime behavior
+- `unscheduled.weekdays.playlist`
+- `unscheduled.weekends.playlist`
 
-- No all-channel startup resolving.
-- Channel tune resolves only current slot.
-- Re-entering the same channel does not restart playback.
-- Auto transitions do not force EPG popup.
-- Expired direct stream URLs refresh automatically.
+### Daily rotate behavior
 
-## Import from PDF
+For `daily_rotate`, the same slot plays:
 
-Use the importer to rebuild channel metadata from a new provider PDF:
+- day 1: first video
+- day 2: second video
+- day 3: third video
+
+...and so on, cycling by playlist length.
+
+## Current setup
+
+- Channel `100` is fixed as `TataSky`.
+- Channel `100` uses `https://www.youtube.com/@TataPlayOfficial/videos` for weekday/weekend prime slots.
+- Channel `100` also uses Tata Play for unscheduled time.
+- All other channels are imported from your PDF and have empty playlist fields for you to fill.
+
+## Regenerate from a new PDF
 
 ```powershell
-python scripts/import_channels_from_pdf.py --pdf "C:\path\Channel List.pdf"
+python scripts/import_channels_from_pdf.py --pdf "C:\path\Channel List.pdf" --schedules-out "channel_schedules.json"
 ```

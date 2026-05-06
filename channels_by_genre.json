@@ -169,6 +169,14 @@
       "fta_pay": "FTA"
     }
   ],
+  "DTH Services": [
+    {
+      "epg_no": "100",
+      "name": "TataSky",
+      "quality": "HD",
+      "fta_pay": "FTA"
+    }
+  ],
   "English Entertainment": [
     {
       "epg_no": "202",
