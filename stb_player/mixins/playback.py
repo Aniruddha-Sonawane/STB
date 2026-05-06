@@ -1,3 +1,4 @@
+
 """
 Playback logic for scheduled and local channels.
 """
@@ -51,7 +52,8 @@ class PlaybackMixin:
         if tries >= 2:
             channel["_current_title"] = "Channel unavailable"
             channel["_recover_inflight"] = False
-            self.show_epg(user_initiated=False)
+            self._show_nosignal_overlay()
+            self._show_logo_overlay()
             return
 
         channel["_recover_tries"] = tries + 1
@@ -132,6 +134,14 @@ class PlaybackMixin:
 
         previous_channel = self.current_channel
         self._snapshot()
+
+        self._suppress_end_event = True
+        try:
+            self.player.stop()
+        except Exception:
+            pass
+        self.root.after(250, lambda: setattr(self, "_suppress_end_event", False))
+
         self.current_channel = channel
         self.channel_request_id += 1
         self._epg_row_index = 0
@@ -140,11 +150,13 @@ class PlaybackMixin:
         source = channel.get("source", "")
         is_first_channel = not previous_channel
 
+        self._show_nosignal_overlay()
+        self._show_logo_overlay()
+        self.root.after_idle(self.root.focus_force)
+
         if self._is_youtube_channel(channel):
             channel["_recover_inflight"] = False
             channel["_current_title"] = "Loading..."
-            if user_initiated:
-                self.show_epg(user_initiated=True)
             threading.Thread(
                 target=self._resolve_channel_program,
                 args=(channel, request_id, user_initiated),
@@ -384,6 +396,7 @@ class PlaybackMixin:
         else:
             self.show_epg(user_initiated=False)
 
+        self._show_logo_overlay()
         self._suppress_end_event = True
         self.root.after(300, lambda: setattr(self, "_suppress_end_event", False))
 
@@ -400,6 +413,7 @@ class PlaybackMixin:
         self._set_video_window()
         self.player.audio_set_volume(self._volume)
         self.player.play()
+        self.root.after_idle(self.root.focus_force)
 
         effective_seek = seek_ms
         if effective_seek == 0 and not self._is_youtube_channel(channel):
@@ -409,6 +423,8 @@ class PlaybackMixin:
             self._seek_when_ready(effective_seek, request_id)
 
         self._start_tick(request_id)
+
+        self.root.after(1200, self._hide_nosignal_overlay)
 
     # ------------------------------------------------------------------
     # Seek helper
@@ -439,18 +455,22 @@ class PlaybackMixin:
         print(f"[Channel] {message}", file=sys.stderr)
         channel = self.current_channel
         if not channel:
+            self._show_nosignal_overlay()
+            self._show_logo_overlay()
             return
+
+        self._show_nosignal_overlay()
+        self._show_logo_overlay()
+
         if self._is_youtube_channel(channel):
             if channel.get("_recover_tries", 0) >= 2:
                 channel["_current_title"] = "Channel unavailable"
                 channel["_recover_inflight"] = False
-                self.show_epg(user_initiated=False)
                 return
             self._recover_youtube_channel(channel)
             return
 
         channel["_current_title"] = "Playback unavailable"
-        self.show_epg(user_initiated=False)
 
     # ------------------------------------------------------------------
     # Progress tick
@@ -533,3 +553,4 @@ class PlaybackMixin:
 
     def stop(self):
         self.player.stop()
+    
