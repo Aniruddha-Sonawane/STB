@@ -60,7 +60,7 @@ class BaseMixin:
         self._browse_hide_job = None
 
         self._epg_row_index = 0
-        self._epg_items = []
+        self._epg_cache = {}
 
         self.channel_state: dict = {}
 
@@ -141,14 +141,14 @@ class BaseMixin:
         return data
 
     def _scan_images(self):
-    
+
         files = []
-    
+
         if not os.path.exists(ADSQUARE_DIR):
             return files
-    
+
         for ext in IMG_EXTS:
-        
+
             files.extend(
                 glob.glob(
                     os.path.join(
@@ -157,9 +157,9 @@ class BaseMixin:
                     )
                 )
             )
-    
+
         return sorted(files)
-    
+
         # ------------------------------------------------------------------
         # Startup overlay
         # ------------------------------------------------------------------
@@ -264,7 +264,6 @@ class BaseMixin:
             if files:
                 files.sort()
                 channel["_startup_stream"] = (files[0], "", None, None)
-
 
     # ------------------------------------------------------------------
     # Startup finish
@@ -406,12 +405,12 @@ class BaseMixin:
 
             if self.ui_mode == "CHANNEL_INPUT":
                 return
-        
+
             # Browse preview only
             self._browse_channel_delta(-1)
-        
+
             return
-        
+
         if key == "Right":
 
             if self.ui_mode == "CHANNEL_INPUT":
@@ -564,52 +563,69 @@ class BaseMixin:
 
     def _browse_channel_delta(self, delta: int):
 
-       keys = self._sorted_keys()
-    
-       if not keys:
-           return
-    
-       self.ui_mode = "BROWSE"
-    
-       current_num = self._browse_num
-    
-       if not current_num:
-           current_num = (
+        keys = self._sorted_keys()
+
+        if not keys:
+            return
+
+        self.ui_mode = "BROWSE"
+
+        current_num = self._browse_num
+
+        if not current_num:
+            current_num = (
                self.current_channel.get("number")
                if self.current_channel
                else None
            )
-    
-       if current_num and current_num in keys:
-           idx = keys.index(current_num)
-       else:
-           idx = 0
-    
-       new_idx = (idx + delta) % len(keys)
-    
-       self._browse_num = keys[new_idx]
-    
-       browse_channel = self.channels.get(self._browse_num)
-    
-       if browse_channel:
-        
-           # IMPORTANT:
-           # Preview only.
-           # DO NOT switch playback.
-           self._update_epg(
-               browse_channel,
-               browsing=True,
-           )
-    
-       self.show_epg(
+
+        if current_num and current_num in keys:
+            idx = keys.index(current_num)
+        else:
+            idx = 0
+
+        new_idx = (idx + delta) % len(keys)
+
+        self._browse_num = keys[new_idx]
+
+        browse_channel = self.channels.get(self._browse_num)
+
+        if browse_channel:
+
+            # IMPORTANT:
+            # Preview only.
+            # DO NOT switch playback.
+            channel_number = str(
+                browse_channel.get("number", "")
+            )
+
+            cached = self._epg_cache.get(channel_number)
+
+            if cached:
+            
+                self._epg_items = cached.get(
+                    "items",
+                    []
+                )
+
+                self._render_epg_rows()
+
+            else:
+            
+                self._update_epg(
+                    browse_channel,
+                    browsing=True,
+                )
+
+        self.show_epg(
            auto_hide=4000,
            user_initiated=True,
        )
-    
-       if self._browse_hide_job:
-           self.root.after_cancel(self._browse_hide_job)
-    
-       self._browse_hide_job = self.root.after(
+
+        if self._browse_hide_job:
+            self.root.after_cancel(self._browse_hide_job)
+
+        self._browse_hide_job = self.root.after(
            3500,
            self._cancel_browse,
        )
@@ -617,32 +633,32 @@ class BaseMixin:
     def _confirm_browse(self):
 
         number = self._browse_num
-    
+
         self._browse_num = None
-    
+
         self.ui_mode = "NORMAL"
-    
+
         self.hide_epg()
-    
+
         if not number:
             return
-    
+
         channel = self.channels.get(number)
-    
+
         if not channel:
             return
-    
+
         current_number = (
             self.current_channel.get("number")
             if self.current_channel
             else None
         )
-    
+
         # Same channel -> just reopen EPG
         if current_number == number:
             self.show_epg(user_initiated=True)
             return
-    
+
         # ACTUAL channel switch happens only here
         self.switch_channel(
             channel,
@@ -664,9 +680,27 @@ class BaseMixin:
     # ------------------------------------------------------------------
 
     def _build_epg_items(self, channel):
-
+            
         items = []
-
+        channel_number = str(
+            channel.get("number", "")
+        )
+        
+        cached = self._epg_cache.get(channel_number)
+        
+        # 8 second cache
+        if cached:
+        
+            cache_time = cached.get("time", 0)
+        
+            age = (
+                datetime.datetime.now().timestamp()
+                - cache_time
+            )
+        
+            if age < 8:
+            
+                return cached.get("items", [])
         current_title = (
             channel.get("_current_video_title")
             or channel.get("name", "")
@@ -686,7 +720,7 @@ class BaseMixin:
             0,
             self.player.get_time()
         )
-        
+
         if elapsed_ms < 0:
             elapsed_ms = 0
 
@@ -721,11 +755,11 @@ class BaseMixin:
             title = video.get("title", "Upcoming")
 
             raw_duration = video.get("duration")
-            
+
             try:
-               duration_sec = int(raw_duration)
+                duration_sec = int(raw_duration)
             except Exception:
-               duration_sec = 1800
+                duration_sec = 1800
 
             next_end = upcoming_start + datetime.timedelta(
                 seconds=duration_sec
@@ -743,6 +777,11 @@ class BaseMixin:
             ))
 
             upcoming_start = next_end
+
+        self._epg_cache[channel_number] = {
+            "time": datetime.datetime.now().timestamp(),
+            "items": items,
+        }
 
         return items
 
@@ -811,11 +850,35 @@ class BaseMixin:
 
         selected = items[index] if index < len(items) else ("", "", None)
         selected_next = items[index + 1] if index + 1 < len(items) else ("", "", None)
-
-        self.epg_active_title.config(text=selected[0])
-        self.epg_active_time.config(text=selected[1])
-        self.epg_next_title.config(text=selected_next[0])
-        self.epg_next_time.config(text=selected_next[1])
+        
+        active_title = selected[0] or ""
+        next_title = selected_next[0] or ""
+        
+        # Hard truncate
+        MAX_ACTIVE = 65
+        MAX_NEXT = 65
+        
+        if len(active_title) > MAX_ACTIVE:
+            active_title = active_title[:MAX_ACTIVE - 3] + "..."
+        
+        if len(next_title) > MAX_NEXT:
+            next_title = next_title[:MAX_NEXT - 3] + "..."
+        
+        self.epg_active_title.config(
+            text=active_title
+        )
+        
+        self.epg_active_time.config(
+            text=selected[1]
+        )
+        
+        self.epg_next_title.config(
+            text=next_title
+        )
+        
+        self.epg_next_time.config(
+            text=selected_next[1]
+        )
 
 
 # ------------------------------------------------------------------

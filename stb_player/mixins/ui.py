@@ -378,12 +378,13 @@ class UiMixin:
             font=("Arial", 14, "bold"),
             padx=12,
             pady=6,
+            width=52,
         )
 
         self.epg_active_title.pack(
             side=tk.LEFT,
-            fill=tk.X,
-            expand=True,
+            fill=tk.NONE,
+            expand=False,
         )
 
         self.epg_active_time = tk.Label(
@@ -393,7 +394,7 @@ class UiMixin:
             bg=C_PROG_ACTIVE,
             anchor="e",
             justify="right",
-            font=("Arial", 12, "bold"),
+            font=("Arial", 14, "bold"),
             padx=2,
             pady=6,
         )
@@ -444,15 +445,16 @@ class UiMixin:
             bg=C_PROG_NEXT,
             anchor="w",
             justify="left",
-            font=("Arial", 12, "bold"),
+            font=("Arial", 14, "bold"),
             padx=12,
-            pady=4,
+            pady=6,
+            width=52,
         )
 
         self.epg_next_title.pack(
             side=tk.LEFT,
-            fill=tk.X,
-            expand=True,
+            fill=tk.NONE,
+            expand=False,
         )
 
         self.epg_next_time = tk.Label(
@@ -462,9 +464,9 @@ class UiMixin:
             bg=C_PROG_NEXT,
             anchor="e",
             justify="right",
-            font=("Arial", 11, "bold"),
+            font=("Arial", 14, "bold"),
             padx=2,
-            pady=4,
+            pady=6,
         )
 
         self.epg_next_time.pack(
@@ -633,22 +635,20 @@ class UiMixin:
                 self.hide_epg,
             )
 
-
     def hide_epg(self):
-    
+
         self.epg_window.withdraw()
-    
+
         self.ui_mode = "NORMAL"
-    
+
         if self._browse_num is not None:
-        
+
             self._browse_num = None
-    
+
             # Restore actual playing channel info
             if self.current_channel:
-            
+
                 self._update_epg(
                     self.current_channel,
                     browsing=False,
                 )
-    
