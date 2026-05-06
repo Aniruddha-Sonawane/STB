@@ -431,27 +431,65 @@ class UiMixin:
             self._current_img = photo
             self._epg_img_canvas.itemconfig(self._epg_img_id, image=photo)
 
-        if not browsing:
-            self._epg_items = self._build_epg_items(channel)
-        else:
+        if browsing:
+
             items = []
+
             schedule_ref = channel.get("schedule")
+
             if isinstance(schedule_ref, list):
+
                 for schedule in schedule_ref:
+
                     time_str = (
                         f"{schedule.get('start', '')} - {schedule.get('end', '')}"
                         if schedule.get("start")
                         else ""
                     )
-                    items.append((schedule.get("title", ""), time_str, None))
+
+                    items.append((
+                        schedule.get("title", ""),
+                        time_str,
+                        None,
+                    ))
+
             elif self._is_youtube_channel(channel):
-                for block in self.scheduler.get_upcoming_blocks(channel, count=3):
-                    block_title = block.title or channel.get("name", "")
+
+                for block in self.scheduler.get_upcoming_blocks(
+                    channel,
+                    count=3,
+                ):
+
+                    block_title = (
+                        block.title
+                        or channel.get("name", "")
+                    )
+
                     block_time = block.start_dt.strftime("%I:%M %p")
-                    items.append((block_title, block_time, None))
+
+                    items.append((
+                        block_title,
+                        block_time,
+                        None,
+                    ))
+
             if not items:
-                items = [(channel.get("name", ""), "", None), ("", "", None)]
+
+                items = [
+                    (
+                        channel.get("name", ""),
+                        "",
+                        None,
+                    )
+                ]
+
+            # PREVIEW DATA ONLY
             self._epg_items = items
+
+        else:
+
+            # REAL PLAYING CHANNEL DATA
+            self._epg_items = self._build_epg_items(channel)
 
         self._epg_row_index = 0
         self._render_epg_rows()
@@ -469,33 +507,74 @@ class UiMixin:
                 self.epg_progress.coords(self.progress_fill, 0, 2, 0, 8)
 
     def show_epg(self, auto_hide=EPG_AUTO_HIDE_MS, user_initiated=False):
+
         if not user_initiated and not self.epg_window.winfo_viewable():
             return
-        if self.current_channel:
-            self._update_epg(self.current_channel)
+
+        display_channel = self.current_channel
+
+        # IMPORTANT:
+        # During browse mode show preview channel,
+        # NOT currently playing channel.
+        if self.ui_mode == "BROWSE" and self._browse_num:
+
+            browse_channel = self.channels.get(self._browse_num)
+
+            if browse_channel:
+                display_channel = browse_channel
+
+        if display_channel:
+
+            self._update_epg(
+                display_channel,
+                browsing=(self.ui_mode == "BROWSE"),
+            )
 
         self.root.update_idletasks()
+
         root_w = self.root.winfo_width()
         root_h = self.root.winfo_height()
+
         root_x = self.root.winfo_rootx()
         root_y = self.root.winfo_rooty()
+
         width = min(1100, int(root_w * 0.94))
         height = 240
+
         x = root_x + (root_w - width) // 2
         y = root_y + root_h - height - 36
+
         self.epg_window.geometry(f"{width}x{height}+{x}+{y}")
+
         self.epg_window.deiconify()
+
         self.epg_window.lift()
 
         if self.hide_job:
             self.root.after_cancel(self.hide_job)
+
         if auto_hide:
-            self.hide_job = self.root.after(auto_hide, self.hide_epg)
+            self.hide_job = self.root.after(
+                auto_hide,
+                self.hide_epg,
+            )
+
 
     def hide_epg(self):
+    
         self.epg_window.withdraw()
+    
         self.ui_mode = "NORMAL"
+    
         if self._browse_num is not None:
+        
             self._browse_num = None
+    
+            # Restore actual playing channel info
             if self.current_channel:
-                self._update_epg(self.current_channel)
+            
+                self._update_epg(
+                    self.current_channel,
+                    browsing=False,
+                )
+    

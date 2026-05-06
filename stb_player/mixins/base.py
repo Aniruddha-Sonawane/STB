@@ -33,7 +33,7 @@ from stb_player.constants import (
     C_PROG_ACTIVE,
     C_WHITE,
     EPG_AUTO_HIDE_MS,
-    IMAGES_DIR,
+    ADSQUARE_DIR,
     IMG_EXTS,
     STREAM_CACHE_FILE,
     VIDEO_CACHE_FILE,
@@ -141,14 +141,28 @@ class BaseMixin:
         return data
 
     def _scan_images(self):
+    
         files = []
+    
+        if not os.path.exists(ADSQUARE_DIR):
+            return files
+    
         for ext in IMG_EXTS:
-            files.extend(glob.glob(os.path.join(IMAGES_DIR, ext)))
-        return files
-
-    # ------------------------------------------------------------------
-    # Startup overlay
-    # ------------------------------------------------------------------
+        
+            files.extend(
+                glob.glob(
+                    os.path.join(
+                        ADSQUARE_DIR,
+                        ext,
+                    )
+                )
+            )
+    
+        return sorted(files)
+    
+        # ------------------------------------------------------------------
+        # Startup overlay
+        # ------------------------------------------------------------------
 
     def _show_startup_loading(self):
         overlay = tk.Frame(self.root, bg="black")
@@ -389,14 +403,23 @@ class BaseMixin:
             return
 
         if key == "Left":
+
             if self.ui_mode == "CHANNEL_INPUT":
                 return
+        
+            # Browse preview only
             self._browse_channel_delta(-1)
+        
             return
+        
         if key == "Right":
+
             if self.ui_mode == "CHANNEL_INPUT":
                 return
+
+            # Browse preview only
             self._browse_channel_delta(+1)
+
             return
 
         if key == "Down":
@@ -540,38 +563,92 @@ class BaseMixin:
     # ------------------------------------------------------------------
 
     def _browse_channel_delta(self, delta: int):
-        keys = self._sorted_keys()
-        if not keys:
-            return
-        self.ui_mode = "BROWSE"
-        current_num = self._browse_num
-        if not current_num:
-            current_num = self.current_channel.get("number") if self.current_channel else None
-        if current_num and current_num in keys:
-            idx = keys.index(current_num)
-        else:
-            idx = 0
-        new_idx = (idx + delta) % len(keys)
-        self._browse_num = keys[new_idx]
-        channel = self.channels.get(self._browse_num)
-        if channel:
-            self._update_epg(channel, browsing=True)
-        self.show_epg(auto_hide=4000, user_initiated=True)
-        if self._browse_hide_job:
-            self.root.after_cancel(self._browse_hide_job)
-        self._browse_hide_job = self.root.after(3500, self._cancel_browse)
+
+       keys = self._sorted_keys()
+    
+       if not keys:
+           return
+    
+       self.ui_mode = "BROWSE"
+    
+       current_num = self._browse_num
+    
+       if not current_num:
+           current_num = (
+               self.current_channel.get("number")
+               if self.current_channel
+               else None
+           )
+    
+       if current_num and current_num in keys:
+           idx = keys.index(current_num)
+       else:
+           idx = 0
+    
+       new_idx = (idx + delta) % len(keys)
+    
+       self._browse_num = keys[new_idx]
+    
+       browse_channel = self.channels.get(self._browse_num)
+    
+       if browse_channel:
+        
+           # IMPORTANT:
+           # Preview only.
+           # DO NOT switch playback.
+           self._update_epg(
+               browse_channel,
+               browsing=True,
+           )
+    
+       self.show_epg(
+           auto_hide=4000,
+           user_initiated=True,
+       )
+    
+       if self._browse_hide_job:
+           self.root.after_cancel(self._browse_hide_job)
+    
+       self._browse_hide_job = self.root.after(
+           3500,
+           self._cancel_browse,
+       )
 
     def _confirm_browse(self):
+
         number = self._browse_num
+    
         self._browse_num = None
+    
         self.ui_mode = "NORMAL"
+    
         self.hide_epg()
+    
+        if not number:
+            return
+    
         channel = self.channels.get(number)
-        if channel:
-            if self.current_channel and channel.get("number") == self.current_channel.get("number"):
-                self.show_epg(user_initiated=True)
-                return
-            self.switch_channel(channel, user_initiated=True)
+    
+        if not channel:
+            return
+    
+        current_number = (
+            self.current_channel.get("number")
+            if self.current_channel
+            else None
+        )
+    
+        # Same channel -> just reopen EPG
+        if current_number == number:
+            self.show_epg(user_initiated=True)
+            return
+    
+        # ACTUAL channel switch happens only here
+        self.switch_channel(
+            channel,
+            user_initiated=True,
+            force_restart=True,
+        )
 
     def _cancel_browse(self):
         self._browse_num = None
