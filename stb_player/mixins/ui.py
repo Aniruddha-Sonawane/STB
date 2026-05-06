@@ -1,4 +1,3 @@
-
 import datetime
 import random
 import threading
@@ -100,7 +99,6 @@ class UiMixin:
                     font=("Arial", 11),
                     pady=16,
                 ).pack()
-                self.root.after_idle(self.root.focus_force)
                 return
 
             for index, (lang, label, fmt_id) in enumerate(tracks):
@@ -145,7 +143,6 @@ class UiMixin:
                     def _click(_event, format_ref=format_id, lang_ref=lang_id):
                         window.destroy()
                         self._switch_audio_track(format_ref, lang_ref)
-                        self.root.after_idle(self.root.focus_force)
 
                     row.bind("<Enter>", _hover_on)
                     row.bind("<Leave>", _hover_off)
@@ -235,14 +232,12 @@ class UiMixin:
         self._vol_win.geometry(f"{self._VOL_W}x{self._VOL_H}+{x}+{y}")
         self._vol_win.deiconify()
         self._vol_win.lift()
-        self.root.after_idle(self.root.focus_force)
         if self._vol_hide:
             self.root.after_cancel(self._vol_hide)
         self._vol_hide = self.root.after(2500, self._hide_vol_bar)
 
     def _hide_vol_bar(self):
         self._vol_win.withdraw()
-        self.root.after_idle(self.root.focus_force)
 
     def _prepare_mail(self):
         self._mail_win = tk.Toplevel(self.root)
@@ -277,7 +272,6 @@ class UiMixin:
         self._mail_win.geometry(f"+{x}+{y}")
         self._mail_win.deiconify()
         self._mail_win.lift()
-        self.root.after_idle(self.root.focus_force)
         if self._mail_hide_job:
             self.root.after_cancel(self._mail_hide_job)
         self._mail_hide_job = self.root.after(6000, self._hide_mail)
@@ -285,7 +279,6 @@ class UiMixin:
     def _hide_mail(self):
         self._mail_visible = False
         self._mail_win.withdraw()
-        self.root.after_idle(self.root.focus_force)
 
     def _schedule_next_mail(self):
         jitter = random.randint(-600_000, 600_000)
@@ -478,58 +471,31 @@ class UiMixin:
     def show_epg(self, auto_hide=EPG_AUTO_HIDE_MS, user_initiated=False):
         if not user_initiated and not self.epg_window.winfo_viewable():
             return
-
-        display_channel = self.current_channel
-
-        if self.ui_mode == "BROWSE" and self._browse_num:
-            browse_channel = self.channels.get(self._browse_num)
-            if browse_channel:
-                display_channel = browse_channel
-
-        if display_channel:
-            self._update_epg(
-                display_channel,
-                browsing=(self.ui_mode == "BROWSE"),
-            )
+        if self.current_channel:
+            self._update_epg(self.current_channel)
 
         self.root.update_idletasks()
-
         root_w = self.root.winfo_width()
         root_h = self.root.winfo_height()
-
         root_x = self.root.winfo_rootx()
         root_y = self.root.winfo_rooty()
-
         width = min(1100, int(root_w * 0.94))
         height = 240
-
         x = root_x + (root_w - width) // 2
         y = root_y + root_h - height - 36
-
         self.epg_window.geometry(f"{width}x{height}+{x}+{y}")
-
         self.epg_window.deiconify()
-
-        self.epg_window.attributes("-topmost", True)
-
         self.epg_window.lift()
-
-        self._show_logo_overlay()
-
-        self.root.after_idle(self.root.focus_force)
 
         if self.hide_job:
             self.root.after_cancel(self.hide_job)
-
         if auto_hide:
             self.hide_job = self.root.after(auto_hide, self.hide_epg)
 
     def hide_epg(self):
         self.epg_window.withdraw()
         self.ui_mode = "NORMAL"
-        self.root.after_idle(self.root.focus_force)
         if self._browse_num is not None:
             self._browse_num = None
             if self.current_channel:
                 self._update_epg(self.current_channel)
-    

@@ -1,5 +1,4 @@
-
-"""
+﻿"""
 stb_player/mixins/base.py
 =========================
 Application bootstrap, channel loading and startup warmup.
@@ -10,7 +9,7 @@ What changed vs original
 * ``_warmup_channel`` reads the scheduler cache first; only hits YouTube
   when the cache is stale (> 24 h old).  After fetching, video metadata
   (url, title, duration) is saved to ``video_cache.json``.
-* The startup overlay lifts as soon as warmup finishes – no fixed timeout.
+* The startup overlay lifts as soon as warmup finishes â€“ no fixed timeout.
 * Channel 100 (or the first channel) is pre-resolved to the
   *clock-scheduled* video so playback starts instantly.
 """
@@ -34,14 +33,9 @@ from stb_player.constants import (
     C_PROG_ACTIVE,
     C_WHITE,
     EPG_AUTO_HIDE_MS,
-    ADSQUARE_DIR,
     IMAGES_DIR,
     IMG_EXTS,
-    LOGO_TRANSPARENT_COLOR,
-    NO_SIGNAL_DIR,
-    NO_SIGNAL_ROTATE_MS,
     STREAM_CACHE_FILE,
-    TATASKY_LOGO,
     VIDEO_CACHE_FILE,
 )
 from stb_player.scheduler import ChannelScheduler
@@ -88,7 +82,7 @@ class BaseMixin:
         self._startup_finished = False
         self._suppress_end_event = False
 
-        # Persistent scheduler – video cache + clock-based schedule.
+        # Persistent scheduler â€“ video cache + clock-based schedule.
         self.scheduler = ChannelScheduler(
             VIDEO_CACHE_FILE,
             STREAM_CACHE_FILE,
@@ -127,25 +121,8 @@ class BaseMixin:
 
         self._img_pool = self._scan_images()
         self._current_img = None
-
-        self._logo_win = None
-        self._logo_label = None
-        self._logo_photo = None
-
-        self._nosignal_win = None
-        self._nosignal_label = None
-        self._nosignal_frames = []
-        self._nosignal_index = 0
-        self._nosignal_job = None
-        self._nosignal_visible = False
-
-        self._prepare_logo_overlay()
-        self._prepare_nosignal_overlay()
-
         self._show_startup_loading()
         self._start_channel_warmup()
-
-        self.root.after(200, self.root.focus_force)
 
     # ------------------------------------------------------------------
     # Channel loading
@@ -165,243 +142,9 @@ class BaseMixin:
 
     def _scan_images(self):
         files = []
-
-        search_dirs = [
-            ADSQUARE_DIR,
-        ]
-
-        for folder in search_dirs:
-            if not os.path.exists(folder):
-                continue
-
-            for ext in IMG_EXTS:
-                files.extend(glob.glob(os.path.join(folder, ext)))
-
-        return sorted(files)
-
-    def _scan_nosignal_images(self):
-        files = []
-        for ext in ("*.jpg", "*.jpeg", "*.png", "*.gif", "*.bmp", "*.webp"):
-            files.extend(glob.glob(os.path.join(NO_SIGNAL_DIR, ext)))
-
-        def _sort_key(path: str):
-            stem = Path(path).stem
-            if stem.isdigit():
-                return (0, int(stem))
-            return (1, stem.lower())
-
-        files.sort(key=_sort_key)
-
-        frames = []
-        try:
-            from PIL import Image, ImageTk
-
-            for path in files:
-                try:
-                    img = Image.open(path).convert("RGBA")
-                    screen_w = max(1, self.root.winfo_screenwidth())
-                    screen_h = max(1, self.root.winfo_screenheight())
-                    img = img.resize((screen_w, screen_h), Image.LANCZOS)
-                    frames.append(ImageTk.PhotoImage(img))
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
-        if not frames:
-            for path in files:
-                try:
-                    photo = tk.PhotoImage(file=path)
-                    frames.append(photo)
-                except Exception:
-                    pass
-
-        return frames
-
-    # ------------------------------------------------------------------
-    # Permanent overlay logo
-    # ------------------------------------------------------------------
-
-    def _prepare_logo_overlay(self):
-        self._logo_win = tk.Toplevel(self.root)
-        self._logo_win.withdraw()
-        self._logo_win.overrideredirect(True)
-        self._logo_win.attributes("-topmost", True)
-        self._logo_win.configure(bg=LOGO_TRANSPARENT_COLOR)
-
-        try:
-            self._logo_win.attributes("-transparentcolor", LOGO_TRANSPARENT_COLOR)
-        except tk.TclError:
-            pass
-
-        self._logo_label = tk.Label(
-            self._logo_win,
-            bg=LOGO_TRANSPARENT_COLOR,
-            bd=0,
-            highlightthickness=0,
-        )
-        self._logo_label.pack()
-
-        self._load_tatasky_logo()
-        self._show_logo_overlay()
-
-    def _load_tatasky_logo(self):
-        try:
-            if not os.path.exists(TATASKY_LOGO):
-                return
-
-            from PIL import Image, ImageTk
-
-            img = Image.open(TATASKY_LOGO).convert("RGBA")
-            img.thumbnail((170, 72), Image.LANCZOS)
-
-            self._logo_photo = ImageTk.PhotoImage(img)
-            self._logo_label.config(image=self._logo_photo)
-        except Exception:
-            try:
-                if os.path.exists(TATASKY_LOGO):
-                    self._logo_photo = tk.PhotoImage(file=TATASKY_LOGO)
-                    self._logo_label.config(image=self._logo_photo)
-            except Exception:
-                pass
-
-    def _position_logo_overlay(self):
-        if not self._logo_win:
-            return
-
-        if not self._logo_win.winfo_exists():
-            return
-
-        self.root.update_idletasks()
-
-        root_w = self.root.winfo_width()
-        root_h = self.root.winfo_height()
-
-        root_x = self.root.winfo_rootx()
-        root_y = self.root.winfo_rooty()
-
-        self._logo_win.update_idletasks()
-
-        win_w = self._logo_win.winfo_reqwidth()
-        win_h = self._logo_win.winfo_reqheight()
-
-        margin_x = 22
-        margin_y = 22
-
-        x = root_x + root_w - win_w - margin_x
-        y = root_y + root_h - win_h - margin_y
-
-        self._logo_win.geometry(f"+{x}+{y}")
-
-    def _show_logo_overlay(self):
-        if not self._logo_win or not self._logo_win.winfo_exists():
-            return
-
-        self._position_logo_overlay()
-
-        self._logo_win.deiconify()
-
-        try:
-            self._logo_win.attributes("-topmost", True)
-        except Exception:
-            pass
-
-        self._logo_win.lift()
-
-        if self.epg_window and self.epg_window.winfo_exists():
-            self.epg_window.lift()
-
-        self.root.after_idle(self.root.focus_force)
-
-    # ------------------------------------------------------------------
-    # No-signal slideshow overlay
-    # ------------------------------------------------------------------
-
-    def _prepare_nosignal_overlay(self):
-        self._nosignal_win = tk.Toplevel(self.root)
-        self._nosignal_win.withdraw()
-        self._nosignal_win.overrideredirect(True)
-        self._nosignal_win.attributes("-topmost", True)
-        self._nosignal_win.configure(bg="black")
-
-        self._nosignal_label = tk.Label(
-            self._nosignal_win,
-            bg="black",
-            bd=0,
-            highlightthickness=0,
-        )
-        self._nosignal_label.pack(fill=tk.BOTH, expand=True)
-
-        self._nosignal_frames = self._scan_nosignal_images()
-
-    def _position_nosignal_overlay(self):
-        if not self._nosignal_win or not self._nosignal_win.winfo_exists():
-            return
-
-        self.root.update_idletasks()
-
-        root_w = max(1, self.root.winfo_width())
-        root_h = max(1, self.root.winfo_height())
-        root_x = self.root.winfo_rootx()
-        root_y = self.root.winfo_rooty()
-
-        self._nosignal_win.geometry(f"{root_w}x{root_h}+{root_x}+{root_y}")
-
-    def _show_nosignal_overlay(self):
-        if not self._nosignal_win or not self._nosignal_win.winfo_exists():
-            return
-
-        if not self._nosignal_frames:
-            return
-
-        self._nosignal_visible = True
-        self._position_nosignal_overlay()
-        self._nosignal_win.deiconify()
-        self._nosignal_win.lift()
-        self._rotate_nosignal_image()
-        self.root.after_idle(self.root.focus_force)
-
-    def _rotate_nosignal_image(self):
-        if not self._nosignal_visible:
-            return
-        if not self._nosignal_win or not self._nosignal_win.winfo_exists():
-            return
-        if not self._nosignal_frames:
-            return
-
-        photo = self._nosignal_frames[self._nosignal_index]
-        self._nosignal_label.config(image=photo)
-        self._nosignal_label.image = photo
-
-        self._show_logo_overlay()
-
-        self._nosignal_index = (self._nosignal_index + 1) % len(self._nosignal_frames)
-
-        if self._nosignal_job:
-            try:
-                self.root.after_cancel(self._nosignal_job)
-            except Exception:
-                pass
-
-        self._nosignal_job = self.root.after(
-            NO_SIGNAL_ROTATE_MS,
-            self._rotate_nosignal_image,
-        )
-
-    def _hide_nosignal_overlay(self):
-        self._nosignal_visible = False
-
-        if self._nosignal_job:
-            try:
-                self.root.after_cancel(self._nosignal_job)
-            except Exception:
-                pass
-            self._nosignal_job = None
-
-        if self._nosignal_win and self._nosignal_win.winfo_exists():
-            self._nosignal_win.withdraw()
-
-        self.root.after_idle(self.root.focus_force)
+        for ext in IMG_EXTS:
+            files.extend(glob.glob(os.path.join(IMAGES_DIR, ext)))
+        return files
 
     # ------------------------------------------------------------------
     # Startup overlay
@@ -422,7 +165,7 @@ class BaseMixin:
 
         self._startup_status = tk.Label(
             overlay,
-            text="Loading channels...",
+            text="Loading channelsâ€¦",
             fg=C_DIM,
             bg="black",
             font=("Arial", 14),
@@ -507,6 +250,7 @@ class BaseMixin:
             if files:
                 files.sort()
                 channel["_startup_stream"] = (files[0], "", None, None)
+
 
     # ------------------------------------------------------------------
     # Startup finish
@@ -628,20 +372,9 @@ class BaseMixin:
                 self.channel_buffer += key
             self.ui_mode = "CHANNEL_INPUT"
             self._show_ch_badge(self.channel_buffer)
-
             if self.buffer_job:
                 self.root.after_cancel(self.buffer_job)
-
-            exact_match = self.channel_buffer in self.channels
-            ambiguous_prefix = any(
-                ch != self.channel_buffer and ch.startswith(self.channel_buffer)
-                for ch in self.channels.keys()
-            )
-
-            if exact_match and not ambiguous_prefix:
-                self.buffer_job = self.root.after(0, self._auto_confirm_channel)
-            else:
-                self.buffer_job = self.root.after(900, self._auto_confirm_channel)
+            self.buffer_job = self.root.after(3000, self._auto_confirm_channel)
             return
 
         if key == "Return":
@@ -777,7 +510,6 @@ class BaseMixin:
         self._badge_win.geometry(f"+{x}+{y}")
         self._badge_win.deiconify()
         self._badge_win.lift()
-        self.root.after_idle(self.root.focus_force)
 
         if self._badge_hide_job:
             self.root.after_cancel(self._badge_hide_job)
@@ -801,7 +533,7 @@ class BaseMixin:
                 self.show_epg(user_initiated=True)
                 return
             self.hide_epg()
-            self.switch_channel(channel, user_initiated=True, force_restart=True)
+            self.switch_channel(channel, user_initiated=True)
 
     # ------------------------------------------------------------------
     # Browse (left/right arrow channel switch)
@@ -839,7 +571,7 @@ class BaseMixin:
             if self.current_channel and channel.get("number") == self.current_channel.get("number"):
                 self.show_epg(user_initiated=True)
                 return
-            self.switch_channel(channel, user_initiated=True, force_restart=True)
+            self.switch_channel(channel, user_initiated=True)
 
     def _cancel_browse(self):
         self._browse_num = None
@@ -977,4 +709,3 @@ def _fmt_time_range(start_dt, end_dt) -> str:
     start = start_dt.strftime("%I:%M %p").lstrip("0")
     end = end_dt.strftime("%I:%M %p").lstrip("0")
     return f"{start} - {end}"
-    

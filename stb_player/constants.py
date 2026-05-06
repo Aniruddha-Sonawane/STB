@@ -1,10 +1,8 @@
-
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CHANNELS_FILE = str(BASE_DIR / "channels.json")
 IMAGES_DIR = str(BASE_DIR / "images")
-ADSQUARE_DIR = str(BASE_DIR / "images" / "AdSquare")
 SCHEDULES_DIR = str(BASE_DIR / "schedules")
 
 # Persistent video cache – titles, URLs and durations for every channel.
@@ -20,12 +18,6 @@ EPG_AUTO_HIDE_MS = 10_000
 # We no longer use a fixed timeout – the overlay lifts when warmup finishes.
 STARTUP_LOADING_MS = 10_000
 
-# Requested assets / timings.
-NO_SIGNAL_DIR = str(BASE_DIR / "images" / "NoSignal")
-TATASKY_LOGO = str(BASE_DIR / "images" / "Tatasky.png")
-NO_SIGNAL_ROTATE_MS = 4000
-LOGO_TRANSPARENT_COLOR = "#010101"
-
 C_BG = "#0A0C14"
 C_PROG_ACTIVE = "#1A4FA3"
 C_PROG_NEXT = "#0D1525"
@@ -40,4 +32,3 @@ C_PROGRESS_BG = "#1E2540"
 C_PROGRESS_FG = "#3B82F6"
 C_DIVIDER = "#1E2A45"
 C_BADGE_BG = "#0A0C14"
-    
