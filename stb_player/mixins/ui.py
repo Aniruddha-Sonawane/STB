@@ -351,51 +351,125 @@ class UiMixin:
 
         row_active = tk.Frame(info, bg=C_PROG_ACTIVE)
         row_active.pack(fill=tk.X, padx=4, pady=(5, 2))
+
+        # LEFT SIDE
+        active_left = tk.Frame(row_active, bg=C_PROG_ACTIVE)
+        active_left.pack(
+            side=tk.LEFT,
+            fill=tk.BOTH,
+            expand=True,
+        )
+
+        # RIGHT SIDE
+        active_right = tk.Frame(row_active, bg=C_PROG_ACTIVE)
+        active_right.pack(
+            side=tk.RIGHT,
+            anchor="e",
+            padx=(10, 14),
+        )
+
         self.epg_active_title = tk.Label(
-            row_active,
+            active_left,
             text="",
             fg=C_WHITE,
             bg=C_PROG_ACTIVE,
             anchor="w",
+            justify="left",
             font=("Arial", 14, "bold"),
             padx=12,
             pady=6,
         )
-        self.epg_active_title.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        self.epg_active_title.pack(
+            side=tk.LEFT,
+            fill=tk.X,
+            expand=True,
+        )
+
         self.epg_active_time = tk.Label(
-            row_active,
+            active_right,
             text="",
-            fg="#BDD7FF",
+            fg="#FFFFFF",
             bg=C_PROG_ACTIVE,
-            font=("Arial", 11),
-            padx=12,
+            anchor="e",
+            justify="right",
+            font=("Arial", 12, "bold"),
+            padx=2,
             pady=6,
         )
-        self.epg_active_time.pack(side=tk.RIGHT)
 
-        row_next = tk.Frame(info, bg=C_PROG_NEXT)
-        row_next.pack(fill=tk.X, padx=4, pady=(0, 5))
-        self.epg_next_title = tk.Label(
+        self.epg_active_time.pack(
+            side=tk.RIGHT,
+        )
+
+        row_next = tk.Frame(
+            info,
+            bg=C_PROG_NEXT,
+        )
+
+        row_next.pack(
+            fill=tk.X,
+            padx=4,
+            pady=(0, 5),
+        )
+
+        # LEFT SIDE
+        next_left = tk.Frame(
             row_next,
+            bg=C_PROG_NEXT,
+        )
+
+        next_left.pack(
+            side=tk.LEFT,
+            fill=tk.BOTH,
+            expand=True,
+        )
+
+        # RIGHT SIDE
+        next_right = tk.Frame(
+            row_next,
+            bg=C_PROG_NEXT,
+        )
+
+        next_right.pack(
+            side=tk.RIGHT,
+            anchor="e",
+            padx=(10, 14),
+        )
+
+        self.epg_next_title = tk.Label(
+            next_left,
             text="",
             fg=C_LIGHT,
             bg=C_PROG_NEXT,
             anchor="w",
-            font=("Arial", 12),
+            justify="left",
+            font=("Arial", 12, "bold"),
             padx=12,
             pady=4,
         )
-        self.epg_next_title.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        self.epg_next_title.pack(
+            side=tk.LEFT,
+            fill=tk.X,
+            expand=True,
+        )
+
         self.epg_next_time = tk.Label(
-            row_next,
+            next_right,
             text="",
-            fg=C_DIM,
+            fg="#D6E4FF",
             bg=C_PROG_NEXT,
-            font=("Arial", 10),
-            padx=12,
+            anchor="e",
+            justify="right",
+            font=("Arial", 11, "bold"),
+            padx=2,
             pady=4,
         )
-        self.epg_next_time.pack(side=tk.RIGHT)
+
+        self.epg_next_time.pack(
+            side=tk.RIGHT,
+        )
 
         tk.Frame(info, bg=C_DIVIDER, height=1).pack(fill=tk.X, padx=4)
 

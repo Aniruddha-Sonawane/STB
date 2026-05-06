@@ -224,12 +224,34 @@ class PlaybackMixin:
             if source_key:
                 channel["_current_source_key"] = source_key
             if videos:
-                channel["_yt_list"] = [item.get("url", "") for item in videos if item.get("url")]
-                title_map = {item.get("url", ""): item.get("title", "") for item in videos if item.get("url")}
+            
+                channel["_yt_list"] = [
+                    item.get("url", "")
+                    for item in videos
+                    if item.get("url")
+                ]
+            
+                title_map = {
+                    item.get("url", ""): item.get("title", "")
+                    for item in videos
+                    if item.get("url")
+                }
+            
                 channel.setdefault("_yt_entry_titles", {}).update(
-                    {url: title for url, title in title_map.items() if title}
+                    {
+                        url: title
+                        for url, title in title_map.items()
+                        if title
+                    }
                 )
-
+            
+                # IMPORTANT:
+                # Store upcoming videos for dynamic EPG
+                if len(videos) > 1:
+                    channel["_upcoming_videos"] = videos[1:]
+                else:
+                    channel["_upcoming_videos"] = []
+            
             if not video:
                 self.root.after(
                     0,
@@ -256,6 +278,10 @@ class PlaybackMixin:
                 or video.get("title", "")
                 or "Loading..."
             )
+            
+            # Current playing title for EPG
+            channel["_current_video_title"] = title
+            
             channel["_current_title"] = title
 
             if request_id != self.channel_request_id or channel is not self.current_channel:
