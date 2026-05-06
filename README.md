@@ -60,3 +60,11 @@ This project now uses deterministic, TV-style scheduling:
 - Re-entering the same channel does not restart playback.
 - Auto transitions do not force EPG popup.
 - Expired direct stream URLs refresh automatically.
+
+## Import from PDF
+
+Use the importer to rebuild channel metadata from a new provider PDF:
+
+```powershell
+python scripts/import_channels_from_pdf.py --pdf "C:\path\Channel List.pdf"
+```

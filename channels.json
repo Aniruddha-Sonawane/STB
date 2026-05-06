@@ -1,26 +1,4850 @@
 {
-  "100": {
-    "name": "Tata Play",
-    "schedule": "schedules/100.json"
+  "114": {
+    "name": "DD National",
+    "epg_no": "114",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   },
-  "101": {
-    "name": "Music",
-    "schedule": "schedules/101.json"
+  "115": {
+    "name": "Star Plus HD",
+    "epg_no": "115",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   },
-  "102": {
-    "name": "News",
-    "schedule": "schedules/102.json"
+  "117": {
+    "name": "Star Plus",
+    "epg_no": "117",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   },
-  "103": {
-    "name": "Movie Channel",
-    "source": "videos/movies/"
+  "121": {
+    "name": "Star Bharat HD",
+    "epg_no": "121",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   },
-  "104": {
-    "name": "YouTube Random",
-    "schedule": "schedules/104.json"
+  "122": {
+    "name": "Star Bharat",
+    "epg_no": "122",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   },
-  "108": {
-    "name": "Disney India",
-    "schedule": "schedules/108.json"
+  "128": {
+    "name": "SET HD",
+    "epg_no": "128",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "130": {
+    "name": "SET",
+    "epg_no": "130",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "132": {
+    "name": "Sony SAB HD",
+    "epg_no": "132",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "134": {
+    "name": "Sony SAB",
+    "epg_no": "134",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "137": {
+    "name": "&TV HD",
+    "epg_no": "137",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "139": {
+    "name": "&TV",
+    "epg_no": "139",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "141": {
+    "name": "Zee TV HD",
+    "epg_no": "141",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "143": {
+    "name": "Zee TV",
+    "epg_no": "143",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "147": {
+    "name": "Colors HD",
+    "epg_no": "147",
+    "genre": "Hindi Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "149": {
+    "name": "Colors",
+    "epg_no": "149",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "153": {
+    "name": "UTV Bindass",
+    "epg_no": "153",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "155": {
+    "name": "Investigation Discovery",
+    "epg_no": "155",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "156": {
+    "name": "Naaptol",
+    "epg_no": "156",
+    "genre": "Shopping",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "158": {
+    "name": "Ezmall",
+    "epg_no": "158",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "171": {
+    "name": "Star Utsav",
+    "epg_no": "171",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "172": {
+    "name": "Zee Anmol",
+    "epg_no": "172",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "173": {
+    "name": "Colors Rishtey",
+    "epg_no": "173",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "174": {
+    "name": "Sony Pal",
+    "epg_no": "174",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "175": {
+    "name": "The Q",
+    "epg_no": "175",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "176": {
+    "name": "Big Magic",
+    "epg_no": "176",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "177": {
+    "name": "Dangal",
+    "epg_no": "177",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "178": {
+    "name": "Anjan TV",
+    "epg_no": "178",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "180": {
+    "name": "DD Retro",
+    "epg_no": "180",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "181": {
+    "name": "Shemaroo TV",
+    "epg_no": "181",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "182": {
+    "name": "Ishara",
+    "epg_no": "182",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "198": {
+    "name": "DD Kisan",
+    "epg_no": "198",
+    "genre": "Hindi Entertainment",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "202": {
+    "name": "Star World HD",
+    "epg_no": "202",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "203": {
+    "name": "Star World",
+    "epg_no": "203",
+    "genre": "English Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "206": {
+    "name": "Star World Premiere HD",
+    "epg_no": "206",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "210": {
+    "name": "Zee Café HD",
+    "epg_no": "210",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "211": {
+    "name": "Zee Café",
+    "epg_no": "211",
+    "genre": "English Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "214": {
+    "name": "Colors Infinity HD",
+    "epg_no": "214",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "215": {
+    "name": "Colors Infinity",
+    "epg_no": "215",
+    "genre": "English Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "218": {
+    "name": "Comedy Central HD",
+    "epg_no": "218",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "219": {
+    "name": "Comedy Central",
+    "epg_no": "219",
+    "genre": "English Entertainment",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "221": {
+    "name": "Disney International HD",
+    "epg_no": "221",
+    "genre": "English Entertainment",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "308": {
+    "name": "Star Gold HD",
+    "epg_no": "308",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "310": {
+    "name": "Star Gold",
+    "epg_no": "310",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "312": {
+    "name": "Sony Max HD",
+    "epg_no": "312",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "314": {
+    "name": "Sony Max",
+    "epg_no": "314",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "317": {
+    "name": "Star Gold 2",
+    "epg_no": "317",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "319": {
+    "name": "Zee Cinema HD",
+    "epg_no": "319",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "321": {
+    "name": "Zee Cinema",
+    "epg_no": "321",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "322": {
+    "name": "UTV HD",
+    "epg_no": "322",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "323": {
+    "name": "UTV Movies",
+    "epg_no": "323",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "325": {
+    "name": "UTV Action",
+    "epg_no": "325",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "327": {
+    "name": "Zee Bollywood",
+    "epg_no": "327",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "328": {
+    "name": "Zee Classic",
+    "epg_no": "328",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "331": {
+    "name": "&pictures HD",
+    "epg_no": "331",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "332": {
+    "name": "&pictures",
+    "epg_no": "332",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "344": {
+    "name": "Colors Cineplex HD",
+    "epg_no": "344",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "345": {
+    "name": "Colors Cineplex",
+    "epg_no": "345",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "346": {
+    "name": "B4U Kadak",
+    "epg_no": "346",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "349": {
+    "name": "Zee Action",
+    "epg_no": "349",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "351": {
+    "name": "Sony Wah",
+    "epg_no": "351",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "352": {
+    "name": "B4U Movies",
+    "epg_no": "352",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "355": {
+    "name": "Sony Max 2",
+    "epg_no": "355",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "356": {
+    "name": "Star Gold Select HD",
+    "epg_no": "356",
+    "genre": "Hindi Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "357": {
+    "name": "Star Gold Select",
+    "epg_no": "357",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "358": {
+    "name": "Cinema TV India",
+    "epg_no": "358",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "365": {
+    "name": "Wow Cinema One",
+    "epg_no": "365",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "366": {
+    "name": "Enterr10 Movies",
+    "epg_no": "366",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "367": {
+    "name": "Bflix Movies",
+    "epg_no": "367",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "369": {
+    "name": "Star Utsav Movies",
+    "epg_no": "369",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "371": {
+    "name": "Zee Anmol Cinema",
+    "epg_no": "371",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "375": {
+    "name": "Dhinchaak",
+    "epg_no": "375",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "376": {
+    "name": "Manoranjan TV",
+    "epg_no": "376",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "377": {
+    "name": "Manoranjan Grand",
+    "epg_no": "377",
+    "genre": "Hindi Movies",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "402": {
+    "name": "Star Movies HD",
+    "epg_no": "402",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "403": {
+    "name": "Star Movies",
+    "epg_no": "403",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "406": {
+    "name": "Sony Pix HD",
+    "epg_no": "406",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "407": {
+    "name": "Sony Pix",
+    "epg_no": "407",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "412": {
+    "name": "&flix HD",
+    "epg_no": "412",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "413": {
+    "name": "&flix",
+    "epg_no": "413",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "418": {
+    "name": "Star Movies Select HD",
+    "epg_no": "418",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "420": {
+    "name": "Movies Now HD",
+    "epg_no": "420",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "421": {
+    "name": "Movies Now",
+    "epg_no": "421",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "423": {
+    "name": "MN+ HD",
+    "epg_no": "423",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "425": {
+    "name": "MNX HD",
+    "epg_no": "425",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "426": {
+    "name": "MNX",
+    "epg_no": "426",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "429": {
+    "name": "Romedy Now",
+    "epg_no": "429",
+    "genre": "English Movies",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "431": {
+    "name": "&prive HD",
+    "epg_no": "431",
+    "genre": "English Movies",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "453": {
+    "name": "DD Sports",
+    "epg_no": "453",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "454": {
+    "name": "Star Sports 1 HD",
+    "epg_no": "454",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "455": {
+    "name": "Star Sports 1",
+    "epg_no": "455",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "456": {
+    "name": "Star Sports 2 HD",
+    "epg_no": "456",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "457": {
+    "name": "Star Sports 2",
+    "epg_no": "457",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "458": {
+    "name": "Star Sports 3",
+    "epg_no": "458",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "459": {
+    "name": "Star Sports 1 Hindi HD",
+    "epg_no": "459",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "460": {
+    "name": "Star Sports 1 Hindi",
+    "epg_no": "460",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "463": {
+    "name": "Star Sports Select 1 HD",
+    "epg_no": "463",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "464": {
+    "name": "Star Sports Select 1",
+    "epg_no": "464",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "465": {
+    "name": "Star Sports Select 2 HD",
+    "epg_no": "465",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "466": {
+    "name": "Star Sports Select 2",
+    "epg_no": "466",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "470": {
+    "name": "Sony Ten 1 HD",
+    "epg_no": "470",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "471": {
+    "name": "Sony Ten 1",
+    "epg_no": "471",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "473": {
+    "name": "Sony Ten 2 HD",
+    "epg_no": "473",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "474": {
+    "name": "Sony Ten 2",
+    "epg_no": "474",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "475": {
+    "name": "Sony Ten 3 HD",
+    "epg_no": "475",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "476": {
+    "name": "Sony Ten 3",
+    "epg_no": "476",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "483": {
+    "name": "Sony Six HD",
+    "epg_no": "483",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "484": {
+    "name": "Sony Six",
+    "epg_no": "484",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "495": {
+    "name": "Eurosport HD",
+    "epg_no": "495",
+    "genre": "Sports",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "496": {
+    "name": "Eurosport",
+    "epg_no": "496",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "497": {
+    "name": "Star Sports First",
+    "epg_no": "497",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "498": {
+    "name": "1Sports",
+    "epg_no": "498",
+    "genre": "Sports",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "501": {
+    "name": "DD News HD",
+    "epg_no": "501",
+    "genre": "Hindi News",
+    "quality": "HD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "502": {
+    "name": "DD News",
+    "epg_no": "502",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "504": {
+    "name": "ABP News",
+    "epg_no": "504",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "506": {
+    "name": "NDTV India",
+    "epg_no": "506",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "508": {
+    "name": "Aaj Tak HD",
+    "epg_no": "508",
+    "genre": "Hindi News",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "509": {
+    "name": "Aaj Tak",
+    "epg_no": "509",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "511": {
+    "name": "Zee News",
+    "epg_no": "511",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "514": {
+    "name": "India TV",
+    "epg_no": "514",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "516": {
+    "name": "News 24",
+    "epg_no": "516",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "519": {
+    "name": "News18 India",
+    "epg_no": "519",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "520": {
+    "name": "Zee Hindustan",
+    "epg_no": "520",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "521": {
+    "name": "R Bharat",
+    "epg_no": "521",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "522": {
+    "name": "India News",
+    "epg_no": "522",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "523": {
+    "name": "News Nation",
+    "epg_no": "523",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "524": {
+    "name": "TV9 Bharatvarsh",
+    "epg_no": "524",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "525": {
+    "name": "Good News Today",
+    "epg_no": "525",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "527": {
+    "name": "Total TV",
+    "epg_no": "527",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "528": {
+    "name": "Times Now Navbharat HD",
+    "epg_no": "528",
+    "genre": "Hindi News",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "529": {
+    "name": "Times Now Navbharat",
+    "epg_no": "529",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "530": {
+    "name": "News India 24x7",
+    "epg_no": "530",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "534": {
+    "name": "Sudarshan News",
+    "epg_no": "534",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "542": {
+    "name": "APN News",
+    "epg_no": "542",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "551": {
+    "name": "India Voice",
+    "epg_no": "551",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "552": {
+    "name": "News 11 Bharat",
+    "epg_no": "552",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "553": {
+    "name": "News 1 India",
+    "epg_no": "553",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "557": {
+    "name": "Hindi Khabar",
+    "epg_no": "557",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "559": {
+    "name": "Bharat Samachar",
+    "epg_no": "559",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "563": {
+    "name": "Khabrain Abhi Tak",
+    "epg_no": "563",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "566": {
+    "name": "Samay",
+    "epg_no": "566",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "567": {
+    "name": "Network 10",
+    "epg_no": "567",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "568": {
+    "name": "Jantantra TV",
+    "epg_no": "568",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "569": {
+    "name": "Prime News",
+    "epg_no": "569",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "590": {
+    "name": "Zee Business",
+    "epg_no": "590",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "592": {
+    "name": "CNBC Awaaz",
+    "epg_no": "592",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "594": {
+    "name": "ET Now Swadesh",
+    "epg_no": "594",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "598": {
+    "name": "Sansad TV",
+    "epg_no": "598",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "599": {
+    "name": "Sansad TV - Rajya Sabha",
+    "epg_no": "599",
+    "genre": "Hindi News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "601": {
+    "name": "NDTV 24x7",
+    "epg_no": "601",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "603": {
+    "name": "Times Now World (HD)",
+    "epg_no": "603",
+    "genre": "English News",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "604": {
+    "name": "Times Now",
+    "epg_no": "604",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "606": {
+    "name": "India Today",
+    "epg_no": "606",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "608": {
+    "name": "CNN News18",
+    "epg_no": "608",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "610": {
+    "name": "NewsX",
+    "epg_no": "610",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "612": {
+    "name": "Mirror Now",
+    "epg_no": "612",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "613": {
+    "name": "WION",
+    "epg_no": "613",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "616": {
+    "name": "Republic TV",
+    "epg_no": "616",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "617": {
+    "name": "India Ahead",
+    "epg_no": "617",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "622": {
+    "name": "DD India",
+    "epg_no": "622",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "623": {
+    "name": "NDTV Profit Prime",
+    "epg_no": "623",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "625": {
+    "name": "CNBC TV18 Prime HD",
+    "epg_no": "625",
+    "genre": "English News",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "626": {
+    "name": "CNBC TV18",
+    "epg_no": "626",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "627": {
+    "name": "ET Now",
+    "epg_no": "627",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "631": {
+    "name": "CNN",
+    "epg_no": "631",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "633": {
+    "name": "BBC World",
+    "epg_no": "633",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "637": {
+    "name": "Al Jazeera",
+    "epg_no": "637",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "638": {
+    "name": "Channel News Asia",
+    "epg_no": "638",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "639": {
+    "name": "France 24",
+    "epg_no": "639",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "640": {
+    "name": "TV5 Monde Asie",
+    "epg_no": "640",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "641": {
+    "name": "DW",
+    "epg_no": "641",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "642": {
+    "name": "Australia TV",
+    "epg_no": "642",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "643": {
+    "name": "Russia Today",
+    "epg_no": "643",
+    "genre": "English News",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "652": {
+    "name": "Hungama TV",
+    "epg_no": "652",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "655": {
+    "name": "Marvel HQ",
+    "epg_no": "655",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "658": {
+    "name": "Disney",
+    "epg_no": "658",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "662": {
+    "name": "Nick HD+",
+    "epg_no": "662",
+    "genre": "Kids",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "663": {
+    "name": "Nick",
+    "epg_no": "663",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "666": {
+    "name": "Cartoon Network HD+",
+    "epg_no": "666",
+    "genre": "Kids",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "667": {
+    "name": "Cartoon Network",
+    "epg_no": "667",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "670": {
+    "name": "Pogo",
+    "epg_no": "670",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "672": {
+    "name": "Discovery Kids",
+    "epg_no": "672",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "674": {
+    "name": "Sonic Nickelodeon",
+    "epg_no": "674",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "676": {
+    "name": "Sony Yay",
+    "epg_no": "676",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "678": {
+    "name": "Gubbare",
+    "epg_no": "678",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "680": {
+    "name": "ETV Bal Bharat",
+    "epg_no": "680",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "684": {
+    "name": "Baby TV HD",
+    "epg_no": "684",
+    "genre": "Kids",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "685": {
+    "name": "Nick Jr",
+    "epg_no": "685",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "686": {
+    "name": "Disney Junior",
+    "epg_no": "686",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "687": {
+    "name": "CBeeBies",
+    "epg_no": "687",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "692": {
+    "name": "Kushi TV",
+    "epg_no": "692",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "693": {
+    "name": "Chutti TV",
+    "epg_no": "693",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "694": {
+    "name": "Chintu TV",
+    "epg_no": "694",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "695": {
+    "name": "Kochu TV",
+    "epg_no": "695",
+    "genre": "Kids",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "708": {
+    "name": "National Geographic HD",
+    "epg_no": "708",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "709": {
+    "name": "National Geographic",
+    "epg_no": "709",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "711": {
+    "name": "Nat Geo Wild HD",
+    "epg_no": "711",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "712": {
+    "name": "Nat Geo Wild",
+    "epg_no": "712",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "713": {
+    "name": "Discovery HD World",
+    "epg_no": "713",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "714": {
+    "name": "Discovery Channel",
+    "epg_no": "714",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "716": {
+    "name": "Animal Planet HD World",
+    "epg_no": "716",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "717": {
+    "name": "Animal Planet",
+    "epg_no": "717",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "719": {
+    "name": "Discovery Science",
+    "epg_no": "719",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "720": {
+    "name": "History TV18 HD",
+    "epg_no": "720",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "721": {
+    "name": "History TV18",
+    "epg_no": "721",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "724": {
+    "name": "Sony BBC Earth HD",
+    "epg_no": "724",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "725": {
+    "name": "Sony BBC Earth",
+    "epg_no": "725",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "735": {
+    "name": "Epic",
+    "epg_no": "735",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "753": {
+    "name": "Fox Life HD",
+    "epg_no": "753",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "754": {
+    "name": "Fox Life",
+    "epg_no": "754",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "755": {
+    "name": "DD Gyan Darshan",
+    "epg_no": "755",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "756": {
+    "name": "Swayam Prabha",
+    "epg_no": "756",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "759": {
+    "name": "TLC HD",
+    "epg_no": "759",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "760": {
+    "name": "TLC",
+    "epg_no": "760",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "762": {
+    "name": "Good Times",
+    "epg_no": "762",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "764": {
+    "name": "Discovery Turbo",
+    "epg_no": "764",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "765": {
+    "name": "TravelXP HD",
+    "epg_no": "765",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "766": {
+    "name": "TravelXP",
+    "epg_no": "766",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "768": {
+    "name": "Food Food",
+    "epg_no": "768",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "769": {
+    "name": "Zee Zest HD",
+    "epg_no": "769",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "770": {
+    "name": "Zee Zest",
+    "epg_no": "770",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "772": {
+    "name": "Fashion TV",
+    "epg_no": "772",
+    "genre": "Knowledge & Lifestyle",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "806": {
+    "name": "MTV HD+",
+    "epg_no": "806",
+    "genre": "Music",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "807": {
+    "name": "MTV",
+    "epg_no": "807",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "809": {
+    "name": "9XM",
+    "epg_no": "809",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "811": {
+    "name": "Zoom",
+    "epg_no": "811",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "813": {
+    "name": "E24",
+    "epg_no": "813",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "820": {
+    "name": "MTV Beats HD",
+    "epg_no": "820",
+    "genre": "Music",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "821": {
+    "name": "MTV Beats",
+    "epg_no": "821",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "822": {
+    "name": "B4U Music",
+    "epg_no": "822",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "825": {
+    "name": "Mastiii",
+    "epg_no": "825",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "826": {
+    "name": "Zing",
+    "epg_no": "826",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "830": {
+    "name": "9X Jalwa",
+    "epg_no": "830",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "833": {
+    "name": "insync",
+    "epg_no": "833",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "835": {
+    "name": "Showbox",
+    "epg_no": "835",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "855": {
+    "name": "Vh1 HD",
+    "epg_no": "855",
+    "genre": "Music",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "856": {
+    "name": "Vh1",
+    "epg_no": "856",
+    "genre": "Music",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1055": {
+    "name": "Aastha",
+    "epg_no": "1055",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1057": {
+    "name": "Sanskar",
+    "epg_no": "1057",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1058": {
+    "name": "Disha TV",
+    "epg_no": "1058",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1059": {
+    "name": "Paras TV",
+    "epg_no": "1059",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1061": {
+    "name": "MH One Shraddha",
+    "epg_no": "1061",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1063": {
+    "name": "Sadhna TV",
+    "epg_no": "1063",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1064": {
+    "name": "Sharnam TV",
+    "epg_no": "1064",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1065": {
+    "name": "Peace of Mind",
+    "epg_no": "1065",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1066": {
+    "name": "Jinvani Channel",
+    "epg_no": "1066",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1067": {
+    "name": "Arihant",
+    "epg_no": "1067",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1068": {
+    "name": "Ishwar TV",
+    "epg_no": "1068",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1073": {
+    "name": "Satsang TV",
+    "epg_no": "1073",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1074": {
+    "name": "Shubh TV",
+    "epg_no": "1074",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1077": {
+    "name": "Aastha Bhajan",
+    "epg_no": "1077",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1078": {
+    "name": "Vedic",
+    "epg_no": "1078",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1082": {
+    "name": "Subharti TV",
+    "epg_no": "1082",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1083": {
+    "name": "Divya",
+    "epg_no": "1083",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1084": {
+    "name": "Awakening",
+    "epg_no": "1084",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1085": {
+    "name": "Santwani",
+    "epg_no": "1085",
+    "genre": "Spiritual",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1102": {
+    "name": "Zee Ganga",
+    "epg_no": "1102",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1103": {
+    "name": "Dishum",
+    "epg_no": "1103",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1113": {
+    "name": "Zee Biskope",
+    "epg_no": "1113",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1114": {
+    "name": "Filamchi Bhojpuri",
+    "epg_no": "1114",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1118": {
+    "name": "Oscar Movies Bhojpuri",
+    "epg_no": "1118",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1119": {
+    "name": "Bhojpuri Cinema",
+    "epg_no": "1119",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1120": {
+    "name": "B4U Bhojpuri",
+    "epg_no": "1120",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1122": {
+    "name": "PASAND",
+    "epg_no": "1122",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1125": {
+    "name": "News18 Uttar Pradesh",
+    "epg_no": "1125",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1126": {
+    "name": "Zee Uttar Pradesh",
+    "epg_no": "1126",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1127": {
+    "name": "ABP Ganga",
+    "epg_no": "1127",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1129": {
+    "name": "News18 Bihar Jharkhand",
+    "epg_no": "1129",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1130": {
+    "name": "Zee Bihar Jharkhand",
+    "epg_no": "1130",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1136": {
+    "name": "India News UP UK",
+    "epg_no": "1136",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1137": {
+    "name": "News State UP",
+    "epg_no": "1137",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1138": {
+    "name": "Sadhna Plus News",
+    "epg_no": "1138",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1139": {
+    "name": "Kashish News",
+    "epg_no": "1139",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1152": {
+    "name": "DD Bharati",
+    "epg_no": "1152",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1153": {
+    "name": "DD Uttar Pradesh",
+    "epg_no": "1153",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1154": {
+    "name": "DD Bihar",
+    "epg_no": "1154",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1155": {
+    "name": "News18 Madhya Pradesh",
+    "epg_no": "1155",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1156": {
+    "name": "Zee Madhya Pradesh",
+    "epg_no": "1156",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1161": {
+    "name": "IBC 24",
+    "epg_no": "1161",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1162": {
+    "name": "Bansal News",
+    "epg_no": "1162",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1163": {
+    "name": "INH 24X7",
+    "epg_no": "1163",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1164": {
+    "name": "India News MP CG",
+    "epg_no": "1164",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1165": {
+    "name": "News State MP CG",
+    "epg_no": "1165",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1166": {
+    "name": "Swaraj Express SMBC",
+    "epg_no": "1166",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1168": {
+    "name": "Sadhna News MP CG",
+    "epg_no": "1168",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1169": {
+    "name": "News 24 MP CG",
+    "epg_no": "1169",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1170": {
+    "name": "Anaadi TV",
+    "epg_no": "1170",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1175": {
+    "name": "DD Madhya Pradesh",
+    "epg_no": "1175",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1176": {
+    "name": "News18 Rajasthan",
+    "epg_no": "1176",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1177": {
+    "name": "Zee Rajasthan News",
+    "epg_no": "1177",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1182": {
+    "name": "First India Rajasthan",
+    "epg_no": "1182",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1183": {
+    "name": "India News Rajasthan",
+    "epg_no": "1183",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1184": {
+    "name": "Patrika TV Rajasthan",
+    "epg_no": "1184",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1185": {
+    "name": "Jan TV",
+    "epg_no": "1185",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1186": {
+    "name": "A1 TV",
+    "epg_no": "1186",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1190": {
+    "name": "DD Rajasthan",
+    "epg_no": "1190",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1191": {
+    "name": "News18 Urdu",
+    "epg_no": "1191",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1192": {
+    "name": "Zee Salaam",
+    "epg_no": "1192",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1193": {
+    "name": "Channel Win",
+    "epg_no": "1193",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1194": {
+    "name": "Gulistan News",
+    "epg_no": "1194",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1199": {
+    "name": "DD Urdu",
+    "epg_no": "1199",
+    "genre": "Hindi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1201": {
+    "name": "Colors Marathi HD",
+    "epg_no": "1201",
+    "genre": "Marathi Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1202": {
+    "name": "Colors Marathi",
+    "epg_no": "1202",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1203": {
+    "name": "Zee Marathi HD",
+    "epg_no": "1203",
+    "genre": "Marathi Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1204": {
+    "name": "Zee Marathi",
+    "epg_no": "1204",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1207": {
+    "name": "Star Pravah HD",
+    "epg_no": "1207",
+    "genre": "Marathi Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1208": {
+    "name": "Star Pravah",
+    "epg_no": "1208",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1211": {
+    "name": "Zee Yuva",
+    "epg_no": "1211",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1213": {
+    "name": "Sony Marathi",
+    "epg_no": "1213",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1217": {
+    "name": "Sun Marathi",
+    "epg_no": "1217",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1225": {
+    "name": "Zee Talkies HD",
+    "epg_no": "1225",
+    "genre": "Marathi Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1226": {
+    "name": "Zee Talkies",
+    "epg_no": "1226",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1229": {
+    "name": "Fakt Marathi",
+    "epg_no": "1229",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1230": {
+    "name": "Shemaroo Marathi Bana",
+    "epg_no": "1230",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1255": {
+    "name": "ABP Majha",
+    "epg_no": "1255",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1257": {
+    "name": "News18 Lokmat",
+    "epg_no": "1257",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1259": {
+    "name": "Zee 24 Taas",
+    "epg_no": "1259",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1261": {
+    "name": "Saam TV",
+    "epg_no": "1261",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1262": {
+    "name": "Jai Maharashtra",
+    "epg_no": "1262",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1263": {
+    "name": "TV9 Marathi",
+    "epg_no": "1263",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1265": {
+    "name": "Lokshahi",
+    "epg_no": "1265",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1274": {
+    "name": "DD Sahyadri",
+    "epg_no": "1274",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1276": {
+    "name": "9X Jhakaas",
+    "epg_no": "1276",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1277": {
+    "name": "Sangeet Marathi",
+    "epg_no": "1277",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1278": {
+    "name": "Zee Vajwa",
+    "epg_no": "1278",
+    "genre": "Marathi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1302": {
+    "name": "Colors Bangla HD",
+    "epg_no": "1302",
+    "genre": "Bengali Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1303": {
+    "name": "Colors Bangla",
+    "epg_no": "1303",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1306": {
+    "name": "Zee Bangla HD",
+    "epg_no": "1306",
+    "genre": "Bengali Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1307": {
+    "name": "Zee Bangla",
+    "epg_no": "1307",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1309": {
+    "name": "Star Jalsha HD",
+    "epg_no": "1309",
+    "genre": "Bengali Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1310": {
+    "name": "Star Jalsha",
+    "epg_no": "1310",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1312": {
+    "name": "Sony Aath",
+    "epg_no": "1312",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1317": {
+    "name": "Sun Bangla",
+    "epg_no": "1317",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1320": {
+    "name": "Aakaash Aath",
+    "epg_no": "1320",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1321": {
+    "name": "Ruposhi Bangla",
+    "epg_no": "1321",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1322": {
+    "name": "Enterr10 Bangla",
+    "epg_no": "1322",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1326": {
+    "name": "Jalsha Movies HD",
+    "epg_no": "1326",
+    "genre": "Bengali Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1327": {
+    "name": "Jalsha Movies",
+    "epg_no": "1327",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1329": {
+    "name": "Zee Bangla Cinema",
+    "epg_no": "1329",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1331": {
+    "name": "Colors Bangla Cinema",
+    "epg_no": "1331",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1341": {
+    "name": "Khushboo Bangla",
+    "epg_no": "1341",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1350": {
+    "name": "Star Sports 1 Bangla",
+    "epg_no": "1350",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1360": {
+    "name": "ABP Ananda",
+    "epg_no": "1360",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1362": {
+    "name": "Zee 24 Ghanta",
+    "epg_no": "1362",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1363": {
+    "name": "Kolkata TV",
+    "epg_no": "1363",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1365": {
+    "name": "News18 Bangla",
+    "epg_no": "1365",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1366": {
+    "name": "TV9 Bangla",
+    "epg_no": "1366",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1367": {
+    "name": "Republic Bangla",
+    "epg_no": "1367",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1368": {
+    "name": "News Time Bangla",
+    "epg_no": "1368",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1369": {
+    "name": "CTVN AKD Plus",
+    "epg_no": "1369",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1370": {
+    "name": "Calcutta News",
+    "epg_no": "1370",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1379": {
+    "name": "DD Bangla",
+    "epg_no": "1379",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1380": {
+    "name": "Sangeet Bangla",
+    "epg_no": "1380",
+    "genre": "Bengali Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1403": {
+    "name": "Zee Telugu HD",
+    "epg_no": "1403",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1404": {
+    "name": "Zee Telugu",
+    "epg_no": "1404",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1405": {
+    "name": "Gemini TV HD",
+    "epg_no": "1405",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1406": {
+    "name": "Gemini TV",
+    "epg_no": "1406",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1408": {
+    "name": "Star Maa HD",
+    "epg_no": "1408",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1409": {
+    "name": "Star Maa",
+    "epg_no": "1409",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1411": {
+    "name": "ETV HD",
+    "epg_no": "1411",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1412": {
+    "name": "ETV Telugu",
+    "epg_no": "1412",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1415": {
+    "name": "Gemini Life",
+    "epg_no": "1415",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1417": {
+    "name": "ETV Plus",
+    "epg_no": "1417",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1419": {
+    "name": "Telugu Naaptol",
+    "epg_no": "1419",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1422": {
+    "name": "Vissa TV",
+    "epg_no": "1422",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1423": {
+    "name": "Studio Yuva",
+    "epg_no": "1423",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1430": {
+    "name": "Gemini Movies HD",
+    "epg_no": "1430",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1431": {
+    "name": "Gemini Movies",
+    "epg_no": "1431",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1432": {
+    "name": "Star Maa Movies HD",
+    "epg_no": "1432",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1433": {
+    "name": "Star Maa Movies",
+    "epg_no": "1433",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1435": {
+    "name": "Star Maa Gold",
+    "epg_no": "1435",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1437": {
+    "name": "Zee Cinemalu HD",
+    "epg_no": "1437",
+    "genre": "Telugu Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1438": {
+    "name": "Zee Cinemalu",
+    "epg_no": "1438",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1440": {
+    "name": "ETV Cinema",
+    "epg_no": "1440",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1442": {
+    "name": "Gemini Comedy",
+    "epg_no": "1442",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1446": {
+    "name": "Star Sports 1 Telugu",
+    "epg_no": "1446",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1451": {
+    "name": "ETV Life",
+    "epg_no": "1451",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1453": {
+    "name": "ETV Abhiruchi",
+    "epg_no": "1453",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1456": {
+    "name": "Sakshi TV",
+    "epg_no": "1456",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1457": {
+    "name": "ETV Andhra Pradesh",
+    "epg_no": "1457",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1458": {
+    "name": "TV5 News",
+    "epg_no": "1458",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1459": {
+    "name": "TV9 Telugu",
+    "epg_no": "1459",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1460": {
+    "name": "NTV Telugu",
+    "epg_no": "1460",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1461": {
+    "name": "ABN Andhra Jyothy",
+    "epg_no": "1461",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1462": {
+    "name": "T News",
+    "epg_no": "1462",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1463": {
+    "name": "V6 News",
+    "epg_no": "1463",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1464": {
+    "name": "ETV Telangana",
+    "epg_no": "1464",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1465": {
+    "name": "HM TV",
+    "epg_no": "1465",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1466": {
+    "name": "Raj News Telugu",
+    "epg_no": "1466",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1467": {
+    "name": "10 TV",
+    "epg_no": "1467",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1470": {
+    "name": "4TV News",
+    "epg_no": "1470",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1479": {
+    "name": "Vidya",
+    "epg_no": "1479",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1480": {
+    "name": "Nipuna",
+    "epg_no": "1480",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1481": {
+    "name": "DD Saptagiri",
+    "epg_no": "1481",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1482": {
+    "name": "DD Yadagiri",
+    "epg_no": "1482",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1484": {
+    "name": "Gemini Music",
+    "epg_no": "1484",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1486": {
+    "name": "Star Maa Music",
+    "epg_no": "1486",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1487": {
+    "name": "Raj Musix Telugu",
+    "epg_no": "1487",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1490": {
+    "name": "Bhakti TV",
+    "epg_no": "1490",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1491": {
+    "name": "Subhavaartha TV",
+    "epg_no": "1491",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1492": {
+    "name": "Aradana TV",
+    "epg_no": "1492",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1493": {
+    "name": "Swara Sagar",
+    "epg_no": "1493",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1494": {
+    "name": "Hindu Dharmam",
+    "epg_no": "1494",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1499": {
+    "name": "SVBC",
+    "epg_no": "1499",
+    "genre": "Telugu Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1503": {
+    "name": "Sun TV HD",
+    "epg_no": "1503",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1504": {
+    "name": "Sun TV",
+    "epg_no": "1504",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1506": {
+    "name": "Sun Life",
+    "epg_no": "1506",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1507": {
+    "name": "Star Vijay HD",
+    "epg_no": "1507",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1508": {
+    "name": "Star Vijay",
+    "epg_no": "1508",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1510": {
+    "name": "Zee Tamil HD",
+    "epg_no": "1510",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1511": {
+    "name": "Zee Tamil",
+    "epg_no": "1511",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1513": {
+    "name": "Vijay Super",
+    "epg_no": "1513",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1514": {
+    "name": "Colors Tamil HD",
+    "epg_no": "1514",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1515": {
+    "name": "Colors Tamil",
+    "epg_no": "1515",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1517": {
+    "name": "Jaya TV HD",
+    "epg_no": "1517",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1518": {
+    "name": "Kalaignar TV",
+    "epg_no": "1518",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1520": {
+    "name": "Raj TV",
+    "epg_no": "1520",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1521": {
+    "name": "D Tamil",
+    "epg_no": "1521",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1522": {
+    "name": "Raj Digital Plus",
+    "epg_no": "1522",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1523": {
+    "name": "Mega TV",
+    "epg_no": "1523",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1524": {
+    "name": "Mega 24",
+    "epg_no": "1524",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1525": {
+    "name": "Tamil Naaptol",
+    "epg_no": "1525",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1530": {
+    "name": "Vasanth TV",
+    "epg_no": "1530",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1531": {
+    "name": "Sirippoli",
+    "epg_no": "1531",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1532": {
+    "name": "Polimer TV",
+    "epg_no": "1532",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1533": {
+    "name": "Makkal TV",
+    "epg_no": "1533",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1534": {
+    "name": "Peppers TV",
+    "epg_no": "1534",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1535": {
+    "name": "Moon TV",
+    "epg_no": "1535",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1536": {
+    "name": "Vendhar TV",
+    "epg_no": "1536",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1540": {
+    "name": "KTV HD",
+    "epg_no": "1540",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1541": {
+    "name": "KTV",
+    "epg_no": "1541",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1543": {
+    "name": "Adithya TV",
+    "epg_no": "1543",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1544": {
+    "name": "J Movies",
+    "epg_no": "1544",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1546": {
+    "name": "Zee Thirai",
+    "epg_no": "1546",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1551": {
+    "name": "Star Sports 1 Tamil",
+    "epg_no": "1551",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1552": {
+    "name": "Sony Ten 4",
+    "epg_no": "1552",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1553": {
+    "name": "TravelXP Tamil",
+    "epg_no": "1553",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1554": {
+    "name": "Kalvi TV",
+    "epg_no": "1554",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1556": {
+    "name": "Puthiya Thalaimurai",
+    "epg_no": "1556",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1557": {
+    "name": "Thanthi TV",
+    "epg_no": "1557",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1558": {
+    "name": "Jaya Plus",
+    "epg_no": "1558",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1559": {
+    "name": "Sun News",
+    "epg_no": "1559",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1560": {
+    "name": "News 7 Tamil",
+    "epg_no": "1560",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1561": {
+    "name": "Polimer News",
+    "epg_no": "1561",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1562": {
+    "name": "News18 Tamil Nadu",
+    "epg_no": "1562",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1563": {
+    "name": "Seithigal TV",
+    "epg_no": "1563",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1564": {
+    "name": "Raj News Tamil",
+    "epg_no": "1564",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1565": {
+    "name": "Sathiyam TV",
+    "epg_no": "1565",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1566": {
+    "name": "Malaimurasu Seithigal",
+    "epg_no": "1566",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1567": {
+    "name": "Captain News",
+    "epg_no": "1567",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1568": {
+    "name": "News J",
+    "epg_no": "1568",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1578": {
+    "name": "DD Podhigai",
+    "epg_no": "1578",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1579": {
+    "name": "Sun Music HD",
+    "epg_no": "1579",
+    "genre": "Tamil Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1580": {
+    "name": "Sun Music",
+    "epg_no": "1580",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1581": {
+    "name": "Jaya Max",
+    "epg_no": "1581",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1582": {
+    "name": "Raj Musix",
+    "epg_no": "1582",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1583": {
+    "name": "Vijay Music",
+    "epg_no": "1583",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1584": {
+    "name": "Isaiaruvi",
+    "epg_no": "1584",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1585": {
+    "name": "Murasu TV",
+    "epg_no": "1585",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1586": {
+    "name": "Mega Musiq",
+    "epg_no": "1586",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1587": {
+    "name": "Jothi TV",
+    "epg_no": "1587",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1590": {
+    "name": "Madha TV",
+    "epg_no": "1590",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1591": {
+    "name": "Angel TV",
+    "epg_no": "1591",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1592": {
+    "name": "Nambikkai TV",
+    "epg_no": "1592",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1599": {
+    "name": "SVBC 2",
+    "epg_no": "1599",
+    "genre": "Tamil Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1603": {
+    "name": "Udaya TV HD",
+    "epg_no": "1603",
+    "genre": "Kannada Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1604": {
+    "name": "Udaya TV",
+    "epg_no": "1604",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1605": {
+    "name": "Colors Kannada HD",
+    "epg_no": "1605",
+    "genre": "Kannada Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1606": {
+    "name": "Colors Kannada",
+    "epg_no": "1606",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1609": {
+    "name": "Star Suvarna HD",
+    "epg_no": "1609",
+    "genre": "Kannada Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1610": {
+    "name": "Star Suvarna",
+    "epg_no": "1610",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1611": {
+    "name": "Zee Kannada HD",
+    "epg_no": "1611",
+    "genre": "Kannada Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1612": {
+    "name": "Zee Kannada",
+    "epg_no": "1612",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1615": {
+    "name": "Colors Super",
+    "epg_no": "1615",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1617": {
+    "name": "Kannada Naaptol",
+    "epg_no": "1617",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1618": {
+    "name": "Sirikannada All Time",
+    "epg_no": "1618",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1626": {
+    "name": "Udaya Movies",
+    "epg_no": "1626",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1628": {
+    "name": "Udaya Comedy",
+    "epg_no": "1628",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1630": {
+    "name": "Star Suvarna Plus",
+    "epg_no": "1630",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1632": {
+    "name": "Colors Kannada Cinema",
+    "epg_no": "1632",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1634": {
+    "name": "Zee Picchar",
+    "epg_no": "1634",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1639": {
+    "name": "Public Movies",
+    "epg_no": "1639",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1645": {
+    "name": "Star Sports 1 Kannada",
+    "epg_no": "1645",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1650": {
+    "name": "Kasthuri",
+    "epg_no": "1650",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1653": {
+    "name": "TV9 Kannada",
+    "epg_no": "1653",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1654": {
+    "name": "Asianet Suvarna News",
+    "epg_no": "1654",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1655": {
+    "name": "Public TV",
+    "epg_no": "1655",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1656": {
+    "name": "News18 Kannada",
+    "epg_no": "1656",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1657": {
+    "name": "TV5 Kannada",
+    "epg_no": "1657",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1658": {
+    "name": "Raj News Kannada",
+    "epg_no": "1658",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1659": {
+    "name": "Dighvijay 24x7 News",
+    "epg_no": "1659",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1660": {
+    "name": "Power TV",
+    "epg_no": "1660",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1661": {
+    "name": "News 1st",
+    "epg_no": "1661",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1672": {
+    "name": "DD Chandana",
+    "epg_no": "1672",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1673": {
+    "name": "Udaya Music",
+    "epg_no": "1673",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1674": {
+    "name": "Raj Musix Kannada",
+    "epg_no": "1674",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1677": {
+    "name": "Public Music",
+    "epg_no": "1677",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1685": {
+    "name": "Sri Sankara TV",
+    "epg_no": "1685",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1686": {
+    "name": "Ayush TV",
+    "epg_no": "1686",
+    "genre": "Kannada Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1702": {
+    "name": "Colors Gujarati",
+    "epg_no": "1702",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1711": {
+    "name": "Colors Gujarati Cinema",
+    "epg_no": "1711",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1720": {
+    "name": "TV9 Gujarati",
+    "epg_no": "1720",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1721": {
+    "name": "Gujarat Samachar TV",
+    "epg_no": "1721",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1722": {
+    "name": "Sandesh News",
+    "epg_no": "1722",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1724": {
+    "name": "CNBC Bajaar",
+    "epg_no": "1724",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1726": {
+    "name": "News18 Gujarati",
+    "epg_no": "1726",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1728": {
+    "name": "ABP Asmita",
+    "epg_no": "1728",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1729": {
+    "name": "VTV Gujarati",
+    "epg_no": "1729",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1731": {
+    "name": "Zee 24 Kalak",
+    "epg_no": "1731",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1732": {
+    "name": "India News Gujarat",
+    "epg_no": "1732",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1734": {
+    "name": "Mantavya News",
+    "epg_no": "1734",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1739": {
+    "name": "DD Girnar",
+    "epg_no": "1739",
+    "genre": "Gujarati Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1752": {
+    "name": "Colors Oriya",
+    "epg_no": "1752",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1754": {
+    "name": "Tarang TV",
+    "epg_no": "1754",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1756": {
+    "name": "Zee Sarthak",
+    "epg_no": "1756",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1760": {
+    "name": "Manjari",
+    "epg_no": "1760",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1763": {
+    "name": "Alankar",
+    "epg_no": "1763",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1771": {
+    "name": "OTV",
+    "epg_no": "1771",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1773": {
+    "name": "Zee Odisha",
+    "epg_no": "1773",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1774": {
+    "name": "Kanak News",
+    "epg_no": "1774",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1776": {
+    "name": "News18 Odia",
+    "epg_no": "1776",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1777": {
+    "name": "Kalinga TV",
+    "epg_no": "1777",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1778": {
+    "name": "Prameya News 7",
+    "epg_no": "1778",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1779": {
+    "name": "Nandighosha TV",
+    "epg_no": "1779",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1780": {
+    "name": "Argus News",
+    "epg_no": "1780",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1785": {
+    "name": "DD Odia",
+    "epg_no": "1785",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1786": {
+    "name": "Tarang Music",
+    "epg_no": "1786",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1795": {
+    "name": "Prarthana TV",
+    "epg_no": "1795",
+    "genre": "Odia Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1802": {
+    "name": "Surya TV HD",
+    "epg_no": "1802",
+    "genre": "Malayalam Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1803": {
+    "name": "Surya TV",
+    "epg_no": "1803",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1806": {
+    "name": "Asianet HD",
+    "epg_no": "1806",
+    "genre": "Malayalam Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1807": {
+    "name": "Asianet",
+    "epg_no": "1807",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1809": {
+    "name": "Asianet Plus",
+    "epg_no": "1809",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1811": {
+    "name": "Zee Keralam HD",
+    "epg_no": "1811",
+    "genre": "Malayalam Regional",
+    "quality": "HD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1812": {
+    "name": "Zee Keralam",
+    "epg_no": "1812",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1814": {
+    "name": "Flowers",
+    "epg_no": "1814",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1817": {
+    "name": "Amrita TV",
+    "epg_no": "1817",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1818": {
+    "name": "Mazhavil Manorama HD",
+    "epg_no": "1818",
+    "genre": "Malayalam Regional",
+    "quality": "HD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1819": {
+    "name": "Mazhavil Manorama",
+    "epg_no": "1819",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1820": {
+    "name": "Kairali TV",
+    "epg_no": "1820",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1822": {
+    "name": "We TV",
+    "epg_no": "1822",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1823": {
+    "name": "Naaptol Malayalam",
+    "epg_no": "1823",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1826": {
+    "name": "Surya Movies",
+    "epg_no": "1826",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1828": {
+    "name": "Asianet Movies",
+    "epg_no": "1828",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1830": {
+    "name": "Surya Comedy",
+    "epg_no": "1830",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1838": {
+    "name": "Safari TV",
+    "epg_no": "1838",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1841": {
+    "name": "Asianet News",
+    "epg_no": "1841",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1842": {
+    "name": "Kairali News",
+    "epg_no": "1842",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1843": {
+    "name": "Manorama News",
+    "epg_no": "1843",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1844": {
+    "name": "Mathrubhumi News",
+    "epg_no": "1844",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1846": {
+    "name": "News18 Kerala",
+    "epg_no": "1846",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1847": {
+    "name": "Jai Hind TV",
+    "epg_no": "1847",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1848": {
+    "name": "Jeevan TV",
+    "epg_no": "1848",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1849": {
+    "name": "Media One TV",
+    "epg_no": "1849",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1850": {
+    "name": "Janam TV",
+    "epg_no": "1850",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1851": {
+    "name": "Kaumudy",
+    "epg_no": "1851",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1853": {
+    "name": "Raj News Malayalam",
+    "epg_no": "1853",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1854": {
+    "name": "Twenty four",
+    "epg_no": "1854",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1873": {
+    "name": "KITE Victers",
+    "epg_no": "1873",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1874": {
+    "name": "DD Malayalam",
+    "epg_no": "1874",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1875": {
+    "name": "Surya Music",
+    "epg_no": "1875",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1877": {
+    "name": "Raj Musix Malayalam",
+    "epg_no": "1877",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1878": {
+    "name": "Kappa TV",
+    "epg_no": "1878",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1885": {
+    "name": "Goodness",
+    "epg_no": "1885",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1886": {
+    "name": "God TV",
+    "epg_no": "1886",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1887": {
+    "name": "SHALOM TV",
+    "epg_no": "1887",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1888": {
+    "name": "Harvest TV 24x7",
+    "epg_no": "1888",
+    "genre": "Malayalam Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1903": {
+    "name": "Zee Punjabi",
+    "epg_no": "1903",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1906": {
+    "name": "PTC Punjabi",
+    "epg_no": "1906",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1907": {
+    "name": "MH One",
+    "epg_no": "1907",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1911": {
+    "name": "Pitaara TV",
+    "epg_no": "1911",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1912": {
+    "name": "PTC Punjabi Gold",
+    "epg_no": "1912",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1920": {
+    "name": "Zee Punjab Haryana",
+    "epg_no": "1920",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1921": {
+    "name": "PTC News",
+    "epg_no": "1921",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1922": {
+    "name": "News18 Punjab Haryana",
+    "epg_no": "1922",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1923": {
+    "name": "India News Punjab",
+    "epg_no": "1923",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1924": {
+    "name": "India News Haryana",
+    "epg_no": "1924",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1925": {
+    "name": "Janta TV",
+    "epg_no": "1925",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1926": {
+    "name": "MH One News",
+    "epg_no": "1926",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1927": {
+    "name": "ANB News",
+    "epg_no": "1927",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1928": {
+    "name": "Living India News",
+    "epg_no": "1928",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1929": {
+    "name": "ABP Sanjha",
+    "epg_no": "1929",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1935": {
+    "name": "DD Punjabi",
+    "epg_no": "1935",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1938": {
+    "name": "PTC Chak De",
+    "epg_no": "1938",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1939": {
+    "name": "9X Tashan",
+    "epg_no": "1939",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1941": {
+    "name": "PTC Music",
+    "epg_no": "1941",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1942": {
+    "name": "Punjabi hits",
+    "epg_no": "1942",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1945": {
+    "name": "Chardikla Time TV",
+    "epg_no": "1945",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1946": {
+    "name": "PTC Simran",
+    "epg_no": "1946",
+    "genre": "Punjabi Regional",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1951": {
+    "name": "Nepal 1",
+    "epg_no": "1951",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1952": {
+    "name": "Rang",
+    "epg_no": "1952",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1953": {
+    "name": "Rengoni TV",
+    "epg_no": "1953",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1961": {
+    "name": "Indradhanu",
+    "epg_no": "1961",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1970": {
+    "name": "DY 365",
+    "epg_no": "1970",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1971": {
+    "name": "News18 Assam North East",
+    "epg_no": "1971",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "Pay",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1973": {
+    "name": "News Live",
+    "epg_no": "1973",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1974": {
+    "name": "Protidin Time",
+    "epg_no": "1974",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1975": {
+    "name": "Prag News",
+    "epg_no": "1975",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1976": {
+    "name": "North East Live",
+    "epg_no": "1976",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1977": {
+    "name": "NKTV 24x7",
+    "epg_no": "1977",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1978": {
+    "name": "Hornbill TV",
+    "epg_no": "1978",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1985": {
+    "name": "DD Port Blair",
+    "epg_no": "1985",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1986": {
+    "name": "DD Arunprabha",
+    "epg_no": "1986",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1987": {
+    "name": "DD Manipur",
+    "epg_no": "1987",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1988": {
+    "name": "DD North East",
+    "epg_no": "1988",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1989": {
+    "name": "DD Kashir",
+    "epg_no": "1989",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
+  },
+  "1990": {
+    "name": "Ramdhenu",
+    "epg_no": "1990",
+    "genre": "Others",
+    "quality": "SD",
+    "fta_pay": "FTA",
+    "source": "https://www.youtube.com/@TataPlayOfficial/videos"
   }
 }

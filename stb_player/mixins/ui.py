@@ -423,8 +423,10 @@ class UiMixin:
     def _update_epg(self, channel, browsing=False):
         number = channel.get("number", "")
         name = channel.get("name", "")
+        genre = channel.get("genre", "")
+        display_name = f"{name} ({genre})" if genre else name
         self.epg_ch_num.config(text=f" {number} ")
-        self.epg_ch_name.config(text=name)
+        self.epg_ch_name.config(text=display_name)
 
         photo = self._pick_image(190, 190)
         if photo:

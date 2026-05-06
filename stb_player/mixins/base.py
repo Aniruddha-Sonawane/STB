@@ -487,7 +487,14 @@ class BaseMixin:
 
     def _show_ch_badge(self, number_str: str):
         ch = self.channels.get(number_str)
-        name = ch.get("name", "") if ch else ""
+        if ch:
+            genre = ch.get("genre", "")
+            if genre:
+                name = f"{ch.get('name', '')} ({genre})"
+            else:
+                name = ch.get("name", "")
+        else:
+            name = ""
 
         self._badge_ch_num.config(text=number_str)
         self._badge_ch_name.config(text=name)

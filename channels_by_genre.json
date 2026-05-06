@@ -1,0 +1,3684 @@
+{
+  "Bengali Regional": [
+    {
+      "epg_no": "1302",
+      "name": "Colors Bangla HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1303",
+      "name": "Colors Bangla",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1306",
+      "name": "Zee Bangla HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1307",
+      "name": "Zee Bangla",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1309",
+      "name": "Star Jalsha HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1310",
+      "name": "Star Jalsha",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1312",
+      "name": "Sony Aath",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1317",
+      "name": "Sun Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1320",
+      "name": "Aakaash Aath",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1321",
+      "name": "Ruposhi Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1322",
+      "name": "Enterr10 Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1326",
+      "name": "Jalsha Movies HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1327",
+      "name": "Jalsha Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1329",
+      "name": "Zee Bangla Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1331",
+      "name": "Colors Bangla Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1341",
+      "name": "Khushboo Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1350",
+      "name": "Star Sports 1 Bangla",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1360",
+      "name": "ABP Ananda",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1362",
+      "name": "Zee 24 Ghanta",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1363",
+      "name": "Kolkata TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1365",
+      "name": "News18 Bangla",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1366",
+      "name": "TV9 Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1367",
+      "name": "Republic Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1368",
+      "name": "News Time Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1369",
+      "name": "CTVN AKD Plus",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1370",
+      "name": "Calcutta News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1379",
+      "name": "DD Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1380",
+      "name": "Sangeet Bangla",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "English Entertainment": [
+    {
+      "epg_no": "202",
+      "name": "Star World HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "203",
+      "name": "Star World",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "206",
+      "name": "Star World Premiere HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "210",
+      "name": "Zee Café HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "211",
+      "name": "Zee Café",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "214",
+      "name": "Colors Infinity HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "215",
+      "name": "Colors Infinity",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "218",
+      "name": "Comedy Central HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "219",
+      "name": "Comedy Central",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "221",
+      "name": "Disney International HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "English Movies": [
+    {
+      "epg_no": "402",
+      "name": "Star Movies HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "403",
+      "name": "Star Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "406",
+      "name": "Sony Pix HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "407",
+      "name": "Sony Pix",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "412",
+      "name": "&flix HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "413",
+      "name": "&flix",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "418",
+      "name": "Star Movies Select HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "420",
+      "name": "Movies Now HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "421",
+      "name": "Movies Now",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "423",
+      "name": "MN+ HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "425",
+      "name": "MNX HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "426",
+      "name": "MNX",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "429",
+      "name": "Romedy Now",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "431",
+      "name": "&prive HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "English News": [
+    {
+      "epg_no": "601",
+      "name": "NDTV 24x7",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "603",
+      "name": "Times Now World (HD)",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "604",
+      "name": "Times Now",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "606",
+      "name": "India Today",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "608",
+      "name": "CNN News18",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "610",
+      "name": "NewsX",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "612",
+      "name": "Mirror Now",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "613",
+      "name": "WION",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "616",
+      "name": "Republic TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "617",
+      "name": "India Ahead",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "622",
+      "name": "DD India",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "623",
+      "name": "NDTV Profit Prime",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "625",
+      "name": "CNBC TV18 Prime HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "626",
+      "name": "CNBC TV18",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "627",
+      "name": "ET Now",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "631",
+      "name": "CNN",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "633",
+      "name": "BBC World",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "637",
+      "name": "Al Jazeera",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "638",
+      "name": "Channel News Asia",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "639",
+      "name": "France 24",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "640",
+      "name": "TV5 Monde Asie",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "641",
+      "name": "DW",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "642",
+      "name": "Australia TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "643",
+      "name": "Russia Today",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Gujarati Regional": [
+    {
+      "epg_no": "1702",
+      "name": "Colors Gujarati",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1711",
+      "name": "Colors Gujarati Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1720",
+      "name": "TV9 Gujarati",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1721",
+      "name": "Gujarat Samachar TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1722",
+      "name": "Sandesh News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1724",
+      "name": "CNBC Bajaar",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1726",
+      "name": "News18 Gujarati",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1728",
+      "name": "ABP Asmita",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1729",
+      "name": "VTV Gujarati",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1731",
+      "name": "Zee 24 Kalak",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1732",
+      "name": "India News Gujarat",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1734",
+      "name": "Mantavya News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1739",
+      "name": "DD Girnar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Hindi Entertainment": [
+    {
+      "epg_no": "114",
+      "name": "DD National",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "115",
+      "name": "Star Plus HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "117",
+      "name": "Star Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "121",
+      "name": "Star Bharat HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "122",
+      "name": "Star Bharat",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "128",
+      "name": "SET HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "130",
+      "name": "SET",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "132",
+      "name": "Sony SAB HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "134",
+      "name": "Sony SAB",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "137",
+      "name": "&TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "139",
+      "name": "&TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "141",
+      "name": "Zee TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "143",
+      "name": "Zee TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "147",
+      "name": "Colors HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "149",
+      "name": "Colors",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "153",
+      "name": "UTV Bindass",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "155",
+      "name": "Investigation Discovery",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "171",
+      "name": "Star Utsav",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "172",
+      "name": "Zee Anmol",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "173",
+      "name": "Colors Rishtey",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "174",
+      "name": "Sony Pal",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "175",
+      "name": "The Q",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "176",
+      "name": "Big Magic",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "177",
+      "name": "Dangal",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "178",
+      "name": "Anjan TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "180",
+      "name": "DD Retro",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "181",
+      "name": "Shemaroo TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "182",
+      "name": "Ishara",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "198",
+      "name": "DD Kisan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Hindi Movies": [
+    {
+      "epg_no": "308",
+      "name": "Star Gold HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "310",
+      "name": "Star Gold",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "312",
+      "name": "Sony Max HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "314",
+      "name": "Sony Max",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "317",
+      "name": "Star Gold 2",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "319",
+      "name": "Zee Cinema HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "321",
+      "name": "Zee Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "322",
+      "name": "UTV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "323",
+      "name": "UTV Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "325",
+      "name": "UTV Action",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "327",
+      "name": "Zee Bollywood",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "328",
+      "name": "Zee Classic",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "331",
+      "name": "&pictures HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "332",
+      "name": "&pictures",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "344",
+      "name": "Colors Cineplex HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "345",
+      "name": "Colors Cineplex",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "346",
+      "name": "B4U Kadak",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "349",
+      "name": "Zee Action",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "351",
+      "name": "Sony Wah",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "352",
+      "name": "B4U Movies",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "355",
+      "name": "Sony Max 2",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "356",
+      "name": "Star Gold Select HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "357",
+      "name": "Star Gold Select",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "358",
+      "name": "Cinema TV India",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "365",
+      "name": "Wow Cinema One",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "366",
+      "name": "Enterr10 Movies",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "367",
+      "name": "Bflix Movies",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "369",
+      "name": "Star Utsav Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "371",
+      "name": "Zee Anmol Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "375",
+      "name": "Dhinchaak",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "376",
+      "name": "Manoranjan TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "377",
+      "name": "Manoranjan Grand",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Hindi News": [
+    {
+      "epg_no": "501",
+      "name": "DD News HD",
+      "quality": "HD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "502",
+      "name": "DD News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "504",
+      "name": "ABP News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "506",
+      "name": "NDTV India",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "508",
+      "name": "Aaj Tak HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "509",
+      "name": "Aaj Tak",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "511",
+      "name": "Zee News",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "514",
+      "name": "India TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "516",
+      "name": "News 24",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "519",
+      "name": "News18 India",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "520",
+      "name": "Zee Hindustan",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "521",
+      "name": "R Bharat",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "522",
+      "name": "India News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "523",
+      "name": "News Nation",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "524",
+      "name": "TV9 Bharatvarsh",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "525",
+      "name": "Good News Today",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "527",
+      "name": "Total TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "528",
+      "name": "Times Now Navbharat HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "529",
+      "name": "Times Now Navbharat",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "530",
+      "name": "News India 24x7",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "534",
+      "name": "Sudarshan News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "542",
+      "name": "APN News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "551",
+      "name": "India Voice",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "552",
+      "name": "News 11 Bharat",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "553",
+      "name": "News 1 India",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "557",
+      "name": "Hindi Khabar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "559",
+      "name": "Bharat Samachar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "563",
+      "name": "Khabrain Abhi Tak",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "566",
+      "name": "Samay",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "567",
+      "name": "Network 10",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "568",
+      "name": "Jantantra TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "569",
+      "name": "Prime News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "590",
+      "name": "Zee Business",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "592",
+      "name": "CNBC Awaaz",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "594",
+      "name": "ET Now Swadesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "598",
+      "name": "Sansad TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "599",
+      "name": "Sansad TV - Rajya Sabha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Hindi Regional": [
+    {
+      "epg_no": "1102",
+      "name": "Zee Ganga",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1103",
+      "name": "Dishum",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1113",
+      "name": "Zee Biskope",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1114",
+      "name": "Filamchi Bhojpuri",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1118",
+      "name": "Oscar Movies Bhojpuri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1119",
+      "name": "Bhojpuri Cinema",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1120",
+      "name": "B4U Bhojpuri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1122",
+      "name": "PASAND",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1125",
+      "name": "News18 Uttar Pradesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1126",
+      "name": "Zee Uttar Pradesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1127",
+      "name": "ABP Ganga",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1129",
+      "name": "News18 Bihar Jharkhand",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1130",
+      "name": "Zee Bihar Jharkhand",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1136",
+      "name": "India News UP UK",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1137",
+      "name": "News State UP",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1138",
+      "name": "Sadhna Plus News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1139",
+      "name": "Kashish News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1152",
+      "name": "DD Bharati",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1153",
+      "name": "DD Uttar Pradesh",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1154",
+      "name": "DD Bihar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1155",
+      "name": "News18 Madhya Pradesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1156",
+      "name": "Zee Madhya Pradesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1161",
+      "name": "IBC 24",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1162",
+      "name": "Bansal News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1163",
+      "name": "INH 24X7",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1164",
+      "name": "India News MP CG",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1165",
+      "name": "News State MP CG",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1166",
+      "name": "Swaraj Express SMBC",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1168",
+      "name": "Sadhna News MP CG",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1169",
+      "name": "News 24 MP CG",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1170",
+      "name": "Anaadi TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1175",
+      "name": "DD Madhya Pradesh",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1176",
+      "name": "News18 Rajasthan",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1177",
+      "name": "Zee Rajasthan News",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1182",
+      "name": "First India Rajasthan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1183",
+      "name": "India News Rajasthan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1184",
+      "name": "Patrika TV Rajasthan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1185",
+      "name": "Jan TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1186",
+      "name": "A1 TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1190",
+      "name": "DD Rajasthan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1191",
+      "name": "News18 Urdu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1192",
+      "name": "Zee Salaam",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1193",
+      "name": "Channel Win",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1194",
+      "name": "Gulistan News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1199",
+      "name": "DD Urdu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Kannada Regional": [
+    {
+      "epg_no": "1603",
+      "name": "Udaya TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1604",
+      "name": "Udaya TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1605",
+      "name": "Colors Kannada HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1606",
+      "name": "Colors Kannada",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1609",
+      "name": "Star Suvarna HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1610",
+      "name": "Star Suvarna",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1611",
+      "name": "Zee Kannada HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1612",
+      "name": "Zee Kannada",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1615",
+      "name": "Colors Super",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1617",
+      "name": "Kannada Naaptol",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1618",
+      "name": "Sirikannada All Time",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1626",
+      "name": "Udaya Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1628",
+      "name": "Udaya Comedy",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1630",
+      "name": "Star Suvarna Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1632",
+      "name": "Colors Kannada Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1634",
+      "name": "Zee Picchar",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1639",
+      "name": "Public Movies",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1645",
+      "name": "Star Sports 1 Kannada",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1650",
+      "name": "Kasthuri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1653",
+      "name": "TV9 Kannada",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1654",
+      "name": "Asianet Suvarna News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1655",
+      "name": "Public TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1656",
+      "name": "News18 Kannada",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1657",
+      "name": "TV5 Kannada",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1658",
+      "name": "Raj News Kannada",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1659",
+      "name": "Dighvijay 24x7 News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1660",
+      "name": "Power TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1661",
+      "name": "News 1st",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1672",
+      "name": "DD Chandana",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1673",
+      "name": "Udaya Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1674",
+      "name": "Raj Musix Kannada",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1677",
+      "name": "Public Music",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1685",
+      "name": "Sri Sankara TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1686",
+      "name": "Ayush TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Kids": [
+    {
+      "epg_no": "652",
+      "name": "Hungama TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "655",
+      "name": "Marvel HQ",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "658",
+      "name": "Disney",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "662",
+      "name": "Nick HD+",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "663",
+      "name": "Nick",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "666",
+      "name": "Cartoon Network HD+",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "667",
+      "name": "Cartoon Network",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "670",
+      "name": "Pogo",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "672",
+      "name": "Discovery Kids",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "674",
+      "name": "Sonic Nickelodeon",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "676",
+      "name": "Sony Yay",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "678",
+      "name": "Gubbare",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "680",
+      "name": "ETV Bal Bharat",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "684",
+      "name": "Baby TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "685",
+      "name": "Nick Jr",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "686",
+      "name": "Disney Junior",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "687",
+      "name": "CBeeBies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "692",
+      "name": "Kushi TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "693",
+      "name": "Chutti TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "694",
+      "name": "Chintu TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "695",
+      "name": "Kochu TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "Knowledge & Lifestyle": [
+    {
+      "epg_no": "708",
+      "name": "National Geographic HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "709",
+      "name": "National Geographic",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "711",
+      "name": "Nat Geo Wild HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "712",
+      "name": "Nat Geo Wild",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "713",
+      "name": "Discovery HD World",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "714",
+      "name": "Discovery Channel",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "716",
+      "name": "Animal Planet HD World",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "717",
+      "name": "Animal Planet",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "719",
+      "name": "Discovery Science",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "720",
+      "name": "History TV18 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "721",
+      "name": "History TV18",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "724",
+      "name": "Sony BBC Earth HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "725",
+      "name": "Sony BBC Earth",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "735",
+      "name": "Epic",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "753",
+      "name": "Fox Life HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "754",
+      "name": "Fox Life",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "755",
+      "name": "DD Gyan Darshan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "756",
+      "name": "Swayam Prabha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "759",
+      "name": "TLC HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "760",
+      "name": "TLC",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "762",
+      "name": "Good Times",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "764",
+      "name": "Discovery Turbo",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "765",
+      "name": "TravelXP HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "766",
+      "name": "TravelXP",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "768",
+      "name": "Food Food",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "769",
+      "name": "Zee Zest HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "770",
+      "name": "Zee Zest",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "772",
+      "name": "Fashion TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Malayalam Regional": [
+    {
+      "epg_no": "1802",
+      "name": "Surya TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1803",
+      "name": "Surya TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1806",
+      "name": "Asianet HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1807",
+      "name": "Asianet",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1809",
+      "name": "Asianet Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1811",
+      "name": "Zee Keralam HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1812",
+      "name": "Zee Keralam",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1814",
+      "name": "Flowers",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1817",
+      "name": "Amrita TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1818",
+      "name": "Mazhavil Manorama HD",
+      "quality": "HD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1819",
+      "name": "Mazhavil Manorama",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1820",
+      "name": "Kairali TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1822",
+      "name": "We TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1823",
+      "name": "Naaptol Malayalam",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1826",
+      "name": "Surya Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1828",
+      "name": "Asianet Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1830",
+      "name": "Surya Comedy",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1838",
+      "name": "Safari TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1841",
+      "name": "Asianet News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1842",
+      "name": "Kairali News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1843",
+      "name": "Manorama News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1844",
+      "name": "Mathrubhumi News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1846",
+      "name": "News18 Kerala",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1847",
+      "name": "Jai Hind TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1848",
+      "name": "Jeevan TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1849",
+      "name": "Media One TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1850",
+      "name": "Janam TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1851",
+      "name": "Kaumudy",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1853",
+      "name": "Raj News Malayalam",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1854",
+      "name": "Twenty four",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1873",
+      "name": "KITE Victers",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1874",
+      "name": "DD Malayalam",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1875",
+      "name": "Surya Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1877",
+      "name": "Raj Musix Malayalam",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1878",
+      "name": "Kappa TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1885",
+      "name": "Goodness",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1886",
+      "name": "God TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1887",
+      "name": "SHALOM TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1888",
+      "name": "Harvest TV 24x7",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Marathi Regional": [
+    {
+      "epg_no": "1201",
+      "name": "Colors Marathi HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1202",
+      "name": "Colors Marathi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1203",
+      "name": "Zee Marathi HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1204",
+      "name": "Zee Marathi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1207",
+      "name": "Star Pravah HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1208",
+      "name": "Star Pravah",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1211",
+      "name": "Zee Yuva",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1213",
+      "name": "Sony Marathi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1217",
+      "name": "Sun Marathi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1225",
+      "name": "Zee Talkies HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1226",
+      "name": "Zee Talkies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1229",
+      "name": "Fakt Marathi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1230",
+      "name": "Shemaroo Marathi Bana",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1255",
+      "name": "ABP Majha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1257",
+      "name": "News18 Lokmat",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1259",
+      "name": "Zee 24 Taas",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1261",
+      "name": "Saam TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1262",
+      "name": "Jai Maharashtra",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1263",
+      "name": "TV9 Marathi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1265",
+      "name": "Lokshahi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1274",
+      "name": "DD Sahyadri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1276",
+      "name": "9X Jhakaas",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1277",
+      "name": "Sangeet Marathi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1278",
+      "name": "Zee Vajwa",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "Music": [
+    {
+      "epg_no": "806",
+      "name": "MTV HD+",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "807",
+      "name": "MTV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "809",
+      "name": "9XM",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "811",
+      "name": "Zoom",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "813",
+      "name": "E24",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "820",
+      "name": "MTV Beats HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "821",
+      "name": "MTV Beats",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "822",
+      "name": "B4U Music",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "825",
+      "name": "Mastiii",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "826",
+      "name": "Zing",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "830",
+      "name": "9X Jalwa",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "833",
+      "name": "insync",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "835",
+      "name": "Showbox",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "855",
+      "name": "Vh1 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "856",
+      "name": "Vh1",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "Odia Regional": [
+    {
+      "epg_no": "1752",
+      "name": "Colors Oriya",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1754",
+      "name": "Tarang TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1756",
+      "name": "Zee Sarthak",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1760",
+      "name": "Manjari",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1763",
+      "name": "Alankar",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1771",
+      "name": "OTV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1773",
+      "name": "Zee Odisha",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1774",
+      "name": "Kanak News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1776",
+      "name": "News18 Odia",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1777",
+      "name": "Kalinga TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1778",
+      "name": "Prameya News 7",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1779",
+      "name": "Nandighosha TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1780",
+      "name": "Argus News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1785",
+      "name": "DD Odia",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1786",
+      "name": "Tarang Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1795",
+      "name": "Prarthana TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "Others": [
+    {
+      "epg_no": "158",
+      "name": "Ezmall",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1951",
+      "name": "Nepal 1",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1952",
+      "name": "Rang",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1953",
+      "name": "Rengoni TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1961",
+      "name": "Indradhanu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1970",
+      "name": "DY 365",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1971",
+      "name": "News18 Assam North East",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1973",
+      "name": "News Live",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1974",
+      "name": "Protidin Time",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1975",
+      "name": "Prag News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1976",
+      "name": "North East Live",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1977",
+      "name": "NKTV 24x7",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1978",
+      "name": "Hornbill TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1985",
+      "name": "DD Port Blair",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1986",
+      "name": "DD Arunprabha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1987",
+      "name": "DD Manipur",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1988",
+      "name": "DD North East",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1989",
+      "name": "DD Kashir",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1990",
+      "name": "Ramdhenu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Punjabi Regional": [
+    {
+      "epg_no": "1903",
+      "name": "Zee Punjabi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1906",
+      "name": "PTC Punjabi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1907",
+      "name": "MH One",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1911",
+      "name": "Pitaara TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1912",
+      "name": "PTC Punjabi Gold",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1920",
+      "name": "Zee Punjab Haryana",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1921",
+      "name": "PTC News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1922",
+      "name": "News18 Punjab Haryana",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1923",
+      "name": "India News Punjab",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1924",
+      "name": "India News Haryana",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1925",
+      "name": "Janta TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1926",
+      "name": "MH One News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1927",
+      "name": "ANB News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1928",
+      "name": "Living India News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1929",
+      "name": "ABP Sanjha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1935",
+      "name": "DD Punjabi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1938",
+      "name": "PTC Chak De",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1939",
+      "name": "9X Tashan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1941",
+      "name": "PTC Music",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1942",
+      "name": "Punjabi hits",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1945",
+      "name": "Chardikla Time TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1946",
+      "name": "PTC Simran",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Shopping": [
+    {
+      "epg_no": "156",
+      "name": "Naaptol",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Spiritual": [
+    {
+      "epg_no": "1055",
+      "name": "Aastha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1057",
+      "name": "Sanskar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1058",
+      "name": "Disha TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1059",
+      "name": "Paras TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1061",
+      "name": "MH One Shraddha",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1063",
+      "name": "Sadhna TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1064",
+      "name": "Sharnam TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1065",
+      "name": "Peace of Mind",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1066",
+      "name": "Jinvani Channel",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1067",
+      "name": "Arihant",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1068",
+      "name": "Ishwar TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1073",
+      "name": "Satsang TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1074",
+      "name": "Shubh TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1077",
+      "name": "Aastha Bhajan",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1078",
+      "name": "Vedic",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1082",
+      "name": "Subharti TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1083",
+      "name": "Divya",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1084",
+      "name": "Awakening",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1085",
+      "name": "Santwani",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Sports": [
+    {
+      "epg_no": "453",
+      "name": "DD Sports",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "454",
+      "name": "Star Sports 1 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "455",
+      "name": "Star Sports 1",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "456",
+      "name": "Star Sports 2 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "457",
+      "name": "Star Sports 2",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "458",
+      "name": "Star Sports 3",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "459",
+      "name": "Star Sports 1 Hindi HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "460",
+      "name": "Star Sports 1 Hindi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "463",
+      "name": "Star Sports Select 1 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "464",
+      "name": "Star Sports Select 1",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "465",
+      "name": "Star Sports Select 2 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "466",
+      "name": "Star Sports Select 2",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "470",
+      "name": "Sony Ten 1 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "471",
+      "name": "Sony Ten 1",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "473",
+      "name": "Sony Ten 2 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "474",
+      "name": "Sony Ten 2",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "475",
+      "name": "Sony Ten 3 HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "476",
+      "name": "Sony Ten 3",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "483",
+      "name": "Sony Six HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "484",
+      "name": "Sony Six",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "495",
+      "name": "Eurosport HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "496",
+      "name": "Eurosport",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "497",
+      "name": "Star Sports First",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "498",
+      "name": "1Sports",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    }
+  ],
+  "Tamil Regional": [
+    {
+      "epg_no": "1503",
+      "name": "Sun TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1504",
+      "name": "Sun TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1506",
+      "name": "Sun Life",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1507",
+      "name": "Star Vijay HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1508",
+      "name": "Star Vijay",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1510",
+      "name": "Zee Tamil HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1511",
+      "name": "Zee Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1513",
+      "name": "Vijay Super",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1514",
+      "name": "Colors Tamil HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1515",
+      "name": "Colors Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1517",
+      "name": "Jaya TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1518",
+      "name": "Kalaignar TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1520",
+      "name": "Raj TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1521",
+      "name": "D Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1522",
+      "name": "Raj Digital Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1523",
+      "name": "Mega TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1524",
+      "name": "Mega 24",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1525",
+      "name": "Tamil Naaptol",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1530",
+      "name": "Vasanth TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1531",
+      "name": "Sirippoli",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1532",
+      "name": "Polimer TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1533",
+      "name": "Makkal TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1534",
+      "name": "Peppers TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1535",
+      "name": "Moon TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1536",
+      "name": "Vendhar TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1540",
+      "name": "KTV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1541",
+      "name": "KTV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1543",
+      "name": "Adithya TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1544",
+      "name": "J Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1546",
+      "name": "Zee Thirai",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1551",
+      "name": "Star Sports 1 Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1552",
+      "name": "Sony Ten 4",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1553",
+      "name": "TravelXP Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1554",
+      "name": "Kalvi TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1556",
+      "name": "Puthiya Thalaimurai",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1557",
+      "name": "Thanthi TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1558",
+      "name": "Jaya Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1559",
+      "name": "Sun News",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1560",
+      "name": "News 7 Tamil",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1561",
+      "name": "Polimer News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1562",
+      "name": "News18 Tamil Nadu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1563",
+      "name": "Seithigal TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1564",
+      "name": "Raj News Tamil",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1565",
+      "name": "Sathiyam TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1566",
+      "name": "Malaimurasu Seithigal",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1567",
+      "name": "Captain News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1568",
+      "name": "News J",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1578",
+      "name": "DD Podhigai",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1579",
+      "name": "Sun Music HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1580",
+      "name": "Sun Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1581",
+      "name": "Jaya Max",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1582",
+      "name": "Raj Musix",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1583",
+      "name": "Vijay Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1584",
+      "name": "Isaiaruvi",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1585",
+      "name": "Murasu TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1586",
+      "name": "Mega Musiq",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1587",
+      "name": "Jothi TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1590",
+      "name": "Madha TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1591",
+      "name": "Angel TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1592",
+      "name": "Nambikkai TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1599",
+      "name": "SVBC 2",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ],
+  "Telugu Regional": [
+    {
+      "epg_no": "1403",
+      "name": "Zee Telugu HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1404",
+      "name": "Zee Telugu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1405",
+      "name": "Gemini TV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1406",
+      "name": "Gemini TV",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1408",
+      "name": "Star Maa HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1409",
+      "name": "Star Maa",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1411",
+      "name": "ETV HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1412",
+      "name": "ETV Telugu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1415",
+      "name": "Gemini Life",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1417",
+      "name": "ETV Plus",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1419",
+      "name": "Telugu Naaptol",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1422",
+      "name": "Vissa TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1423",
+      "name": "Studio Yuva",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1430",
+      "name": "Gemini Movies HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1431",
+      "name": "Gemini Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1432",
+      "name": "Star Maa Movies HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1433",
+      "name": "Star Maa Movies",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1435",
+      "name": "Star Maa Gold",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1437",
+      "name": "Zee Cinemalu HD",
+      "quality": "HD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1438",
+      "name": "Zee Cinemalu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1440",
+      "name": "ETV Cinema",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1442",
+      "name": "Gemini Comedy",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1446",
+      "name": "Star Sports 1 Telugu",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1451",
+      "name": "ETV Life",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1453",
+      "name": "ETV Abhiruchi",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1456",
+      "name": "Sakshi TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1457",
+      "name": "ETV Andhra Pradesh",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1458",
+      "name": "TV5 News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1459",
+      "name": "TV9 Telugu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1460",
+      "name": "NTV Telugu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1461",
+      "name": "ABN Andhra Jyothy",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1462",
+      "name": "T News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1463",
+      "name": "V6 News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1464",
+      "name": "ETV Telangana",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1465",
+      "name": "HM TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1466",
+      "name": "Raj News Telugu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1467",
+      "name": "10 TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1470",
+      "name": "4TV News",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1479",
+      "name": "Vidya",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1480",
+      "name": "Nipuna",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1481",
+      "name": "DD Saptagiri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1482",
+      "name": "DD Yadagiri",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1484",
+      "name": "Gemini Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1486",
+      "name": "Star Maa Music",
+      "quality": "SD",
+      "fta_pay": "Pay"
+    },
+    {
+      "epg_no": "1487",
+      "name": "Raj Musix Telugu",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1490",
+      "name": "Bhakti TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1491",
+      "name": "Subhavaartha TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1492",
+      "name": "Aradana TV",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1493",
+      "name": "Swara Sagar",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1494",
+      "name": "Hindu Dharmam",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    },
+    {
+      "epg_no": "1499",
+      "name": "SVBC",
+      "quality": "SD",
+      "fta_pay": "FTA"
+    }
+  ]
+}
