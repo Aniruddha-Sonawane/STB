@@ -420,14 +420,14 @@
         {
           "start": "20:00",
           "duration_minutes": 30,
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "daily_rotate",
           "title": "Weekday Prime 8 PM"
         },
         {
           "start": "20:30",
           "duration_minutes": 30,
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "daily_rotate",
           "title": "Weekday Prime 8:30 PM"
         }
@@ -436,26 +436,26 @@
         {
           "start": "20:00",
           "duration_minutes": 30,
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "daily_rotate",
           "title": "Weekend Prime 8 PM"
         },
         {
           "start": "20:30",
           "duration_minutes": 30,
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "daily_rotate",
           "title": "Weekend Prime 8:30 PM"
         }
       ],
       "unscheduled": {
         "weekdays": {
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "sequential",
           "title": "Weekday Unscheduled Feed"
         },
         "weekends": {
-          "playlist": "",
+          "playlist": "https://www.youtube.com/playlist?list=PLyBAqOWU1mfUGnBl8IMAcutxMeeHw1--p",
           "mode": "sequential",
           "title": "Weekend Unscheduled Feed"
         }
