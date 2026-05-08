@@ -507,60 +507,65 @@ class UiMixin:
             self._current_img = photo
             self._epg_img_canvas.itemconfig(self._epg_img_id, image=photo)
 
-        if browsing:
+        if browsing:    
+                items = []
+                cache_key = str(channel.get("number", ""))
+                cached = self._epg_cache.get(cache_key)
 
-            items = []
+                # Use cached items if fresh (built during warmup or prior visit)
+                if cached and cached.get("items"):
+                    age = datetime.datetime.now().timestamp() - cached.get("time", 0)
+                    if age < 600:
+                        self._epg_items = cached["items"]
+                        self._epg_row_index = 0
+                        self._render_epg_rows()
+                        now = datetime.datetime.now()
+                        self.date_label.config(text=now.strftime("%a %d %b  %I:%M %p"))
+                        return
 
-            schedule_ref = channel.get("schedule")
+                # Build from scheduler (uses warmup-populated metadata, zero network)
+                if self._is_youtube_channel(channel):
+                    program = self.scheduler.resolve_program(channel)
+                    video = program.get("video")
+                    videos = list(program.get("videos") or [])
+                    seek_ms = int(program.get("seek_ms") or 0)
 
-            if isinstance(schedule_ref, list):
+                    if video:
+                        current_title = (
+                            video.get("title")
+                            or channel.get("_current_video_title")
+                            or channel.get("name", "")
+                        )
+                        duration_sec = int(video.get("duration") or 1800)
+                        elapsed_sec = seek_ms // 1000
+                        now_dt = datetime.datetime.now()
+                        start_dt = now_dt - datetime.timedelta(seconds=elapsed_sec)
+                        end_dt = start_dt + datetime.timedelta(seconds=duration_sec)
+                        items.append((
+                            current_title,
+                            f"{start_dt.strftime('%I:%M %p')} - {end_dt.strftime('%I:%M %p')}",
+                            None,
+                        ))
+                        upcoming_start = end_dt
+                        for v in [x for x in videos if x.get("url") != video.get("url")][:5]:
+                            dur = int(v.get("duration") or 1800)
+                            next_end = upcoming_start + datetime.timedelta(seconds=dur)
+                            items.append((
+                                v.get("title", "Upcoming"),
+                                f"{upcoming_start.strftime('%I:%M %p')} - {next_end.strftime('%I:%M %p')}",
+                                None,
+                            ))
+                            upcoming_start = next_end
 
-                for schedule in schedule_ref:
+                if not items:
+                    items = [(channel.get("name", ""), "", None)]
 
-                    time_str = (
-                        f"{schedule.get('start', '')} - {schedule.get('end', '')}"
-                        if schedule.get("start")
-                        else ""
-                    )
-
-                    items.append((
-                        schedule.get("title", ""),
-                        time_str,
-                        None,
-                    ))
-
-            elif self._is_youtube_channel(channel):
-
-                for block in self.scheduler.get_upcoming_blocks(
-                    channel,
-                    count=3,
-                ):
-
-                    block_title = (
-                        block.title
-                        or channel.get("name", "")
-                    )
-
-                    block_time = block.start_dt.strftime("%I:%M %p")
-
-                    items.append((
-                        block_title,
-                        block_time,
-                        None,
-                    ))
-
-            if not items:
-
-                items = [
-                    (
-                        channel.get("name", ""),
-                        "",
-                        None,
-                    )
-                ]
-
-            # PREVIEW DATA ONLY
-            self._epg_items = items
+                # Cache it so next visit is instant
+                self._epg_cache[str(channel.get("number", ""))] = {
+                    "time": datetime.datetime.now().timestamp(),
+                    "items": items,
+                }
+                self._epg_items = items
 
         else:
 

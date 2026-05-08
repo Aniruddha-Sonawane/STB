@@ -126,8 +126,7 @@ class PlaybackMixin:
             and self.current_channel
             and channel.get("number") == self.current_channel.get("number")
         ):
-            if user_initiated:
-                self.show_epg(user_initiated=True)
+
             return
 
         previous_channel = self.current_channel
@@ -224,19 +223,19 @@ class PlaybackMixin:
             if source_key:
                 channel["_current_source_key"] = source_key
             if videos:
-            
+
                 channel["_yt_list"] = [
                     item.get("url", "")
                     for item in videos
                     if item.get("url")
                 ]
-            
+
                 title_map = {
                     item.get("url", ""): item.get("title", "")
                     for item in videos
                     if item.get("url")
                 }
-            
+
                 channel.setdefault("_yt_entry_titles", {}).update(
                     {
                         url: title
@@ -244,14 +243,14 @@ class PlaybackMixin:
                         if title
                     }
                 )
-            
+
                 # IMPORTANT:
                 # Store upcoming videos for dynamic EPG
                 if len(videos) > 1:
                     channel["_upcoming_videos"] = videos[1:]
                 else:
                     channel["_upcoming_videos"] = []
-            
+
             if not video:
                 self.root.after(
                     0,
@@ -278,10 +277,10 @@ class PlaybackMixin:
                 or video.get("title", "")
                 or "Loading..."
             )
-            
+
             # Current playing title for EPG
             channel["_current_video_title"] = title
-            
+
             channel["_current_title"] = title
 
             if request_id != self.channel_request_id or channel is not self.current_channel:
@@ -403,6 +402,12 @@ class PlaybackMixin:
         channel["_recover_tries"] = 0
         channel["_recover_inflight"] = False
 
+        cache_key = str(channel.get("number", ""))
+
+        # Invalidate stale cache so EPG rebuilds with real player position
+        if cache_key in self._epg_cache:
+            del self._epg_cache[cache_key]
+
         self._epg_items = self._build_epg_items(channel)
         self._epg_row_index = 0
         if show_overlay:
@@ -498,7 +503,12 @@ class PlaybackMixin:
 
         self.channel_request_id += 1
         request_id = self.channel_request_id
-        channel["_current_title"] = "Loading..."
+        # Keep previous title visible while resolving
+        if not channel.get("_current_title"):
+            channel["_current_title"] = channel.get(
+                "name",
+                ""
+            )
         threading.Thread(
             target=self._resolve_channel_program,
             args=(channel, request_id, False),
