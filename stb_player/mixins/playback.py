@@ -135,8 +135,9 @@ class PlaybackMixin:
         self.channel_request_id += 1
         self._epg_row_index = 0
         self._epg_items = []
-        # Clear this channel's cache so it rebuilds with fresh timing
-        self._epg_cache.pop(str(channel.get("number", "")), None)
+        # Wipe entire EPG cache on every switch so no stale browse
+        # timing from any channel bleeds into the now-playing display
+        self._epg_cache.clear()
         request_id = self.channel_request_id
         source = channel.get("source", "")
         is_first_channel = not previous_channel
@@ -221,6 +222,10 @@ class PlaybackMixin:
             if video is None and videos:
                 video = videos[0]
                 seek_ms = 0
+            # Stamp exact switch time so EPG timing is accurate immediately
+            import time as _time
+
+            channel["_epg_switch_epoch"] = _time.time()
 
             if source_key:
                 channel["_current_source_key"] = source_key
@@ -540,8 +545,9 @@ class PlaybackMixin:
                 channel = self.current_channel
                 if channel:
                     # Clear stored seek offset now that player has real data
-                    if channel.get("_epg_seek_ms", -1) >= 0:
-                        channel.pop("_epg_seek_ms", None)
+                    # Clear stored timing helpers now that player has real data
+                    channel.pop("_epg_seek_ms", None)
+                    channel.pop("_epg_switch_epoch", None)
 
                     cache_key = str(channel.get("number", ""))
                     cached = self._epg_cache.get(cache_key)

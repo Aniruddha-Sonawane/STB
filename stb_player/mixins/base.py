@@ -835,7 +835,14 @@ class BaseMixin:
                 )
                 duration_sec = int(video.get("duration") or 0)
                 # Prefer stored seek offset (set at switch time) over scheduler
-                elapsed_sec = channel.get("_epg_seek_ms", seek_ms) // 1000
+                import time as _time
+                switch_epoch = channel.get("_epg_switch_epoch")
+                if switch_epoch:
+                    # How many seconds have passed since we switched to this channel
+                    secs_since_switch = _time.time() - switch_epoch
+                    elapsed_sec = (seek_ms // 1000) + int(secs_since_switch)
+                else:
+                    elapsed_sec = channel.get("_epg_seek_ms", seek_ms) // 1000
                 now_dt = dt.datetime.now()
                 start_dt = now_dt - dt.timedelta(seconds=elapsed_sec)
 
