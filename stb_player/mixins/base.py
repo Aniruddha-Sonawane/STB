@@ -159,7 +159,7 @@ class BaseMixin:
 
             try:
 
-                items = self._build_epg_items(channel)
+                items = self._build_epg_items(channel, for_browse=True)
 
                 self._epg_cache[cache_key] = {
                     "time": datetime.datetime.now().timestamp(),
@@ -299,7 +299,7 @@ class BaseMixin:
         """Parse schedule and prime only local-folder startup streams."""
         self.scheduler.prepare_channel(channel)
         source = channel.get("source", "")
-    
+
         # --- Local video folder ---
         if source and os.path.isdir(source):
             files = []
@@ -309,13 +309,13 @@ class BaseMixin:
                 files.sort()
                 channel["_startup_stream"] = (files[0], "", None, None)
             return
-    
+
         # --- YouTube/scheduled channel: resolve titles from cache ---
         if self._is_youtube_channel(channel):
             program = self.scheduler.resolve_program(channel)
             source_key = str(program.get("source_key") or "")
             videos = list(program.get("videos") or [])
-    
+
             if videos:
                 video = program.get("video")
                 if video:
@@ -666,7 +666,7 @@ class BaseMixin:
             cached = self._epg_cache.get(channel_number)
 
             if cached:
-            
+
                 self._epg_items = cached.get(
                     "items",
                     []
@@ -675,7 +675,7 @@ class BaseMixin:
                 self._render_epg_rows()
 
             else:
-            
+
                 self._update_epg(
                     browse_channel,
                     browsing=True,
@@ -743,22 +743,74 @@ class BaseMixin:
                 self.root.after_cancel(self.hide_job)
             self.hide_job = self.root.after(EPG_AUTO_HIDE_MS, self.hide_epg)
 
-    # ------------------------------------------------------------------
-    # EPG item building
-    # ------------------------------------------------------------------
+        # ------------------------------------------------------------------
+        # EPG item building
+        # ------------------------------------------------------------------
 
-    def _build_epg_items(self, channel):
-        items = []
+    def _build_epg_items(self, channel, for_browse=False):
+        import datetime as dt
+
         channel_number = str(channel.get("number", ""))
+        is_playing = (
+            self.current_channel
+            and str(self.current_channel.get("number", "")) == channel_number
+        )
 
+        # --- BROWSE MODE: build purely from scheduler, never from player ---
+        if for_browse or not is_playing:
+            items = []
+            if self._is_youtube_channel(channel):
+                program = self.scheduler.resolve_program(channel)
+                video = program.get("video")
+                videos = list(program.get("videos") or [])
+                seek_ms = int(program.get("seek_ms") or 0)
+
+                if video:
+                    title = (
+                        video.get("title")
+                        or channel.get("_current_video_title")
+                        or channel.get("name", "")
+                    )
+                    duration_sec = int(video.get("duration") or 0)
+                    elapsed_sec = seek_ms // 1000
+                    now_dt = dt.datetime.now()
+                    start_dt = now_dt - dt.timedelta(seconds=elapsed_sec)
+
+                    if duration_sec > 0:
+                        end_dt = start_dt + dt.timedelta(seconds=duration_sec)
+                        time_text = (
+                            f"{start_dt.strftime('%I:%M %p')} - "
+                            f"{end_dt.strftime('%I:%M %p')}"
+                        )
+                    else:
+                        time_text = f"{start_dt.strftime('%I:%M %p')} - --:-- --"
+
+                    items.append((title, time_text, None))
+
+                    upcoming_start = end_dt if duration_sec > 0 else now_dt
+                    for v in [x for x in videos if x.get("url") != video.get("url")][:5]:
+                        dur = int(v.get("duration") or 1800)
+                        next_end = upcoming_start + dt.timedelta(seconds=dur)
+                        items.append((
+                            v.get("title", "Upcoming"),
+                            f"{upcoming_start.strftime('%I:%M %p')} - {next_end.strftime('%I:%M %p')}",
+                            None,
+                        ))
+                        upcoming_start = next_end
+
+            if not items:
+                items = [(channel.get("name", ""), "", None)]
+            return items
+
+        # --- PLAYING MODE: use real player data ---
+        # Check cache (short TTL so timing stays fresh)
         cached = self._epg_cache.get(channel_number)
         if cached:
-            cache_time = cached.get("time", 0)
-            age = datetime.datetime.now().timestamp() - cache_time
-            if age < 600:
+            age = dt.datetime.now().timestamp() - cached.get("time", 0)
+            if age < 30:
                 return cached.get("items", [])
 
-        # Try to get title from scheduler-resolved video metadata first
+        items = []
         current_title = (
             channel.get("_current_video_title")
             or channel.get("_current_title")
@@ -768,8 +820,8 @@ class BaseMixin:
         duration_ms = self.player.get_length()
         elapsed_ms = self.player.get_time()
 
-        # If player not loaded yet, build EPG from scheduler data directly
-        if duration_ms <= 0 and self._is_youtube_channel(channel):
+        # Player not ready yet — use scheduler seek offset
+        if duration_ms <= 0 or elapsed_ms < 0:
             program = self.scheduler.resolve_program(channel)
             video = program.get("video")
             videos = list(program.get("videos") or [])
@@ -781,72 +833,65 @@ class BaseMixin:
                     or channel.get("_current_video_title")
                     or channel.get("name", "")
                 )
-                duration_sec = int(video.get("duration") or 1800)
-                elapsed_sec = seek_ms // 1000
+                duration_sec = int(video.get("duration") or 0)
+                # Prefer stored seek offset (set at switch time) over scheduler
+                elapsed_sec = channel.get("_epg_seek_ms", seek_ms) // 1000
+                now_dt = dt.datetime.now()
+                start_dt = now_dt - dt.timedelta(seconds=elapsed_sec)
 
-                now = datetime.datetime.now()
-                start_dt = now - datetime.timedelta(seconds=elapsed_sec)
-                end_dt = start_dt + datetime.timedelta(seconds=duration_sec)
+                if duration_sec > 0:
+                    end_dt = start_dt + dt.timedelta(seconds=duration_sec)
+                    time_text = (
+                        f"{start_dt.strftime('%I:%M %p')} - "
+                        f"{end_dt.strftime('%I:%M %p')}"
+                    )
+                else:
+                    time_text = f"{start_dt.strftime('%I:%M %p')} - --:-- --"
 
-                time_text = (
-                    f"{start_dt.strftime('%I:%M %p')} - "
-                    f"{end_dt.strftime('%I:%M %p')}"
-                )
                 items.append((current_title, time_text, None))
 
-                upcoming_start = end_dt
-                upcoming_videos = [v for v in videos if v.get("url") != video.get("url")]
-                for v in upcoming_videos[:5]:
-                    title = v.get("title", "Upcoming")
+                upcoming_start = end_dt if duration_sec > 0 else now_dt
+                for v in [x for x in videos if x.get("url") != video.get("url")][:5]:
                     dur = int(v.get("duration") or 1800)
-                    next_end = upcoming_start + datetime.timedelta(seconds=dur)
-                    time_text = (
-                        f"{upcoming_start.strftime('%I:%M %p')} - "
-                        f"{next_end.strftime('%I:%M %p')}"
-                    )
-                    items.append((title, time_text, None))
+                    next_end = upcoming_start + dt.timedelta(seconds=dur)
+                    items.append((
+                        v.get("title", "Upcoming"),
+                        f"{upcoming_start.strftime('%I:%M %p')} - {next_end.strftime('%I:%M %p')}",
+                        None,
+                    ))
                     upcoming_start = next_end
 
-                self._epg_cache[channel_number] = {
-                    "time": datetime.datetime.now().timestamp(),
-                    "items": items,
-                }
-                return items
+            if not items:
+                items = [(current_title, "", None)]
 
-        # Player is active — use real position/duration
-        if duration_ms <= 0:
-            duration_ms = 30 * 60 * 1000
-        if elapsed_ms < 0:
-            elapsed_ms = 0
+            # Don't cache this — player not ready, values will change
+            return items
 
-        now = datetime.datetime.now()
-        start_dt = now - datetime.timedelta(milliseconds=elapsed_ms)
-        end_dt = start_dt + datetime.timedelta(milliseconds=duration_ms)
+        # Player is fully loaded — use real position/duration
+        now_dt = dt.datetime.now()
+        start_dt = now_dt - dt.timedelta(milliseconds=elapsed_ms)
+        end_dt = start_dt + dt.timedelta(milliseconds=duration_ms)
 
-        current_time = (
+        time_text = (
             f"{start_dt.strftime('%I:%M %p')} - "
             f"{end_dt.strftime('%I:%M %p')}"
         )
-        items.append((current_title, current_time, None))
+        items.append((current_title, time_text, None))
 
         upcoming_start = end_dt
-        upcoming = channel.get("_upcoming_videos") or []
-        for video in upcoming[:5]:
+        for video in (channel.get("_upcoming_videos") or [])[:5]:
             title = video.get("title", "Upcoming")
-            try:
-                duration_sec = int(video.get("duration") or 1800)
-            except Exception:
-                duration_sec = 1800
-            next_end = upcoming_start + datetime.timedelta(seconds=duration_sec)
-            time_text = (
-                f"{upcoming_start.strftime('%I:%M %p')} - "
-                f"{next_end.strftime('%I:%M %p')}"
-            )
-            items.append((title, time_text, None))
+            dur_sec = int(video.get("duration") or 1800)
+            next_end = upcoming_start + dt.timedelta(seconds=dur_sec)
+            items.append((
+                title,
+                f"{upcoming_start.strftime('%I:%M %p')} - {next_end.strftime('%I:%M %p')}",
+                None,
+            ))
             upcoming_start = next_end
 
         self._epg_cache[channel_number] = {
-            "time": datetime.datetime.now().timestamp(),
+            "time": dt.datetime.now().timestamp(),
             "items": items,
         }
         return items
@@ -915,32 +960,32 @@ class BaseMixin:
 
         selected = items[index] if index < len(items) else ("", "", None)
         selected_next = items[index + 1] if index + 1 < len(items) else ("", "", None)
-        
+
         active_title = selected[0] or ""
         next_title = selected_next[0] or ""
-        
+
         # Hard truncate
         MAX_ACTIVE = 65
         MAX_NEXT = 65
-        
+
         if len(active_title) > MAX_ACTIVE:
             active_title = active_title[:MAX_ACTIVE - 3] + "..."
-        
+
         if len(next_title) > MAX_NEXT:
             next_title = next_title[:MAX_NEXT - 3] + "..."
-        
+
         self.epg_active_title.config(
             text=active_title
         )
-        
+
         self.epg_active_time.config(
             text=selected[1]
         )
-        
+
         self.epg_next_title.config(
             text=next_title
         )
-        
+
         self.epg_next_time.config(
             text=selected_next[1]
         )

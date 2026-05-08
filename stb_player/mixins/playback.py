@@ -135,6 +135,8 @@ class PlaybackMixin:
         self.channel_request_id += 1
         self._epg_row_index = 0
         self._epg_items = []
+        # Clear this channel's cache so it rebuilds with fresh timing
+        self._epg_cache.pop(str(channel.get("number", "")), None)
         request_id = self.channel_request_id
         source = channel.get("source", "")
         is_first_channel = not previous_channel
@@ -405,11 +407,17 @@ class PlaybackMixin:
         cache_key = str(channel.get("number", ""))
 
         # Invalidate stale cache so EPG rebuilds with real player position
+        # Invalidate stale cache so EPG rebuilds with real player position
         if cache_key in self._epg_cache:
             del self._epg_cache[cache_key]
 
+        # Store the intended seek offset on the channel so EPG can use it
+        # before VLC reports real get_time() (which still shows old channel)
+        channel["_epg_seek_ms"] = seek_ms
+
         self._epg_items = self._build_epg_items(channel)
         self._epg_row_index = 0
+
         if show_overlay:
             self.show_epg(user_initiated=True)
         else:
@@ -528,10 +536,30 @@ class PlaybackMixin:
             if duration > 0 and position >= 0:
                 fill_w = max(2, min(219, int(220 * position / duration)))
                 self.epg_progress.coords(self.progress_fill, 0, 2, fill_w, 8)
+
+                channel = self.current_channel
+                if channel:
+                    # Clear stored seek offset now that player has real data
+                    if channel.get("_epg_seek_ms", -1) >= 0:
+                        channel.pop("_epg_seek_ms", None)
+
+                    cache_key = str(channel.get("number", ""))
+                    cached = self._epg_cache.get(cache_key)
+                    if cached:
+                        items = cached.get("items", [])
+                        if items:
+                            time_str = items[0][1] if items[0][1] else ""
+                            if " - " in time_str:
+                                parts = time_str.split(" - ")
+                                if len(parts) == 2 and parts[0].strip() == parts[1].strip():
+                                    channel.pop("_epg_seek_ms", None)
+                                    del self._epg_cache[cache_key]
+                                    self._epg_items = self._build_epg_items(channel)
+                                    self._render_epg_rows()
+
         except Exception:
             pass
         self._epg_tick = self.root.after(500, lambda: self._do_tick(request_id))
-
     # ------------------------------------------------------------------
     # VLC window binding
     # ------------------------------------------------------------------
